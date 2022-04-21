@@ -14,3 +14,11 @@ console.log(countYuan(15)); // Конвертер долларов США в к�
 function testEven(n) {
 	return n % 2 === 0 ? true : false;
 }
+
+
+// Type of sum Вывести тип данных суммы
+
+function typeOfSum(a, b) {
+	let amount = a + b;
+	return typeof amount;
+}
