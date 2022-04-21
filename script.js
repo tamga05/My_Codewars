@@ -22,3 +22,11 @@ function typeOfSum(a, b) {
 	let amount = a + b;
 	return typeof amount;
 }
+
+
+// Century from year
+
+function century(year) {
+	let numberCentury;
+	return (numberCentury = Math.ceil(year / 100));
+}
