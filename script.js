@@ -59,3 +59,17 @@ function logs(x , a, b){
 	let sumLog;
 	return sumLog = Math.log(a) / Math.log(x) + Math.log(b) / Math.log(x);
 }
+
+
+
+function multiTable(number) {
+	i = 1;
+
+	while (i <= 10) {
+		let result = String(`${i} * ${number} = ${i * number}\n`);
+		console.log(result);
+		i += 1;
+	}
+}
+
+multiTable(2);
