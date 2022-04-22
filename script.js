@@ -27,3 +27,15 @@ function century(year) {
 	let numberCentury;
 	return (numberCentury = Math.ceil(year / 100));
 }
+
+
+// Капитализация (изменение первого символа в слове на Заглавный)
+
+function capitalizeWord(word) {
+
+	let result = String(word);
+	let resultCapitalize = `${result[0].toUpperCase()}${result.slice(1)}`;
+	return resultCapitalize;
+}
+
+console.log(capitalizeWord('andrey'));
