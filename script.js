@@ -41,6 +41,8 @@ function capitalizeWord(word) {
 console.log(capitalizeWord('andrey'));
 
 
+// Beginner Series #2 Clock Clock shows h hours, m minutes and s seconds after midnight. Your task is to write a function which returns the time since midnight in milliseconds.
+
 function past(h, m, s) {
 	let secPerMin = 60;
 	let secPerHour = 3600;
@@ -49,3 +51,11 @@ function past(h, m, s) {
 }
 
 console.log(past(1, 1, 1));
+
+
+//Easy logs Add two logs with base X, with the value of A and B. Example log A + log B where the base is X.
+
+function logs(x , a, b){
+	let sumLog;
+	return sumLog = Math.log(a) / Math.log(x) + Math.log(b) / Math.log(x);
+}
