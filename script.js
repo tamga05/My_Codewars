@@ -4,10 +4,9 @@ const countYuan = (dollarsUSA) => {
 	let YuanPerDollar = 6.75;
 	let counter = (YuanPerDollar * dollarsUSA).toFixed(2);
 	return `'${counter} Chinese Yuan'`;
-};
+}
 
 console.log(countYuan(15)); // Конвертер долларов США в китайские юани
-
 
 // Is it even? Чётное или нечетное число?
 
@@ -15,14 +14,12 @@ function testEven(n) {
 	return n % 2 === 0 ? true : false;
 }
 
-
 // Type of sum Вывести тип данных суммы
 
 function typeOfSum(a, b) {
 	let amount = a + b;
 	return typeof amount;
 }
-
 
 // Century from year
 
