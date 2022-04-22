@@ -74,3 +74,10 @@ function multiTable(number) {
 }
 
 multiTable(2);
+
+
+// No zeros for heros Надо удалить нули (0) только Последние, между других цифр Не надо. Only the ending ones.
+
+function noBoringZeros(n) {
+	return Number(n.toString().replace(/0+$/, ""));
+}
