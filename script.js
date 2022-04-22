@@ -39,3 +39,13 @@ function capitalizeWord(word) {
 }
 
 console.log(capitalizeWord('andrey'));
+
+
+function past(h, m, s) {
+	let secPerMin = 60;
+	let secPerHour = 3600;
+	let ms;
+	return (ms = (s + (m * secPerMin) + (h * secPerHour)) * 1000);
+}
+
+console.log(past(1, 1, 1));
