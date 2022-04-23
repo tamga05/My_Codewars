@@ -161,3 +161,5 @@ function basicOp(operation, value1, value2) {
 		return value1 / value2;
 	}
 }
+
+console.log(basicOp('*', 5, 5));
