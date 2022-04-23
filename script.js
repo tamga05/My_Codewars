@@ -162,4 +162,20 @@ function basicOp(operation, value1, value2) {
 	}
 }
 
-console.log(basicOp('*', 5, 5));
+console.log(basicOp('*', 7, 7));
+
+
+// For Twins: 1. Types Write function typeValidation that will accept two parameters: variable and type and check if type of variable is matching type. Return true if types match or false if not.
+
+function typeValidation(variable, type) {
+	return typeof variable === type;
+}
+
+
+// Bin to Decimal Complete the function which converts a binary number (given as a string) to a decimal number.
+
+function binToDec(bin) {
+	let digit = parseInt(bin, 2);
+
+	return digit;
+}
