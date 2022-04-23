@@ -85,4 +85,4 @@ function noBoringZeros(n) {
 
 // Mr.Freeze
 
-Object.freeze(MrFreeze);
+//Object.freeze(MrFreeze);
