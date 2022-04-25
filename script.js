@@ -220,3 +220,25 @@ const quarterOf = (month) => {
 		return 4;
 	}
 }
+
+
+// Функция принимает Двоичное число в ввиде строки и возвращает Десятичное число
+
+function convertToInteger(str) {
+	const stringInNumber = parseInt(str, 2);
+
+	return stringInNumber;
+}
+
+console.log(convertToInteger("10011"));
+
+
+// Функция складывает два числа и возвращает их сумму в Двоичном исчислении в виде Строки
+
+function addBinary(a, b) {
+	let sum = a + b;
+
+	return sum.toString(2);
+}
+
+console.log(addBinary(5, 3));
