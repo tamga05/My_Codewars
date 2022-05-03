@@ -1,3 +1,5 @@
+"use strict";
+
 // USD => CNY (Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by 'Chinese Yuan'. The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers should be represented as a string with 2 decimal places. (e.g. "21.00" NOT "21.0" or "21"))
 
 const countYuan = (dollarsUSA) => {
@@ -64,7 +66,8 @@ function logs(x , a, b){
 // Multiplication table for number Your goal is to return multiplication table for number that is always an integer from 1 to 10. You can use \n in string to jump to the next line. Note: newlines should be added between rows, but there should be no trailing newline at the end. If you're unsure about the format, look at the sample tests.
 
 function multiTable(number) {
-	i = 1;
+
+	let i = 1;
 
 	while (i <= 10) {
 		let result = String(`${i} * ${number} = ${i * number}\n`);
@@ -108,7 +111,7 @@ const areaOrPerimeter = function (l, w) {
 		return (l + w) * 2;
 	}
 	return l * w;
-}
+};
 
 
 // Remove String Spaces Simple, remove the spaces from the string, then return the resultant string.
@@ -127,7 +130,7 @@ var countSheep = function (num) {
 		murmur += i + 1 + " sheep...";
 	}
 	return murmur;
-}
+};
 
 
 // The Feast of Many Beasts All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake. Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast. Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
@@ -219,7 +222,7 @@ const quarterOf = (month) => {
 	} else if (month >= 10 && month <= 12) {
 		return 4;
 	}
-}
+};
 
 
 // Функция принимает Двоичное число в ввиде строки и возвращает Десятичное число
