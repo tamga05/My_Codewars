@@ -6,7 +6,7 @@ const countYuan = (dollarsUSA) => {
 	let YuanPerDollar = 6.75;
 	let counter = (YuanPerDollar * dollarsUSA).toFixed(2);
 	return `'${counter} Chinese Yuan'`;
-}
+};
 
 console.log(countYuan(15)); // Конвертер долларов США в китайские юани
 
@@ -58,8 +58,8 @@ console.log(past(1, 1, 1));
 //Easy logs Add two logs with base X, with the value of A and B. Example log A + log B where the base is X.
 
 function logs(x , a, b){
-	let sumLog;
-	return sumLog = Math.log(a) / Math.log(x) + Math.log(b) / Math.log(x);
+	let sumLog = Math.log(a) / Math.log(x) + Math.log(b) / Math.log(x);
+	return sumLog;
 }
 
 
@@ -274,3 +274,4 @@ var humanYearsCatYearsDogYears = function (humanYears) {
 
 	return [humanYears, 24 + (humanYears - 2) * 4, 24 + (humanYears - 2) * 5];
 };
+
