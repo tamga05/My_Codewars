@@ -275,3 +275,10 @@ var humanYearsCatYearsDogYears = function (humanYears) {
 	return [humanYears, 24 + (humanYears - 2) * 4, 24 + (humanYears - 2) * 5];
 };
 
+
+// Third Angle of a Triangle You are given two interior angles (in degrees) of a triangle. Write a function to return the 3rd.
+
+function otherAngle(a, b) {
+	return 180 - (a + b);
+}
+
