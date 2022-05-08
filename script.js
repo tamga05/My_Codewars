@@ -36,14 +36,14 @@ function century(year) {
 function capitalizeWord(word) {
 
 	let result = String(word);
-	let resultCapitalize = `${result[0].toUpperCase()}${result.slice(1)}`;
-	return resultCapitalize;
+	return `${result[0].toUpperCase()}${result.slice(1)}`;
+
 }
 
 console.log(capitalizeWord('andrey'));
 
 
-// Beginner Series #2 Clock Clock shows h hours, m minutes and s seconds after midnight. Your task is to write a function which returns the time since midnight in milliseconds.
+// Beginner Series #2 Clock shows h hours, m minutes and s seconds after midnight. Your task is to write a function which returns the time since midnight in milliseconds.
 
 function past(h, m, s) {
 	let secPerMin = 60;
@@ -57,7 +57,7 @@ console.log(past(1, 1, 1));
 
 //Easy logs Add two logs with base X, with the value of A and B. Example log A + log B where the base is X.
 
-function logs(x , a, b){
+function logs(x, a, b){
 	let sumLog = Math.log(a) / Math.log(x) + Math.log(b) / Math.log(x);
 	return sumLog;
 }
