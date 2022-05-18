@@ -42,7 +42,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/it-incubator/projects/my-projects/My_training_course_JS_s_nulya&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tamga/Downloads/Atom_Material_Icons-64.0.0.zip&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -113,6 +113,14 @@
       <workItem from="1652729442004" duration="58000" />
       <workItem from="1652729522753" duration="1040000" />
       <workItem from="1652731114060" duration="2353000" />
+      <workItem from="1652735233435" duration="420000" />
+      <workItem from="1652736364450" duration="54000" />
+      <workItem from="1652773102499" duration="343000" />
+      <workItem from="1652773466206" duration="245000" />
+      <workItem from="1652773729122" duration="163000" />
+      <workItem from="1652778489917" duration="731000" />
+      <workItem from="1652785270346" duration="1138000" />
+      <workItem from="1652815841469" duration="1482000" />
     </task>
     <task id="LOCAL-00001" summary="task solving">
       <created>1652037850613</created>
@@ -156,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652372413074</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="task solving">
+      <created>1652735277295</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652735277295</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
