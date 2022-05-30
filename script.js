@@ -675,3 +675,8 @@ function calculateAge(x, y) {
 
 console.log(calculateAge(2023, 2022));
 
+
+// Function 3 - multiplying two numbers.
+
+const Multiply = (a, b) => a * b;
+console.log(Multiply(7, 5));
