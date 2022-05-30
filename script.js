@@ -653,3 +653,25 @@ function sumStr(a, b) {
     return String(Number(a) + Number(b));
 }
 
+
+// How old will I be in 2099?.
+
+function calculateAge(x, y) {
+
+    const Age = Math.abs((y - x));
+
+    if (y > x && Age === 1) {
+        return `You are ${Age} year old.`;
+    } else if (y < x && Age === 1) {
+        return 'You will be born in 1 year.';
+    } else if (Age === 0) {
+        return `You were born this very year!`;
+    } else if (y > x) {
+        return `You are ${Age} years old.`;
+    } else if (y < x) {
+        return `You will be born in ${Age} years.`;
+    }
+}
+
+console.log(calculateAge(2023, 2022));
+
