@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // USD => CNY (Create a function that converts US dollars (USD) to Chinese Yuan (CNY) . The input is the amount of USD as an integer, and the output should be a string that states the amount of Yuan followed by 'Chinese Yuan'. The conversion rate you should use is 6.75 CNY for every 1 USD. All numbers should be represented as a string with 2 decimal places. (e.g. "21.00" NOT "21.0" or "21"))
 
@@ -83,7 +83,7 @@ multiTable(2);
 // No zeros for heros Надо удалить нули (0) только Последние, между других цифр Не надо. Only the ending ones.
 
 function noBoringZeros(n) {
-    return Number(n.toString().replace(/0+$/, ""));
+    return Number(n.toString().replace(/0+$/, ''));
 }
 
 
@@ -96,9 +96,9 @@ function noBoringZeros(n) {
 
 function testEqual(val) {
     if (val == 12) { // Change this line
-        return "Equal";
+        return 'Equal';
     }
-    return "Not Equal";
+    return 'Not Equal';
 }
 
 console.log(testEqual(12));
@@ -118,7 +118,7 @@ const areaOrPerimeter = function (l, w) {
 // Remove String Spaces Simple, remove the spaces from the string, then return the resultant string.
 
 function noSpace(x) {
-    x = x.split(" ").join("");
+    x = x.split(' ').join('');
     return x;
 }
 
@@ -126,9 +126,9 @@ function noSpace(x) {
 // If you can't sleep, just count sheep!! Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
 
 var countSheep = function (num) {
-    let murmur = "";
+    let murmur = '';
     for (let i = 0; i < num; i++) {
-        murmur += i + 1 + " sheep...";
+        murmur += i + 1 + ' sheep...';
     }
     return murmur;
 };
@@ -234,7 +234,7 @@ function convertToInteger(str) {
     return stringInNumber;
 }
 
-console.log(convertToInteger("10011"));
+console.log(convertToInteger('10011'));
 
 
 // Функция складывает два числа и возвращает их сумму в Двоичном исчислении в виде Строки
@@ -287,21 +287,21 @@ function otherAngle(a, b) {
 
 function whatday(num) {
     if (num == 1) {
-        return "Sunday";
+        return 'Sunday';
     } else if (num == 2) {
-        return "Monday";
+        return 'Monday';
     } else if (num == 3) {
-        return "Tuesday";
+        return 'Tuesday';
     } else if (num == 4) {
-        return "Wednesday";
+        return 'Wednesday';
     } else if (num == 5) {
-        return "Thursday";
+        return 'Thursday';
     } else if (num == 6) {
-        return "Friday";
+        return 'Friday';
     } else if (num == 7) {
-        return "Saturday";
+        return 'Saturday';
     } else {
-        return "Wrong, please enter a number between 1 and 7";
+        return 'Wrong, please enter a number between 1 and 7';
     }
 }
 
@@ -323,14 +323,14 @@ function lovefunc(flower1, flower2) {
 // Man in the west. A western man is trying to find gold in a river. To do that, he passes a bucket through the river's soil and then checks if it contains any gold. However, he could be more productive if he wrote an algorithm to do the job for him. So, you need to check if there is gold in the bucket, and if so, return True/true. If not, return False/false.
 
 function checkTheBucket(bucket) {
-    return bucket.includes("gold");
+    return bucket.includes('gold');
 }
 
 
 // 5 without numbers !! Write a function that always returns 5. Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
 
 function unusualFive() {
-    const five = "Write";
+    const five = 'Write';
     return five.length;
 }
 
@@ -338,7 +338,7 @@ function unusualFive() {
 // Ensure question. Given a string, write a function that returns the string with a question mark ("?") appends to the end, unless the original string ends with a question mark, in which case, returns the original string.
 
 function ensureQuestion(s) {
-    if (s[s.length - 1] != "?") {
+    if (s[s.length - 1] != '?') {
         return `${s}?`;
     } else {
         return s;
@@ -362,17 +362,17 @@ function findDifference([a, b, c], [d, e, f]) {
 
 const rooms = {
     first: {
-        description: "This is the first room",
+        description: 'This is the first room',
         items: {
-            chair: "The old chair looks comfortable",
-            lamp: "This lamp looks ancient",
+            chair: 'The old chair looks comfortable',
+            lamp: 'This lamp looks ancient',
         },
     },
     second: {
-        description: "This is the second room",
+        description: 'This is the second room',
         items: {
-            couch: "This couch looks like it would hurt your back",
-            table: "On the table there is an unopened bottle of water",
+            couch: 'This couch looks like it would hurt your back',
+            table: 'On the table there is an unopened bottle of water',
         },
     },
 };
@@ -406,25 +406,25 @@ function simpleMultiplication(number) {
 
 function switchItUp(number) {
     if (number == 1) {
-        return "One";
+        return 'One';
     } else if (number == 2) {
-        return "Two";
+        return 'Two';
     } else if (number == 3) {
-        return "Three";
+        return 'Three';
     } else if (number == 4) {
-        return "Four";
+        return 'Four';
     } else if (number == 5) {
-        return "Five";
+        return 'Five';
     } else if (number == 6) {
-        return "Six";
+        return 'Six';
     } else if (number == 7) {
-        return "Seven";
+        return 'Seven';
     } else if (number == 8) {
-        return "Eight";
+        return 'Eight';
     } else if (number == 9) {
-        return "Nine";
+        return 'Nine';
     } else if (number == 0) {
-        return "Zero";
+        return 'Zero';
     }
 }
 
@@ -453,9 +453,9 @@ const rps = (p1, p2) => {
 
 function boolToWord(bool) {
     if (bool === true) {
-        return "Yes";
+        return 'Yes';
     } else {
-        return "No";
+        return 'No';
     }
 }
 
@@ -463,7 +463,7 @@ function boolToWord(bool) {
 // Make a simple function called greet that returns the most-famous "hello world!"
 
 function greet() {
-    return "hello world!";
+    return 'hello world!';
 }
 
 
@@ -471,9 +471,9 @@ function greet() {
 
 function evenOrOdd(number) {
     if (number % 2 == 0) {
-        return "Even";
+        return 'Even';
     } else {
-        return "Odd";
+        return 'Odd';
     }
 }
 
@@ -573,15 +573,15 @@ function equal5() {
 // type the console.log() in the next line(don't forget to put the str in the brackets).
 
 function helloWorld() {
-    const str = "Hello World!";
+    const str = 'Hello World!';
     console.log(str);
 }
 
 
 // Training JS #3: Basic data types--String.
 
-var a1 = "A", a2 = "a", b1 = "B", b2 = "b", c1 = "C", c2 = "c", d1 = "D", d2 = "d", e1 = "E", e2 = "e", n1 = "N",
-    n2 = "n";
+var a1 = 'A', a2 = 'a', b1 = 'B', b2 = 'b', c1 = 'C', c2 = 'c', d1 = 'D', d2 = 'd', e1 = 'E', e2 = 'e', n1 = 'N',
+    n2 = 'n';
 
 function Dad() {
     //select some variable to combine "Dad"
@@ -601,17 +601,17 @@ function banana() {
 //answer some questions if you finished works above
 function answer1() {
     //the answer should be "yes" or "no"
-    return "no";
+    return 'no';
 }
 
 function answer2() {
     //the answer should be "yes" or "no"
-    return "no";
+    return 'no';
 }
 
 function answer3() {
     //the answer should be "yes" or "no"
-    return "yes";
+    return 'yes';
 }
 
 
@@ -622,13 +622,13 @@ function bmi(weight, height) {
     const bmi = weight / (height ** 2);
 
     if (bmi <= 18.5) {
-        return "Underweight";
+        return 'Underweight';
     } else if (bmi <= 25.0) {
-        return "Normal";
+        return 'Normal';
     } else if (bmi <= 30.0) {
-        return "Overweight";
+        return 'Overweight';
     } else {
-        return "Obese";
+        return 'Obese';
     }
 }
 
@@ -680,3 +680,11 @@ console.log(calculateAge(2023, 2022));
 
 const Multiply = (a, b) => a * b;
 console.log(Multiply(7, 5));
+
+
+//Will there be enough space? If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+
+function enough(cap, on, wait) {
+    return Math.max(wait + on - cap, 0);
+}
+
