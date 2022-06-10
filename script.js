@@ -713,17 +713,6 @@ function checkSign(num) {
 console.log(checkSign(-10));
 
 
-function checkObj(obj, checkProp) {
-    // Only change code below this line
-    if (obj.hasOwnProperty(checkProp)) {
-        return obj.checkProp;
-    } else {
-        return 'Not Found';
-    }
-    // Only change code above this line
-}
-
-
 //Reversed Strings. Complete the solution so that it reverses the string passed into it.
 
 function solution(str) {
