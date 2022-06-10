@@ -13,8 +13,10 @@ console.log(countYuan(15)); // Конвертер долларов США в к�
 // Is it even? Чётное или нечетное число?
 
 function testEven(n) {
-    return n % 2 === 0 ? true : false;
+    return n % 2 === 0;
 }
+
+console.log(testEven);
 
 
 // Type of sum Вывести тип данных суммы
@@ -24,11 +26,12 @@ function typeOfSum(a, b) {
     return typeof amount;
 }
 
+console.log(typeOfSum);
+
 // Century from year
 
 function century(year) {
-    let numberCentury;
-    return (numberCentury = Math.ceil(year / 100));
+    return (Math.ceil(year / 100));
 }
 
 
@@ -49,8 +52,7 @@ console.log(capitalizeWord('andrey'));
 function past(h, m, s) {
     let secPerMin = 60;
     let secPerHour = 3600;
-    let ms;
-    return (ms = (s + (m * secPerMin) + (h * secPerHour)) * 1000);
+    return ((s + (m * secPerMin) + (h * secPerHour)) * 1000);
 }
 
 console.log(past(1, 1, 1));
@@ -95,7 +97,7 @@ function noBoringZeros(n) {
 // Comparison with the Equality Operator
 
 function testEqual(val) {
-    if (val == 12) { // Change this line
+    if (val === 12) { // Change this line
         return 'Equal';
     }
     return 'Not Equal';
@@ -108,7 +110,7 @@ console.log(testEqual(12));
 // If it is a square, return its area. If it is a rectangle, return its perimeter.
 
 const areaOrPerimeter = function (l, w) {
-    if (l != w) {
+    if (l !== w) {
         return (l + w) * 2;
     }
     return l * w;
@@ -122,10 +124,12 @@ function noSpace(x) {
     return x;
 }
 
+console.log(noSpace);
+
 
 // If you can't sleep, just count sheep!! Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
 
-var countSheep = function (num) {
+const countSheep = function (num) {
     let murmur = '';
     for (let i = 0; i < num; i++) {
         murmur += i + 1 + ' sheep...';
@@ -133,15 +137,16 @@ var countSheep = function (num) {
     return murmur;
 };
 
+console.log(countSheep);
+
 
 // The Feast of Many Beasts All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake. Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast. Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
 
 function feast(beast, dish) {
-    if (beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]) {
-        return true;
-    }
-    return false;
+    return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1];
 }
+
+console.log(feast);
 
 // Transportation on vacation After a hard quarter in the office you decide to get some rest on a vacation. So you will book a flight for you and your girlfriend and try to leave all the mess behind you. You will need a rental car in order for you to get around in your vacation. The manager of the car rental makes you some good offers. Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total. Write a code that gives out the total amount for different days(d).
 
@@ -155,13 +160,13 @@ console.log(rentalCarCost(7));
 // Basic Mathematical Operations Your task is to create a function that does four basic mathematical operations. The function should take three arguments - operation(string/char), value1(number), value2(number). The function should return result of numbers after applying the chosen operation.
 
 function basicOp(operation, value1, value2) {
-    if (operation == '+') {
+    if (operation === '+') {
         return value1 + value2;
-    } else if (operation == '-') {
+    } else if (operation === '-') {
         return value1 - value2;
-    } else if (operation == '*') {
+    } else if (operation === '*') {
         return value1 * value2;
-    } else if (operation == '/') {
+    } else if (operation === '/') {
         return value1 / value2;
     }
 }
@@ -242,7 +247,7 @@ console.log(convertToInteger('10011'));
 function addBinary(a, b) {
     let sum = a + b;
 
-    return sum.toString(2);
+    return sum.toString();
 }
 
 console.log(addBinary(5, 3));
@@ -264,7 +269,7 @@ function finalGrade(exam, projects) {
 
 // Cat years, Dog years Kata Task I have a cat and a dog. I got them at the same time as kitten/puppy. That was humanYears years ago. Return their respective ages now as [humanYears,catYears,dogYears] NOTES: humanYears >= 1 humanYears are whole numbers only Cat Years 15 cat years for first year +9 cat years for second year +4 cat years for each year after that Dog Years 15 dog years for first year +9 dog years for second year +5 dog years for each year after that
 
-var humanYearsCatYearsDogYears = function (humanYears) {
+const humanYearsCatYearsDogYears = function (humanYears) {
     // Your code here!
     if (humanYears === 1) {
         return [1, 15, 15];
@@ -286,19 +291,19 @@ function otherAngle(a, b) {
 // Return the day. Complete the function which returns the weekday according to the input number:
 
 function whatday(num) {
-    if (num == 1) {
+    if (num === 1) {
         return 'Sunday';
-    } else if (num == 2) {
+    } else if (num === 2) {
         return 'Monday';
-    } else if (num == 3) {
+    } else if (num === 3) {
         return 'Tuesday';
-    } else if (num == 4) {
+    } else if (num === 4) {
         return 'Wednesday';
-    } else if (num == 5) {
+    } else if (num === 5) {
         return 'Thursday';
-    } else if (num == 6) {
+    } else if (num === 6) {
         return 'Friday';
-    } else if (num == 7) {
+    } else if (num === 7) {
         return 'Saturday';
     } else {
         return 'Wrong, please enter a number between 1 and 7';
@@ -309,14 +314,8 @@ function whatday(num) {
 // Opposites Attract. Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love. Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
 
 function lovefunc(flower1, flower2) {
-    if (
-        (flower1 % 2 == 0 && flower2 % 2 != 0) ||
-        (flower1 % 2 != 0 && flower2 % 2 == 0)
-    ) {
-        return true;
-    } else {
-        return false;
-    }
+    return (flower1 % 2 === 0 && flower2 % 2 !== 0) ||
+        (flower1 % 2 !== 0 && flower2 % 2 === 0);
 }
 
 
@@ -338,7 +337,7 @@ function unusualFive() {
 // Ensure question. Given a string, write a function that returns the string with a question mark ("?") appends to the end, unless the original string ends with a question mark, in which case, returns the original string.
 
 function ensureQuestion(s) {
-    if (s[s.length - 1] != '?') {
+    if (s[s.length - 1] !== '?') {
         return `${s}?`;
     } else {
         return s;
@@ -378,7 +377,7 @@ const rooms = {
 };
 
 
-// Generate user links. Your task is to create userlinks for the url, you will be given a username and must return a valid link.
+// Generate user links. Your task is to create user-links for the url, you will be given a username and must return a valid link.
 
 // Example
 // generate_link('matt c')
@@ -394,7 +393,7 @@ function generateLink(user) {
 // Simple multiplication. This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
 
 function simpleMultiplication(number) {
-    if (number % 2 == 0) {
+    if (number % 2 === 0) {
         return number * 8;
     } else {
         return number * 9;
@@ -405,25 +404,25 @@ function simpleMultiplication(number) {
 // Switch it Up!. When provided with a number between 0-9, return it in words. Input :: 1 Output :: "One".
 
 function switchItUp(number) {
-    if (number == 1) {
+    if (number === 1) {
         return 'One';
-    } else if (number == 2) {
+    } else if (number === 2) {
         return 'Two';
-    } else if (number == 3) {
+    } else if (number === 3) {
         return 'Three';
-    } else if (number == 4) {
+    } else if (number === 4) {
         return 'Four';
-    } else if (number == 5) {
+    } else if (number === 5) {
         return 'Five';
-    } else if (number == 6) {
+    } else if (number === 6) {
         return 'Six';
-    } else if (number == 7) {
+    } else if (number === 7) {
         return 'Seven';
-    } else if (number == 8) {
+    } else if (number === 8) {
         return 'Eight';
-    } else if (number == 9) {
+    } else if (number === 9) {
         return 'Nine';
-    } else if (number == 0) {
+    } else if (number === 0) {
         return 'Zero';
     }
 }
@@ -439,9 +438,9 @@ function index(array, n) {
 // Rock Paper Scissors!. Let's play! You have to return which player won! In case of a draw return Draw!.
 
 const rps = (p1, p2) => {
-    if (p1 == 'rock' && p2 == 'scissors' || p1 == 'paper' && p2 == 'rock' || p1 == 'scissors' && p2 == 'paper') {
+    if (p1 === 'rock' && p2 === 'scissors' || p1 === 'paper' && p2 === 'rock' || p1 === 'scissors' && p2 === 'paper') {
         return 'Player 1 won!';
-    } else if (p1 == 'scissors' && p2 == 'rock' || p1 == 'rock' && p2 == 'paper' || p1 == 'paper' && p2 == 'scissors') {
+    } else if (p1 === 'scissors' && p2 === 'rock' || p1 === 'rock' && p2 === 'paper' || p1 === 'paper' && p2 === 'scissors') {
         return 'Player 2 won!';
     } else {
         return 'Draw!';
@@ -470,7 +469,7 @@ function greet() {
 // Even or Odd. Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 
 function evenOrOdd(number) {
-    if (number % 2 == 0) {
+    if (number % 2 === 0) {
         return 'Even';
     } else {
         return 'Odd';
@@ -580,7 +579,7 @@ function helloWorld() {
 
 // Training JS #3: Basic data types--String.
 
-var a1 = 'A', a2 = 'a', b1 = 'B', b2 = 'b', c1 = 'C', c2 = 'c', d1 = 'D', d2 = 'd', e1 = 'E', e2 = 'e', n1 = 'N',
+const a1 = 'A', a2 = 'a', b1 = 'B', b2 = 'b', c1 = 'C', c2 = 'c', d1 = 'D', d2 = 'd', e1 = 'E', e2 = 'e', n1 = 'N',
     n2 = 'n';
 
 function Dad() {
@@ -642,7 +641,7 @@ function makeUpperCase(str) {
 
 // Returning Strings. Make a function that will return a greeting statement that uses an input; your program should return, Hello, <name> how are you doing today?.
 
-function greet(name) {
+function greet1(name) {
     return `Hello, ${name} how are you doing today?`;
 }
 
@@ -688,6 +687,8 @@ function enough(cap, on, wait) {
     return Math.max(wait + on - cap, 0);
 }
 
+console.log(enough);
+
 
 //101 Dalmatians - squash the bugs, not the dogs!
 
@@ -717,4 +718,13 @@ console.log(checkSign(-10));
 
 function solution(str) {
     return str.split('').reverse().join('');
+}
+
+console.log(solution);
+
+
+// Return Negative. In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+function makeNegative(num) {
+    return Math.abs(num) * (-1);
 }
