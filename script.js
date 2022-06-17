@@ -763,3 +763,10 @@ function areYouPlayingBanjo(name) {
 function repeatStr(n, s) {
     return s.repeat(n);
 }
+
+
+// Squaring an argument.
+
+function square(x) {
+    return x * x;
+}
