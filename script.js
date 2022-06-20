@@ -785,3 +785,10 @@ function doubleInteger(i) {
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
     return distanceToPump <= mpg * fuelLeft;
 };
+
+
+function sayHello(name) {
+    return `Hello, Mr. ${name}`;
+}
+
+console.log(sayHello('Ivan'));
