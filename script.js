@@ -792,3 +792,10 @@ function sayHello(name) {
 }
 
 console.log(sayHello('Ivan'));
+
+
+// Opposite number. Given an integer or a floating-point number, find its opposite.
+
+function opposite(number) {
+    return -Math.max(number);
+}
