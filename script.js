@@ -461,7 +461,7 @@ function boolToWord(bool) {
 
 // Make a simple function called greet that returns the most-famous "hello world!"
 
-function greet() {
+function greet1() {
     return 'hello world!';
 }
 
@@ -641,7 +641,7 @@ function makeUpperCase(str) {
 
 // Returning Strings. Make a function that will return a greeting statement that uses an input; your program should return, Hello, <name> how are you doing today?.
 
-function greet1(name) {
+function greet2(name) {
     return `Hello, ${name} how are you doing today?`;
 }
 
@@ -810,3 +810,15 @@ const summation = function (num) {
     }
     return sum;
 };
+
+
+//Jenny's secret message. Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
+// Can you help her?
+
+function greet(name) {
+    if (name === 'Johnny') {
+        return 'Hello, my love!';
+    } else {
+        return 'Hello, ' + name + '!';
+    }
+}
