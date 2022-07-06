@@ -868,13 +868,13 @@ console.log(typeof NaN);
 console.log(typeof null);
 
 
-
 //Unfinished Loop - Bug Fixing #1. Oh no, Timmy's created an infinite loop! Help Timmy find and fix the bug in his unfinished for loop!
 
 function createArray(number) {
+
     let newArray = [];
 
-    for ( let i = 1; i <= number; i++) {
+    for (let i = 1; i <= number; i++) {
         newArray.push(i);
     }
 
@@ -883,3 +883,15 @@ function createArray(number) {
 
 console.log(createArray(15));
 
+
+// Max Headroom and JavaScript style. Shouldn't the two functions getMax1 and getMax2 be equivalent and return the same value? Can you spot a problem and fix it? Can you learn something about JavaScript style in this kata?
+
+function getMax1() {
+    const max = {name: 'Max Headroom'};
+    return max;
+}
+
+function getMax2() {
+    const max = {name: 'Max Headroom'};
+    return max;
+}
