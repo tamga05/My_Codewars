@@ -314,8 +314,7 @@ function whatday(num) {
 // Opposites Attract. Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love. Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
 
 function lovefunc(flower1, flower2) {
-    return (flower1 % 2 === 0 && flower2 % 2 !== 0) ||
-        (flower1 % 2 !== 0 && flower2 % 2 === 0);
+    return (flower1 % 2 === 0 && flower2 % 2 !== 0) || (flower1 % 2 !== 0 && flower2 % 2 === 0);
 }
 
 
@@ -361,17 +360,12 @@ function findDifference([a, b, c], [d, e, f]) {
 
 const rooms = {
     first: {
-        description: 'This is the first room',
-        items: {
-            chair: 'The old chair looks comfortable',
-            lamp: 'This lamp looks ancient',
+        description: 'This is the first room', items: {
+            chair: 'The old chair looks comfortable', lamp: 'This lamp looks ancient',
         },
-    },
-    second: {
-        description: 'This is the second room',
-        items: {
-            couch: 'This couch looks like it would hurt your back',
-            table: 'On the table there is an unopened bottle of water',
+    }, second: {
+        description: 'This is the second room', items: {
+            couch: 'This couch looks like it would hurt your back', table: 'On the table there is an unopened bottle of water',
         },
     },
 };
@@ -579,8 +573,7 @@ function helloWorld() {
 
 // Training JS #3: Basic data types--String.
 
-const a1 = 'A', a2 = 'a', b1 = 'B', b2 = 'b', c1 = 'C', c2 = 'c', d1 = 'D', d2 = 'd', e1 = 'E', e2 = 'e', n1 = 'N',
-    n2 = 'n';
+const a1 = 'A', a2 = 'a', b1 = 'B', b2 = 'b', c1 = 'C', c2 = 'c', d1 = 'D', d2 = 'd', e1 = 'E', e2 = 'e', n1 = 'N', n2 = 'n';
 
 function Dad() {
     //select some variable to combine "Dad"
@@ -706,9 +699,7 @@ console.log(howManyDalmatians(101));
 
 function checkSign(num) {
 
-    return (num > 0) ? 'positive'
-        : (num < 0) ? 'negative'
-            : 'zero';
+    return (num > 0) ? 'positive' : (num < 0) ? 'negative' : 'zero';
 }
 
 console.log(checkSign(-10));
@@ -895,3 +886,26 @@ function getMax2() {
     const max = {name: 'Max Headroom'};
     return max;
 }
+
+
+// Unexpected parsing. Function should return a dictionary/Object/Hash with "status" as a key, whose value can : "busy" or "available" depending on the truth value of the argument is_busy.
+//
+// But as you will see after clicking RUN or ATTEMPT this code has several bugs, please fix them.
+
+function getStatus(isBusy) {
+
+    const msg = isBusy ? 'busy' : 'available';
+
+    return {status: msg};
+}
+
+
+//Volume of a Cuboid.
+
+class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+        return length * width * height;
+    }
+}
+
+
