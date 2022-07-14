@@ -231,7 +231,7 @@ const quarterOf = (month) => {
 };
 
 
-// Функция принимает Двоичное число в ввиде строки и возвращает Десятичное число
+// Функция принимает Двоичное число в виде строки и возвращает Десятичное число
 
 function convertToInteger(str) {
     const stringInNumber = parseInt(str, 2);
@@ -907,5 +907,15 @@ class Kata {
         return length * width * height;
     }
 }
+
+
+//5 without numbers !!. Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+
+function unusualFive1() {
+    let solution = 'women';
+    return solution.length;
+}
+
+
 
 
