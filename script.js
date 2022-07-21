@@ -934,3 +934,10 @@ function describeAge(age) {
 //     return `${x}adult` : return `${x}elderly`;
     return (age < 13) ? `${x}kid` : (age < 18) ? `${x}teenager` : (age < 65) ? `${x}adult` : `${x}elderly`;
 }
+
+// Или вот так, будет покороче
+
+function describeAge1(age) {
+    let x = 'You\'re a(n) ';
+    return (age < 13) ? `${x}kid` : (age < 18) ? `${x}teenager` : (age < 65) ? `${x}adult` : `${x}elderly`;
+}
