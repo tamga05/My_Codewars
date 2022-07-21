@@ -917,5 +917,20 @@ function unusualFive1() {
 }
 
 
+//Be Concise I - The Ternary Operator. Your task is to shorten the code as much as possible. Note that submitting the given code will not work because there is a character limit of 137.
 
-
+function describeAge(age) {
+//   if (age <= 12) {
+//     return "You're a(n) kid";
+//   } else if (age >= 13 && age <= 17) {
+//     return "You're a(n) teenager";
+//   } else if (age >= 18 && age <= 64) {
+//     return "You're a(n) adult";
+//   } else {
+//     return "You're a(n) elderly";
+//   }
+    let x = 'You\'re a(n) ';
+//   (age <= 12) ? return `${x}kid` : (age >= 13 && age <= 17) ? return `${x}teenager` : (age >= 18 && age <= 64) ?
+//     return `${x}adult` : return `${x}elderly`;
+    return (age < 13) ? `${x}kid` : (age < 18) ? `${x}teenager` : (age < 65) ? `${x}adult` : `${x}elderly`;
+}
