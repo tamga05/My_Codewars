@@ -935,9 +935,32 @@ function describeAge(age) {
     return (age < 13) ? `${x}kid` : (age < 18) ? `${x}teenager` : (age < 65) ? `${x}adult` : `${x}elderly`;
 }
 
+
 // Или вот так, будет покороче
 
 function describeAge1(age) {
     let x = 'You\'re a(n) ';
     return (age < 13) ? `${x}kid` : (age < 18) ? `${x}teenager` : (age < 65) ? `${x}adult` : `${x}elderly`;
 }
+
+
+// Или вот так, будет ЕЩЁ покороче
+
+function describeAge2(a) {
+    return `You're a(n) ${a < 13 ? 'kid' : a < 18 ? 'teenager' : a < 65 ? 'adult' : 'elderly'}`;
+}
+
+
+//Shifty Closures. Why doesn't greet_abe() actually greet Abe?
+
+const name1 = 'Abe';
+
+const greetAbe = function () {
+    return 'Hello, ' + name1 + '!';
+};
+
+const name2 = 'Ben';
+
+const greetBen = function () {
+    return 'Hello, ' + name2 + '!';
+};
