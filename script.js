@@ -971,3 +971,12 @@ const greetBen = function () {
 function find(a, e) {
     return a.indexOf(e) >= 0 ? a.indexOf(e) : 'Not found';
 }
+
+
+// Geometry Basics: Circle Circumference in 2D. Point objects have x, y attributes. Circle objects have center which is a Point, and radius, which is a
+// number. Write a function calculating circumference of a Circle. Tests round answers to 6 decimal places.
+
+function circleCircumference(circle) {
+    const l = 2 * Math.PI * circle.radius;
+    return l;
+}
