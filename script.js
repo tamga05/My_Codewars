@@ -991,3 +991,25 @@ function circleCircumference(circle) {
 const correctTail = (body, tail) => body[body.length - 1] === tail;
 
 
+// Define a card suit. You get any card as an argument. Your task is to return the suit of this card (in lowercase).
+
+function defineSuit(card) {
+
+// let deck = card.split('');
+
+    if (card.includes('♣')) {
+        return 'clubs';
+    }
+
+    if (card.includes('♦')) {
+        return 'diamonds';
+    }
+
+    if (card.includes('♥')) {
+        return 'hearts';
+    }
+
+    if (card.includes('♠')) {
+        return 'spades';
+    }
+}
