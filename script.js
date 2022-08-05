@@ -995,6 +995,7 @@ const correctTail = (body, tail) => body[body.length - 1] === tail;
 
 function defineSuit(card) {
 
+
 // let deck = card.split('');
 
     if (card.includes('♣')) {
@@ -1017,3 +1018,11 @@ function defineSuit(card) {
 
 // Beginner - Reduce but Grow. Given a non-empty array of integers, return the result of multiplying the values together in order.
 const grow = x => x.reduce((a, b) => a * b);
+
+
+// Beginner Series #4 Cockroach. The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per
+// second, rounded down to the integer (= floored). Note! The input is a Real number (actual type is language dependent) and is >= 0. The result should be an Integer.
+
+function cockroachSpeed(s) {
+    return Math.floor(s * 27.7778);
+}
