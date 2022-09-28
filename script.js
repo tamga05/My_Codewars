@@ -1026,3 +1026,13 @@ const grow = x => x.reduce((a, b) => a * b);
 function cockroachSpeed(s) {
     return Math.floor(s * 27.7778);
 }
+
+
+// Classic Hello World. You are given a method called main, make it print the line Hello World!, (yes, that includes a new line character at the end) and
+// don't return anything.
+
+class Solution {
+    static main() {
+        console.log('Hello World!');
+    }
+}
