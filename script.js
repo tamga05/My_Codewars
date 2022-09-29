@@ -1045,3 +1045,9 @@ function updateLight(current) {
     return current === 'yellow' ? 'red' : current === 'green' ? 'yellow' : 'green';
 }
 
+
+// Hex to Decimal. Complete the function which converts hex number (given as a string) to a decimal number.
+
+function hexToDec(hexString){
+    return parseInt(hexString, 16);
+}
