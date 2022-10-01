@@ -1059,3 +1059,11 @@ function hexToDec(hexString) {
 function derive(coefficient, exponent) {
     return `${coefficient * exponent}x^${exponent - 1}`;
 }
+
+
+// Help the Elite Squad of Brazilian forces BOPE. In this Kata you have to write a function that determine the number of magazines that every soldier has to have in his bag.
+// You will receive the weapon and the number of streets that they have to cross. Considering that every street the officer shoots 3 times.
+
+function magNumber(info){
+    return Math.ceil(info[1]*3/{'PT92':17, 'M4A1':30, 'M16A2':30, 'PSG1':5}[info[0]]);
+}
