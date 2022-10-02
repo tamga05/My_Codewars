@@ -1064,6 +1064,24 @@ function derive(coefficient, exponent) {
 // Help the Elite Squad of Brazilian forces BOPE. In this Kata you have to write a function that determine the number of magazines that every soldier has to have in his bag.
 // You will receive the weapon and the number of streets that they have to cross. Considering that every street the officer shoots 3 times.
 
-function magNumber(info){
-    return Math.ceil(info[1]*3/{'PT92':17, 'M4A1':30, 'M16A2':30, 'PSG1':5}[info[0]]);
+function magNumber(info) {
+    return Math.ceil(info[1] * 3 / {'PT92': 17, 'M4A1': 30, 'M16A2': 30, 'PSG1': 5}[info[0]]);
 }
+
+// Find out whether the shape is a cube. To find the volume (centimeters cubed) of a cuboid you use the formula:
+//
+// volume = Length * Width * Height
+//
+// But someone forgot to use proper record keeping, so we only have the volume, and the length of a single side!
+//
+// It's up to you to find out whether the cuboid has equal sides (= is a cube).
+//
+// Return true if the cuboid could have equal sides, return false otherwise.
+//
+// Return false for invalid numbers too (e.g volume or side is less than or equal to 0).
+//
+// Note: the sides must be integers
+
+const cubeChecker = function (volume, side) {
+    return volume / side ** 2 === side && side > 0;
+};
