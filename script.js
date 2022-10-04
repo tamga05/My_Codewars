@@ -1096,3 +1096,9 @@ const cubeChecker = function (volume, side) {
 function pillars(numPill, dist, width) {
     return numPill === 1 ? 0 : ((numPill - 2) * width) + ((100 * dist) * (numPill - 1));
 }
+
+
+// Multiple of index. Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+
+const multipleOfIndex = array => array.filter((element, index) => element % index === 0);
+
