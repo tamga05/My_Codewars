@@ -1102,3 +1102,11 @@ function pillars(numPill, dist, width) {
 
 const multipleOfIndex = array => array.filter((element, index) => element % index === 0);
 
+
+// Invert values. Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+function invert(array) {
+    return array.map(each => {
+        return each * -1;
+    });
+}
