@@ -1188,3 +1188,11 @@ function grader(score) {
         return 'F';
     }
 }
+
+
+// Be Concise III - Sum Squares. You are given a program sumSquares that takes an array as input and returns the sum of the squares of each item in an
+// array. Shorten the code such that it meets the requirements. Try researching about built-in Array methods; they may help shorten your code a lot.
+
+function sumSquares(array) {
+    return array.reduce((a, b) => a + b ** 2, 0);
+}
