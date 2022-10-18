@@ -1204,3 +1204,10 @@ function sumSquares(array) {
 function aspectRatio(x, y) {
     return [Math.ceil(y * 16 / 9), y];
 }
+
+
+// Vowel remover. Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+function shortcut(string) {
+    return string.split(/[aeiou]/g).join('');
+}
