@@ -1211,3 +1211,8 @@ function aspectRatio(x, y) {
 function shortcut(string) {
     return string.split(/[aeiou]/g).join('');
 }
+
+
+// Kata Example Twist. Add the value "codewars" to the array websites/Websites 1,000 times.
+
+const websites = new Array(1000).fill('codewars');
