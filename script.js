@@ -1216,3 +1216,9 @@ function shortcut(string) {
 // Kata Example Twist. Add the value "codewars" to the array websites/Websites 1,000 times.
 
 const websites = new Array(1000).fill('codewars');
+
+
+// Basic Training: Add item to an Array. Add the value "codewars" to the websites array.
+// After your code executes the websites array should == ["codewars"].
+
+websites.push('codewars');
