@@ -977,8 +977,8 @@ function find(a, e) {
 // number. Write a function calculating circumference of a Circle. Tests round answers to 6 decimal places.
 
 function circleCircumference(circle) {
-    const l = 2 * Math.PI * circle.radius;
-    return l;
+    //const l = 2 * Math.PI * circle.radius;
+    //return l;
 }
 
 
