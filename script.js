@@ -1078,7 +1078,7 @@ function magNumber(info) {
 //
 // Return true if the cuboid could have equal sides, return false otherwise.
 //
-// Return false for invalid numbers too (e.g. volume or side is less than or equal to 0).
+// Return false for invalid numbers too (e.g volume or side is less than or equal to 0).
 //
 // Note: the sides must be integers
 
@@ -1109,12 +1109,4 @@ function invert(array) {
     return array.map(each => {
         return each * -1;
     });
-}
-
-
-// A wolf in sheep's clothing!
-
-function warnTheSheep(queue) {
-    const position = queue.reverse().indexOf('wolf');
-    return position === 0 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${position}! You are about to be eaten by a wolf!`;
 }
