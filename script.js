@@ -1112,7 +1112,7 @@ function invert(array) {
 }
 
 
-// Who ate the cookie?
+// Who ate the cookie ?
 
 function cookie(x) {
     const t = typeof x;
