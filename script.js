@@ -1110,3 +1110,12 @@ function invert(array) {
         return each * -1;
     });
 }
+
+
+// Who ate the cookie?
+
+function cookie(x) {
+    const t = typeof x;
+    const who = t === 'string' ? 'Zach' : t === 'number' ? 'Monica' : 'the dog';
+    return `Who ate the last cookie? It was ${who}!`;
+}
