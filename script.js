@@ -1170,3 +1170,10 @@ function getGrade(s1, s2, s3) {
     if (q >= 60) return 'D';
     if (q >= 0) return 'F';
 }
+
+
+// Double Char. Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+function doubleChar(str) {
+    return str.split('').map((letter) => `${letter}${letter}`).join('');
+}
