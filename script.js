@@ -1177,3 +1177,6 @@ function getGrade(s1, s2, s3) {
 function doubleChar(str) {
     return str.split('').map((letter) => `${letter}${letter}`).join('');
 }
+
+
+//
