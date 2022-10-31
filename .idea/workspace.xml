@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a4115fb-6567-499c-bd67-9d568d5f6977" name="Changes" comment="task solving">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +17,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2GU9bRgBVXhMssqrz5PPHKRZDPe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -29,7 +30,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/My_Codewars&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/it-incubator/projects/My_Codewars&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -62,7 +63,14 @@
       <workItem from="1666820747723" duration="448000" />
       <workItem from="1666852949182" duration="66000" />
       <workItem from="1666937039974" duration="924000" />
-      <workItem from="1667106514647" duration="140000" />
+      <workItem from="1667106514647" duration="352000" />
+      <workItem from="1667107795289" duration="434000" />
+      <workItem from="1667108372197" duration="328000" />
+      <workItem from="1667152982294" duration="213000" />
+      <workItem from="1667153296163" duration="162000" />
+      <workItem from="1667156590100" duration="99000" />
+      <workItem from="1667156707730" duration="95000" />
+      <workItem from="1667195919185" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="task solving">
       <created>1666434068966</created>
@@ -134,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666942703685</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="task solving">
+      <created>1667106824951</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1667106824951</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
