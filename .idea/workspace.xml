@@ -17,7 +17,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2GU9bRgBVXhMssqrz5PPHKRZDPe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -70,7 +70,8 @@
       <workItem from="1667153296163" duration="162000" />
       <workItem from="1667156590100" duration="99000" />
       <workItem from="1667156707730" duration="95000" />
-      <workItem from="1667195919185" duration="715000" />
+      <workItem from="1667195919185" duration="1078000" />
+      <workItem from="1667281295940" duration="1013000" />
     </task>
     <task id="LOCAL-00001" summary="task solving">
       <created>1666434068966</created>
@@ -149,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667106824951</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="task solving">
+      <created>1667198512469</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667198512469</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
