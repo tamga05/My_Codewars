@@ -32,7 +32,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/it-incubator/projects/My_Codewars&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;yiiguxing.plugin.translate&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -71,7 +71,9 @@
       <workItem from="1667156590100" duration="99000" />
       <workItem from="1667156707730" duration="95000" />
       <workItem from="1667195919185" duration="1078000" />
-      <workItem from="1667281295940" duration="1013000" />
+      <workItem from="1667281295940" duration="1225000" />
+      <workItem from="1667284704235" duration="193000" />
+      <workItem from="1667286069991" duration="173000" />
     </task>
     <task id="LOCAL-00001" summary="task solving">
       <created>1666434068966</created>
@@ -157,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667198512469</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="task solving">
+      <created>1667283318178</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667283318178</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
