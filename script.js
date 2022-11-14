@@ -1292,3 +1292,10 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) {
 function expressionMatter(a, b, c) {
     return Math.max(a + b + c, (a + b) * c, a * (b + c), a * b * c);
 }
+
+
+// Sum of differences in array. Your task is to sum the differences between consecutive pairs in the array in descending order.
+
+function sumOfDifferences(arr) {
+    return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+}
