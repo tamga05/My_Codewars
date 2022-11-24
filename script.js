@@ -1435,3 +1435,12 @@ function remove(s, n) {
 function parseF(s) {
     return (Number.isNaN(parseFloat(s)) ? null : parseFloat(s));
 }
+
+
+// Array plus array.Get the sum of two arrays... Actually the sum of all their elements. I'll appreciate for your help.
+//
+// P.S. Each array includes only integer numbers.
+
+function arrayPlusArray(arr1, arr2) {
+    return arr1.concat(arr2).reduce((acc, cur) => acc + cur);
+}
