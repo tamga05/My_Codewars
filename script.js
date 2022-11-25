@@ -1444,3 +1444,11 @@ function parseF(s) {
 function arrayPlusArray(arr1, arr2) {
     return arr1.concat(arr2).reduce((acc, cur) => acc + cur);
 }
+
+
+// Find the first non-consecutive number.
+
+function firstNonConsecutive(arr) {
+    const result = arr.find((number, index) => number !== index + arr[0]);
+    return Number.isInteger(result) ? result : null;
+}
