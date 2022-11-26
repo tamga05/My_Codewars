@@ -1452,3 +1452,12 @@ function firstNonConsecutive(arr) {
     const result = arr.find((number, index) => number !== index + arr[0]);
     return Number.isInteger(result) ? result : null;
 }
+
+
+// No Loops 2 - You only need one. You will be given an array a and a value x. All you need to do is check whether the provided array contains the value, without using a loop.
+//
+// Array can contain numbers or strings. x can be either. Return true if the array contains the value, false if not. With strings you will need to account for case.
+
+function check(a, x) {
+    return a.includes(x);
+}
