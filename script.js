@@ -1488,3 +1488,12 @@ const remove = s => `${s.replace(/!+/g, '')}!`;
 function reverse(string) {
     return string.split(' ').reverse().join(' ');
 }
+
+
+// Calculate average. Write a function which calculates the average of the numbers in a given list.
+//
+// Note: Empty arrays should return 0.
+
+function find_average(array) {
+    return array.reduce((result, current) => result + current, 0) / array.length;
+}
