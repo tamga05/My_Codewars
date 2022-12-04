@@ -1545,3 +1545,11 @@ function stringToArray(string) {
 // All inputs are integers. Assume no irregularities to the cuboid brick. You may assume the bottle is shaped like a cylinder. The brick cannot fit inside the rim. The ice brick placed into the bottle is the largest possible cuboid that could actually fit inside the inner volume.
 
 const iceBrickVolume = (radius, bottleLength, rimLength) => 2 * radius * radius * (bottleLength - rimLength);
+
+
+// Filter out the geese. Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
+
+function gooseFilter(birds) {
+    const geese = ['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher'];
+    return birds.filter(b => !geese.includes(b));
+}
