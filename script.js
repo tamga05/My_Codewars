@@ -1222,8 +1222,7 @@ function add(a, b) {
 function solution([m1, m2, d], [um1, um2, ud]) {
     const G = 6.67e-11;
     const conversion = {
-        kg: 1, g: 1e-3, mg: 1e-6, μg: 1e-9, lb: .453592
-        , m: 1, cm: 1e-2, mm: 1e-3, μm: 1e-6, ft: .3048
+        kg: 1, g: 1e-3, mg: 1e-6, μg: 1e-9, lb: .453592, m: 1, cm: 1e-2, mm: 1e-3, μm: 1e-6, ft: .3048
     };
     return G * m1 * conversion[um1] * m2 * conversion[um2] / (d * conversion[ud]) ** 2;
 }
@@ -1575,4 +1574,14 @@ const check = (a, x) => a.includes(x);
 
 function powersOfTwo(n) {
     return Array.from({length: n + 1}, (v, k) => 2 ** k);
+}
+
+
+// Who is going to pay for the wall?
+// Don Drumphet lives in a nice neighborhood, but one of his neighbors has started to let his house go. Don Drumphet wants to build a wall between his house and his neighbor’s, and is trying to get the neighborhood association to pay for it. He begins to solicit his neighbors to petition to get the association to build the wall. Unfortunately for Don Drumphet, he cannot read very well, has a very limited attention span, and can only remember two letters from each of his neighbors’ names. As he collects signatures, he insists that his neighbors keep truncating their names until two letters remain, and he can finally read them.
+//
+// Your code will show Full name of the neighbor and the truncated version of the name as an array. If the number of the characters in name is less than or equal to two, it will return an array containing only the name as is
+
+function whoIsPaying(name) {
+    return name.length <= 2 ? [name] : [name, name.substr(0, 2)];
 }
