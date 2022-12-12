@@ -1655,14 +1655,7 @@ function greet(language) {
 //
 // Your goal in this kata is to determine which phrase the girls would say at the last petal for a flower of a given number of petals. The number of petals is always greater than 0.
 
-const phrases = [
-    'not at all',
-    'I love you',
-    'a little',
-    'a lot',
-    'passionately',
-    'madly',
-];
+const phrases = ['not at all', 'I love you', 'a little', 'a lot', 'passionately', 'madly',];
 
 const howMuchILoveYou = n => phrases[n % 6];
 
@@ -1694,4 +1687,14 @@ const max = (list) => Math.max(...list);
 
 function greet(name, owner) {
     return name === owner ? 'Hello boss' : 'Hello guest';
+}
+
+
+// Fake Binary.
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+//
+// Note: input will never be an empty string
+
+function fakeBin(x) {
+    return x.split('').map(n => n < 5 ? 0 : 1).join('');
 }
