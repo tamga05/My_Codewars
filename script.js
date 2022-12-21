@@ -1824,6 +1824,7 @@ function uefaEuro2016(teams, scores) {
 
 
 // Sum Mixed Array.
+//
 // Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
 //
 // Return your answer as a number.
@@ -1834,6 +1835,7 @@ function sumMix(x) {
 
 
 // Fuel Calculator.
+//
 // In this kata you will have to write a function that takes litres and pricePerLitre (in dollar) as arguments.
 //
 // Purchases of 2 or more litres get a discount of 5 cents per litre, purchases of 4 or more litres get a discount of 10 cents per litre, and so on every two litres, up to a maximum discount of 25 cents per litre. But total discount per litre cannot be more than 25 cents. Return the total cost rounded to 2 decimal places. Also you can guess that there will not be negative or non-numeric inputs.
@@ -1856,6 +1858,7 @@ const fuelPrice = (litres, pricePerLiter) => {
 
 
 // What's the real floor?
+//
 // Americans are odd people: in their buildings, the first floor is actually the ground floor and there is no 13th floor (due to superstition).
 //
 // Write a function that given a floor in the american system returns the floor in the european system.
@@ -1873,4 +1876,17 @@ const fuelPrice = (litres, pricePerLiter) => {
 
 function getRealFloor(n) {
     return n > 13 ? n - 2 : n > 0 ? n - 1 : n;
+}
+
+
+// Sum of positive.
+//
+// You get an array of numbers, return the sum of all of the positives ones.
+//
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+//
+// Note: if there is nothing to sum, the sum is default to 0.
+
+function positiveSum(arr) {
+    return arr.reduce((a, b) => a + (b > 0 ? b : 0), 0);
 }
