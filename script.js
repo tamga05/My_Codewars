@@ -1890,3 +1890,10 @@ function getRealFloor(n) {
 function positiveSum(arr) {
     return arr.reduce((a, b) => a + (b > 0 ? b : 0), 0);
 }
+
+
+// Is it a number?
+//
+// Given a string s, write a method (function) that will return true if its a valid single integer or floating number or false if its not.
+
+const isDigit = (s) => s === parseFloat(s);
