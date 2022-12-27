@@ -1989,5 +1989,29 @@ const logicalCalc = (array, op) => array.reduce(operations[op]);
 // You have to write a function that determine if a number is Evil of Odious, function should return "It's Evil!" in case of evil number and "It's Odious!" in case of odious number.
 
 function evil(n) {
-    return n.toString(2).match(/1/g).length % 2 ? 'It\'s Odious!' : 'It\'s Evil!';
+    return n.toString().match(/1/g).length % 2 ? 'It\'s Odious!' : 'It\'s Evil!';
+}
+
+
+// Training JS #32: methods of Math---round() ceil() and floor().
+
+// Coding in function roundIt. function accept 1 parameter n. It's a number with a decimal point. Please use different methods based on the location of the decimal point, turn the number into an integer.
+//
+// If the decimal point is on the left side of the number (that is, the count of digits on the left of the decimal point is less than that on the right), Using ceil() method.
+//
+// roundIt(3.45) should return 4
+// If the decimal point is on the right side of the number (that is, the count of digits on the left of the decimal point is more than that on the right), Using floor() method.
+//
+// roundIt(34.5) should return 34
+// If the decimal point is on the middle of the number (that is, the count of digits on the left of the decimal point is equals that on the right), Using round() method.
+//
+// roundIt(34.56) should return 35
+
+function roundIt(n) {
+
+    let [left, right] = n.toString().split('.').map(x => x.length),
+        dx = left - right,
+        fn = dx < 0 ? Math.ceil : dx > 0 ? Math.floor : Math.round;
+
+    return fn(n);
 }

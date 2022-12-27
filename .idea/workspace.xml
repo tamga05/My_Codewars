@@ -42,7 +42,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -202,14 +202,10 @@
       <workItem from="1671863546716" duration="48000" />
       <workItem from="1671889907650" duration="49000" />
       <workItem from="1671945157311" duration="566000" />
-      <workItem from="1672002699941" duration="57000" />
-    </task>
-    <task id="LOCAL-00008" summary="task solving">
-      <created>1667800849277</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1667800849277</updated>
+      <workItem from="1672002699941" duration="382000" />
+      <workItem from="1672003717917" duration="118000" />
+      <workItem from="1672004106312" duration="27000" />
+      <workItem from="1672047940711" duration="670000" />
     </task>
     <task id="LOCAL-00009" summary="task solving">
       <created>1667913700143</created>
@@ -547,7 +543,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671945534402</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="task solving">
+      <created>1672002836174</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1672002836174</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
