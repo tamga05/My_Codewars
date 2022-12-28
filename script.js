@@ -1472,7 +1472,7 @@ function check(a, x) {
 // remove("Hi! Hi!") === "Hi Hi!"
 // remove("Hi") === "Hi!"
 
-const remove = s => `${s.replace(/!+/g, '')}!`;
+remove = s => `${s.replace(/!+/g, '')}!`;
 
 
 // Reversing Words in a String. You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this is not clear enough, here are some examples:
@@ -1794,11 +1794,7 @@ function toBinary(n) {
 // Return the resulting array.
 
 function isVow(a) {
-    return a.map(
-        charCode =>
-            /[aeiou]/.test(String.fromCharCode(charCode))
-                ? String.fromCharCode(charCode)
-                : charCode);
+    return a.map(charCode => /[aeiou]/.test(String.fromCharCode(charCode)) ? String.fromCharCode(charCode) : charCode);
 }
 
 
@@ -1970,9 +1966,7 @@ function periodIsLate(last, today, cycleLength) {
 // A Boolean value (True or False).
 
 const operations = {
-    AND: (a, b) => a && b,
-    OR: (a, b) => a || b,
-    XOR: (a, b) => a !== b,
+    AND: (a, b) => a && b, OR: (a, b) => a || b, XOR: (a, b) => a !== b,
 };
 
 const logicalCalc = (array, op) => array.reduce(operations[op]);
@@ -2009,9 +2003,19 @@ function evil(n) {
 
 function roundIt(n) {
 
-    let [left, right] = n.toString().split('.').map(x => x.length),
-        dx = left - right,
-        fn = dx < 0 ? Math.ceil : dx > 0 ? Math.floor : Math.round;
+    let [left, right] = n.toString().split('.').map(x => x.length), dx = left - right, fn = dx < 0 ? Math.ceil : dx > 0 ? Math.floor : Math.round;
 
     return fn(n);
+}
+
+
+//Points of Reflection
+
+// "Point reflection" or "point symmetry" is a basic concept in geometry where a given point, P, at a given position relative to a mid-point, Q has a corresponding point, P1, which is the same distance from Q but in the opposite direction.
+//
+// Task
+// Given two points P and Q, output the symmetric point of point P about Q. Each argument is a two-element array of integers representing the point's X and Y coordinates. Output should be in the same format, giving the X and Y coordinates of point P1. You do not have to validate the input.
+
+function symmetricPoint([a, b], [c, d]) {
+    return [c * 2 - a, d * 2 - b];
 }
