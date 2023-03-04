@@ -2146,3 +2146,10 @@ function first(arr, n = 1) {
 function countSheeps(arrayOfSheeps) {
     return arrayOfSheeps.filter(Boolean).length;
 }
+
+
+// Find the position!
+
+function position(letter) {
+    return `Position of alphabet: ${letter.charCodeAt() - 96}`;
+}
