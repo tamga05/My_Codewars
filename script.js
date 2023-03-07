@@ -2156,7 +2156,7 @@ function countSheeps(arrayOfSheeps) {
 // Input :: "a"
 //
 // Ouput :: "Position of alphabet: 1"
-
+//
 function position(letter) {
     return `Position of alphabet: ${letter.charCodeAt() - 96}`;
 }
