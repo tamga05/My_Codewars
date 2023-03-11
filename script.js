@@ -2211,6 +2211,8 @@ const checkExam = (answers, responses) => {
 const elevator = (left, right, call) => Math.abs(call - left) < Math.abs(call - right) ? 'left' : 'right';
 
 
+// Twice as old.
+
 // DESCRIPTION:
 // Your function takes two arguments:
 //
