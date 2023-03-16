@@ -2288,3 +2288,17 @@ Your harried co-workers are looking to you for a solution to take this garbled t
 function stringClean(s) {
     return s.replace(/\d/g, '');
 }
+
+
+// Heads and Legs
+
+const isNatural = animal => animal >= 0 && Number.isInteger(animal);
+const animals = (heads, legs) => {
+    const cows = legs / 2 - heads;
+    const chickens = heads - cows;
+
+    return isNatural(chickens) && isNatural(cows)
+        ? [chickens, cows]
+        : 'No solutions';
+};
+// }
