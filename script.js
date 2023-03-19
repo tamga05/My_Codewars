@@ -2186,7 +2186,7 @@ const checkExam = (answers, responses) => {
 };
 
 
-// Closest elevator
+// Closest elevator.
 
 // DESCRIPTION:
 // Given 2 elevators (named "left" and "right") in a building with 3 floors (numbered 0 to 2), write a function elevator accepting 3 arguments (in order):
@@ -2225,7 +2225,7 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 }
 
 
-// Simple Fun #1: Seats in Theater
+// Simple Fun #1: Seats in Theater.
 
 // Task
 // Your friend advised you to see a new performance in the most popular theater in the city. He knows a lot about art and his advice is usually good, but not this time: the performance turned out to be awfully dull. It's so bad you want to sneak out, which is quite simple, especially since the exit is located right behind your row to the left. All you need to do is climb over your seat and make your way to the exit.
@@ -2260,7 +2260,7 @@ function litres(time) {
 }
 
 
-// Sort and Star
+// Sort and Star.
 
 /*
 Description:
@@ -2274,7 +2274,7 @@ function twoSort(s) {
 }
 
 
-// String cleaning
+// String cleaning.
 
 /*
 Description:
@@ -2290,7 +2290,7 @@ function stringClean(s) {
 }
 
 
-// Heads and Legs
+// Heads and Legs.
 
 const isNatural = animal => animal >= 0 && Number.isInteger(animal);
 const animals = (heads, legs) => {
@@ -2303,7 +2303,7 @@ const animals = (heads, legs) => {
 };
 
 
-// Classy Extentions
+// Classy Extentions.
 
 // Description:
 // Classy Extensions, this kata is mainly aimed at the new JS ES6 Update introducing class extends You will be preloaded with the Animal class, so you should only edit the Cat class.
@@ -2319,7 +2319,7 @@ class Cat extends Animal {
 }
 
 
-// Triple Trouble
+// Triple Trouble.
 // Create a function that will return a string that combines all of the letters of the three inputed strings in groups. Taking the first letter of all of the inputs and grouping them next to each other. Do this for every letter, see example below!
 // Ex) Input: "aa", "bb" , "cc" => Output: "abcabc"
 // Note: You can expect all of the inputs to be the same length.
@@ -2327,3 +2327,10 @@ class Cat extends Animal {
 function tripleTrouble(one, two, three) {
     return one.split('').reduce((a, s, c) => `${a}${one[c]}${two[c]}${three[c]}`, '');
 }
+
+
+// Not so black box.
+
+// The kata has been preloaded with a function called blackBox. Figure out what the function does.
+
+JSopenSesame();
