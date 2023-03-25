@@ -264,13 +264,8 @@
       <workItem from="1679366787543" duration="722000" />
       <workItem from="1679458733079" duration="1431000" />
       <workItem from="1679538692624" duration="1922000" />
-    </task>
-    <task id="LOCAL-00041" summary="task solving">
-      <created>1670578709435</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1670578709435</updated>
+      <workItem from="1679626008503" duration="896000" />
+      <workItem from="1679711246688" duration="595000" />
     </task>
     <task id="LOCAL-00042" summary="task solving">
       <created>1670654166355</created>
@@ -608,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679539186625</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="task solving">
+      <created>1679626073629</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1679626073629</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -619,7 +621,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
