@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a4115fb-6567-499c-bd67-9d568d5f6977" name="Changes" comment="task solving">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
@@ -39,7 +40,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tamga/Downloads/intellij-rainbow-brackets-6.26.zip&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tamga/Downloads/astro-231.8109.91.zip&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -269,14 +272,12 @@
       <workItem from="1679797917206" duration="1099000" />
       <workItem from="1679885345657" duration="1044000" />
       <workItem from="1679971463556" duration="951000" />
-      <workItem from="1680063627689" duration="596000" />
-    </task>
-    <task id="LOCAL-00046" summary="task solving">
-      <created>1670999901264</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1670999901264</updated>
+      <workItem from="1680063627689" duration="1240000" />
+      <workItem from="1680067123376" duration="498000" />
+      <workItem from="1680067665600" duration="259000" />
+      <workItem from="1680067938279" duration="29000" />
+      <workItem from="1680067975630" duration="125000" />
+      <workItem from="1680069706469" duration="60000" />
     </task>
     <task id="LOCAL-00047" summary="task solving">
       <created>1671085700013</created>
@@ -614,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679971504076</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="task solving">
+      <created>1680065485644</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1680065485644</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
