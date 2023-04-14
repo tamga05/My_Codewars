@@ -2816,3 +2816,16 @@ Make sure that your function does not return a false positive by just checking j
 function isToday(date) {
     return new Date().toDateString() === date.toDateString();
 }
+
+
+// Grasshopper - Order of operations.
+
+/*
+Description:
+Grasshopper Order of Operations
+You are running the calculation 2 + 2 * 2 + 2 * 2 and expect to get the answer 32 but instead the function keeps returning 10. Fix the function to make it return 32 without changing the number or the operators.
+*/
+
+function orderOperations() {
+    return (2 + 2) * (2 + 2) * 2;
+}
