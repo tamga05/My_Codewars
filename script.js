@@ -2829,3 +2829,19 @@ You are running the calculation 2 + 2 * 2 + 2 * 2 and expect to get the answer 3
 function orderOperations() {
     return (2 + 2) * (2 + 2) * 2;
 }
+
+
+// Grasshopper - Basic Function Fixer.jsr.
+
+/*
+Description:
+Fix the function
+I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors, but it returns the wrong number.
+
+Can you help me fix the function?
+*/
+
+function addFive(num) {
+    const total = num + 5;
+    return total;
+}

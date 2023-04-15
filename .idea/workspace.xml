@@ -41,13 +41,13 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tamga/Downloads/astro-231.8109.91.zip&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tamga/Downloads/intellij-rainbow-brackets-6.26.zip&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -292,13 +292,11 @@
       <workItem from="1681185692653" duration="481000" />
       <workItem from="1681273228740" duration="305000" />
       <workItem from="1681361482888" duration="972000" />
-    </task>
-    <task id="LOCAL-00061" summary="task solving">
-      <created>1672578524320</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1672578524320</updated>
+      <workItem from="1681447122076" duration="311000" />
+      <workItem from="1681447441868" duration="1973000" />
+      <workItem from="1681450115426" duration="143000" />
+      <workItem from="1681450265519" duration="136000" />
+      <workItem from="1681532689092" duration="611000" />
     </task>
     <task id="LOCAL-00062" summary="task solving">
       <created>1672579026755</created>
@@ -636,7 +634,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681361542763</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="task solving">
+      <created>1681447138411</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1681447138411</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
