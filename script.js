@@ -2940,3 +2940,18 @@ For an example list of 1, 3, 5, 7
 const findAverage = function (nums) {
     return nums.reduce((a, b) => (a + b), 0) / nums.length;
 };
+
+
+// Grasshopper - If/else syntax debug.
+
+/*
+Description:
+If/else syntax debug
+While making a game, your partner, Greg, decided to create a function to check if the user is still alive called checkAlive/CheckAlive. Unfortunately, Greg made some errors while creating the function.
+checkAlive/CheckAlive should return true if the player's health is greater than 0 or false if it is 0 or below.
+checkAlive receives one parameter health which will always be a whole number between -10 and 10.
+*/
+
+function checkAlive(health) {
+    return health > 0;
+}
