@@ -2773,6 +2773,9 @@ function addExtra(listOfNumbers) {
 }
 
 
+// Beginner Series #1 School Paperwork.
+
+
 // Grasshopper - Terminal game move function.
 
 /*
@@ -2970,3 +2973,34 @@ Example:
 function twoDecimalPlaces(n) {
     return +n.toFixed(2);
 }
+
+
+// Beginner Series #1 School Paperwork.
+
+/*
+Description:
+Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+Your task is to calculate how many blank pages do you need.
+Example:
+paperwork(5, 5) == 25
+Note! if n or m < 0 return 0! Waiting for translations and Feedback! Thanks!
+*/
+
+function paperwork(n, m) {
+    return n > 0 && m > 0 ? n * m : 0;
+}
+
+
+//  Super Duper Easy.
+
+/*
+Description:
+Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+Note: in C#, you'll always get the input as a string, so the above applies if the string isn't representing a double value.
+*/
+
+function problem(x) {
+    return (typeof x === 'number') ? x * 50 + 6 : 'Error';
+}
+
+
