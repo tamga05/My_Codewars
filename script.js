@@ -2104,10 +2104,7 @@ function main(verb, noun) {
 //
 // So the years 0, -64 and 2016 will return 366 days. Whilst 1974, -10 and 666 will return 365 days.
 
-const yearDays = year =>
-    `${year} has ${
-        (!(year % 100) && year % 400) || year % 4 ? '365' : '366'
-    } days`;
+const yearDays = year => `${year} has ${(!(year % 100) && year % 400) || year % 4 ? '365' : '366'} days`;
 
 
 // Pick a set of first elements.
@@ -2297,9 +2294,7 @@ const animals = (heads, legs) => {
     const cows = legs / 2 - heads;
     const chickens = heads - cows;
 
-    return isNatural(chickens) && isNatural(cows)
-        ? [chickens, cows]
-        : 'No solutions';
+    return isNatural(chickens) && isNatural(cows) ? [chickens, cows] : 'No solutions';
 };
 
 
@@ -2355,13 +2350,7 @@ Output must be returned as a number data-type, greater than or equal to 0, with 
 Using these parameters, create the function that will calculate Bob's and other partier's BAC.
 */
 
-const bloodAlcoholContent = ({ounces, abv}, weight, sex, time) =>
-    Number(
-        (
-            ounces * abv * 5.14 / weight * (sex === 'male' ? 0.73 : 0.66) -
-            0.015 * time
-        ).toFixed(4)
-    );
+const bloodAlcoholContent = ({ounces, abv}, weight, sex, time) => Number((ounces * abv * 5.14 / weight * (sex === 'male' ? 0.73 : 0.66) - 0.015 * time).toFixed(4));
 
 
 // isReallyNaN.
@@ -2556,10 +2545,7 @@ const firstLetter = str => str[0].toUpperCase();
 
 const isValidName = name => /[a-z]/gi.test(name);
 
-const aliasGen = (fName, sName) =>
-    isValidName(fName[0]) && isValidName(sName[0])
-        ? `${firstName[firstLetter(fName)]} ${surname[firstLetter(sName)]}`
-        : 'Your name must start with a letter from A - Z.';
+const aliasGen = (fName, sName) => isValidName(fName[0]) && isValidName(sName[0]) ? `${firstName[firstLetter(fName)]} ${surname[firstLetter(sName)]}` : 'Your name must start with a letter from A - Z.';
 
 
 // Thinkful - Number Drills: Blue and red marbles.
@@ -2664,10 +2650,7 @@ let health = 100;
 let position = 0;
 let coins = 0;
 
-const main = () =>
-    [rollDice, move, combat, getCoins, buyHealth, printStatus].forEach(action =>
-        action()
-    );
+const main = () => [rollDice, move, combat, getCoins, buyHealth, printStatus].forEach(action => action());
 
 
 // Find the Difference in Age between Oldest and Youngest Family Members.
@@ -2890,12 +2873,7 @@ You are using a library (Game.Logic in C#) that already has the functions below.
 */
 
 function doTurn() {
-    rollDice(),
-        move(),
-        combat(),
-        getCoins(),
-        buyHealth(),
-        printStatus();
+    rollDice(), move(), combat(), getCoins(), buyHealth(), printStatus();
 }
 
 
@@ -2972,4 +2950,33 @@ Your points are not included in the array of your classes points. For calculatin
 
 function betterThanAverage(classPoints, yourPoints) {
     return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length;
+}
+
+
+// Fun with ES6 Classes #1 - People, people, people.
+
+/*
+Description:
+Fun with ES6 Classes #1 - People, people, people
+Time for some OOP fun!
+Define a class Person with the following properties:
+A constructor that accepts 4 arguments: firstName/FirstName (defaults to "John" if not set), lastName/LastName (defaults to "Doe" if not set), age/Age (defaults to 0 if not set) and gender/Gender (defaults to "Male" if not set). These should be stored in this.firstName/this.FirstName, this.lastName/this.LastName, this.age/this.Age and this.gender/this.Gender respectively.
+A method sayFullName/SayFullName that accepts no arguments and returns the full name (e.g. "John Doe")
+A class/static method greetExtraTerrestrials/GreetExtraTerrestrials that accepts one parameter raceName and returns "Welcome to Planet Earth raceName". For example, if the race name is "Martians", it should say "Welcome to Planet Earth Martians"
+You may use any valid syntax you like; however, it is highly recommended that you complete this Kata using ES6 syntax and features.
+Have fun! :D
+*/
+
+class Person {
+    constructor(firstName = 'John', lastName = 'Doe', age = 0, gender = 'Male') {
+        Object.assign(this, {firstName, lastName, age, gender});
+    }
+
+    sayFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    static greetExtraTerrestrials(raceName) {
+        return `Welcome to Planet Earth ${raceName}`;
+    }
 }
