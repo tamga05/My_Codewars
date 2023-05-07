@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a4115fb-6567-499c-bd67-9d568d5f6977" name="Changes" comment="task solving">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-    </list>
+    <list default="true" id="9a4115fb-6567-499c-bd67-9d568d5f6977" name="Changes" comment="task solving" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -317,13 +314,7 @@
       <workItem from="1682704899804" duration="110000" />
       <workItem from="1682790751194" duration="2175000" />
       <workItem from="1682794261589" duration="337000" />
-    </task>
-    <task id="LOCAL-00069" summary="task solving">
-      <created>1678047439636</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1678047439636</updated>
+      <workItem from="1682877352943" duration="66000" />
     </task>
     <task id="LOCAL-00070" summary="task solving">
       <created>1678129593627</created>
@@ -661,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682790781300</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="task solving">
+      <created>1682877366090</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1682877366090</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
