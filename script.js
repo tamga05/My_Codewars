@@ -3004,29 +3004,20 @@ function problem(x) {
 }
 
 
-// Playing with cubes II.
+// Online RPG: player to qualifying stage?.
 
 /*
 Description:
-Hey Codewarrior!
-You already implemented a Cube class, but now we need your help again! I'm talking about constructors. We don't have one. Let's code two: One taking an integer and one handling no given arguments!
-Also we got a problem with negative values. Correct the code so negative values will be switched to positive ones!
-The constructor taking no arguments should assign 0 to Cube's Side property.
+Let's imagine we have a popular online RPG. A player begins with a score of 0 in class E5. A1 is the highest level a player can achieve.
+Now let's say the players wants to rank up to class E4. To do so the player needs to achieve at least 100 points to enter the qualifying stage.
+Write a script that will check to see if the player has achieved at least 100 points in his class. If so, he enters the qualifying stage.
+In that case, we return, "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.".
+Otherwise return, False/false (according to the language n use).
+NOTE
+: Remember, in C# you have to cast your output value to Object type!
 */
 
-// This Cube function needs help
-
-class Cube {
-    constructor(n = 0) {
-        this.setSide(n);
-    }
-
-    getSide() {
-        return this.side;
-    }
-
-    setSide(n) {
-        if (typeof n !== 'number') throw new Error('Only numbers accepted');
-        this.side = Math.abs(n);
-    }
+function playerRankUp(points) {
+    if (points >= 100) return 'Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.';
+    return false;
 }
