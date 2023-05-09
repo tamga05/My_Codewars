@@ -2975,12 +2975,177 @@ function twoDecimalPlaces(n) {
 }
 
 
-<<<<<<< HEAD
-    static greetExtraTerrestrials(raceName) {
-        return `Welcome to Planet Earth ${raceName}`;
+// Training JS #21: Methods of String object--trim() and the string template.
+
+/*
+Description:
+Training JS #21:
+Methods of String object--trim() and the string template
+
+This is the last lesson about the string object, we will learn the two knowledge used to format the string.
+
+The first is a simple method: trim(). Usage is very simple:
+
+stringObject.trim()
+Its role is very simple too: remove the whitespace at the edge of the string. example:
+
+var str="             abc                ";
+console.log(str.trim());
+str="\n\n\n\nabc\t\t\t"
+console.log(str.trim());
+//output:
+abc
+abc
+Various non visible characters such as space tab are called whitespace. more detailed information please refer to:whitespace
+
+trim() only remove whitespace at edge of string, whitespace in the middle of the string will not be removed.
+
+var str="  a b c  ";
+console.log(str.trim());
+
+//output:
+a b c
+Next we will learn a new member of the ES6: string template, We look at the following code:
+
+var s1="My name is John.";
+var s2='My name is John.';
+var s3=`My name is John.`;
+Are their values equal? Yes, they are equal. Do you see the difference in s2 and s3? Bingo! single quotes ' and backtick ` are different. Of course, this is not the biggest difference between them. Using double quotes " or single quotes ', we get a fixed string value. Use the backtick ` , we are defining a string template.
+
+We can use ${variable} insert a variable into string template. like this:
+
+var a=1,b=2;
+console.log(`${a} + ${b} = ${a+b}`);
+
+//output:
+1 + 2 = 3
+Or we can write this:
+
+function plus(a,b){
+  console.log(`${a} + ${b} = ${a+b}`);
+}
+plus(1,2);
+plus(3,4);
+
+//output:
+1 + 2 = 3
+3 + 4 = 7
+Isn't it interesting? There are more interesting things to happen. When the string template appears in the back of a function, It will be used as a parameter. Look at the following example:
+
+function repeatIt(s){
+  console.log(`${s} ${s} ${s}`);
+}
+repeatIt `a`;
+repeatIt `ab`;
+
+//output:
+a a a
+ab ab ab
+Ok, lesson is over. let's us do some task.
+
+#Task
+Coding in function ```fiveLine```, function accept 1 parameter:```s```. ```s``` is a string.
+
+Please return a string of 5 lines(newline symbol is ```\n```). The first line has one s; Second line have two s; and so on..Fifth line have five s;
+
+Note1: The two sides of the parameter ```s``` may contain some whitespace, please clear them before using ```s```.
+
+Note2: Using a string template can make your job easier.
+
+Example:
+```
+fiveLine("  a") should return "a\naa\naaa\naaaa\naaaaa"
+a
+aa
+aaa
+aaaa
+aaaaa       <---The effect when you console.log it
+fiveLine("  xy ")
+should return "xy\nxyxy\nxyxyxy\nxyxyxyxy\nxyxyxyxyxy"
+xy
+xyxy
+xyxyxy
+xyxyxyxy
+xyxyxyxyxy  <---The effect when you console.log it
+```
+*/
+
+const fiveLine = s => {
+    const sWithoutWhitespace = s.trim();
+    let result = '';
+
+    for (let i = 1; i <= 5; i++) {
+        if (i === 5) {
+            result += `${sWithoutWhitespace.repeat(i)}`;
+            break;
+        }
+        result += `${sWithoutWhitespace.repeat(i)}\n`;
     }
+
+    return result;
+};
+
+// Beginner Series #1 School Paperwork.
+
+/*
+Description:
+Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+Your task is to calculate how many blank pages do you need.
+Example:
+paperwork(5, 5) == 25
+Note! if n or m < 0 return 0! Waiting for translations and Feedback! Thanks!
+*/
+
+function paperwork(n, m) {
+    return n > 0 && m > 0 ? n * m : 0;
 }
 
+
+//  Super Duper Easy.
+
+/*
+Description:
+Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+Note: in C#, you'll always get the input as a string, so the above applies if the string isn't representing a double value.
+*/
+
+function problem(x) {
+    return (typeof x === 'number') ? x * 50 + 6 : 'Error';
+}
+
+
+// Online RPG: player to qualifying stage?.
+
+/*
+Description:
+Let's imagine we have a popular online RPG. A player begins with a score of 0 in class E5. A1 is the highest level a player can achieve.
+Now let's say the players wants to rank up to class E4. To do so the player needs to achieve at least 100 points to enter the qualifying stage.
+Write a script that will check to see if the player has achieved at least 100 points in his class. If so, he enters the qualifying stage.
+In that case, we return, "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.".
+Otherwise return, False/false (according to the language n use).
+NOTE
+: Remember, in C# you have to cast your output value to Object type!
+*/
+
+function playerRankUp(points) {
+    if (points >= 100) return 'Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.';
+    return false;
+}
+
+
+// Keep up the hoop.
+
+/*
+Description:
+Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him
+Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message :)
+-If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
+-If he doesn't get 10 hoops, return the string "Keep at it until you get it".
+*/
+
+function hoopCount(n) {
+    return n >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it';
+}
 
 // Training JS #21: Methods of String object--trim() and the string template.
 
@@ -3091,66 +3256,3 @@ const fiveLine = s => {
 
     return result;
 };
-=======
-// Beginner Series #1 School Paperwork.
-
-/*
-Description:
-Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
-Your task is to calculate how many blank pages do you need.
-Example:
-paperwork(5, 5) == 25
-Note! if n or m < 0 return 0! Waiting for translations and Feedback! Thanks!
-*/
-
-function paperwork(n, m) {
-    return n > 0 && m > 0 ? n * m : 0;
-}
-
-
-//  Super Duper Easy.
-
-/*
-Description:
-Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
-Note: in C#, you'll always get the input as a string, so the above applies if the string isn't representing a double value.
-*/
-
-function problem(x) {
-    return (typeof x === 'number') ? x * 50 + 6 : 'Error';
-}
-
-
-// Online RPG: player to qualifying stage?.
-
-/*
-Description:
-Let's imagine we have a popular online RPG. A player begins with a score of 0 in class E5. A1 is the highest level a player can achieve.
-Now let's say the players wants to rank up to class E4. To do so the player needs to achieve at least 100 points to enter the qualifying stage.
-Write a script that will check to see if the player has achieved at least 100 points in his class. If so, he enters the qualifying stage.
-In that case, we return, "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.".
-Otherwise return, False/false (according to the language n use).
-NOTE
-: Remember, in C# you have to cast your output value to Object type!
-*/
-
-function playerRankUp(points) {
-    if (points >= 100) return 'Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.';
-    return false;
-}
-
-
-// Keep up the hoop.
-
-/*
-Description:
-Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him
-Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message :)
--If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
--If he doesn't get 10 hoops, return the string "Keep at it until you get it".
-*/
-
-function hoopCount(n) {
-    return n >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it';
-}
->>>>>>> 01ededb3a6f83c2df0318d4e5ea6cdad7922ea59
