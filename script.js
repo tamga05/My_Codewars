@@ -2104,7 +2104,10 @@ function main(verb, noun) {
 //
 // So the years 0, -64 and 2016 will return 366 days. Whilst 1974, -10 and 666 will return 365 days.
 
-const yearDays = year => `${year} has ${(!(year % 100) && year % 400) || year % 4 ? '365' : '366'} days`;
+const yearDays = year =>
+    `${year} has ${
+        (!(year % 100) && year % 400) || year % 4 ? '365' : '366'
+    } days`;
 
 
 // Pick a set of first elements.
@@ -2294,7 +2297,9 @@ const animals = (heads, legs) => {
     const cows = legs / 2 - heads;
     const chickens = heads - cows;
 
-    return isNatural(chickens) && isNatural(cows) ? [chickens, cows] : 'No solutions';
+    return isNatural(chickens) && isNatural(cows)
+        ? [chickens, cows]
+        : 'No solutions';
 };
 
 
@@ -2350,7 +2355,13 @@ Output must be returned as a number data-type, greater than or equal to 0, with 
 Using these parameters, create the function that will calculate Bob's and other partier's BAC.
 */
 
-const bloodAlcoholContent = ({ounces, abv}, weight, sex, time) => Number((ounces * abv * 5.14 / weight * (sex === 'male' ? 0.73 : 0.66) - 0.015 * time).toFixed(4));
+const bloodAlcoholContent = ({ounces, abv}, weight, sex, time) =>
+    Number(
+        (
+            ounces * abv * 5.14 / weight * (sex === 'male' ? 0.73 : 0.66) -
+            0.015 * time
+        ).toFixed(4)
+    );
 
 
 // isReallyNaN.
@@ -2545,7 +2556,10 @@ const firstLetter = str => str[0].toUpperCase();
 
 const isValidName = name => /[a-z]/gi.test(name);
 
-const aliasGen = (fName, sName) => isValidName(fName[0]) && isValidName(sName[0]) ? `${firstName[firstLetter(fName)]} ${surname[firstLetter(sName)]}` : 'Your name must start with a letter from A - Z.';
+const aliasGen = (fName, sName) =>
+    isValidName(fName[0]) && isValidName(sName[0])
+        ? `${firstName[firstLetter(fName)]} ${surname[firstLetter(sName)]}`
+        : 'Your name must start with a letter from A - Z.';
 
 
 // Thinkful - Number Drills: Blue and red marbles.
@@ -2650,7 +2664,10 @@ let health = 100;
 let position = 0;
 let coins = 0;
 
-const main = () => [rollDice, move, combat, getCoins, buyHealth, printStatus].forEach(action => action());
+const main = () =>
+    [rollDice, move, combat, getCoins, buyHealth, printStatus].forEach(action =>
+        action()
+    );
 
 
 // Find the Difference in Age between Oldest and Youngest Family Members.
@@ -2754,6 +2771,9 @@ P.S. You have to create a new list and add a new item to that. (This Kata is ori
 function addExtra(listOfNumbers) {
     return [...listOfNumbers, 1];
 }
+
+
+// Beginner Series #1 School Paperwork.
 
 
 // Grasshopper - Terminal game move function.
@@ -2873,7 +2893,12 @@ You are using a library (Game.Logic in C#) that already has the functions below.
 */
 
 function doTurn() {
-    rollDice(), move(), combat(), getCoins(), buyHealth(), printStatus();
+    rollDice(),
+        move(),
+        combat(),
+        getCoins(),
+        buyHealth(),
+        printStatus();
 }
 
 
@@ -2920,62 +2945,37 @@ const findAverage = function (nums) {
 };
 
 
-// Correct the mistakes of the character recognition software.
+// Grasshopper - If/else syntax debug.
 
 /*
 Description:
-Character recognition software is widely used to digitise printed texts. Thus the texts can be edited, searched and stored on a computer.
-When documents (especially pretty old ones written with a typewriter), are digitised character recognition softwares often make mistakes.
-Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
-S is misinterpreted as 5
-O is misinterpreted as 0
-I is misinterpreted as 1
-The test cases contain numbers only by mistake.
+If/else syntax debug
+While making a game, your partner, Greg, decided to create a function to check if the user is still alive called checkAlive/CheckAlive. Unfortunately, Greg made some errors while creating the function.
+checkAlive/CheckAlive should return true if the player's health is greater than 0 or false if it is 0 or below.
+checkAlive receives one parameter health which will always be a whole number between -10 and 10.
 */
 
-correct = s => s.replace(/0/g, 'O').replace(/1/g, 'I').replace(/5/g, 'S');
-
-
-// How good are you really?
-
-/*
-Description:
-There was a test in your class and you passed it. Congratulations!
-But you're an ambitious person. You want to know if you're better than the average student in your class.
-You got an array with your colleges' points. Now calculate the average to your points!
-Return True if you're better, else False!
-Note:
-Your points are not included in the array of your classes points. For calculating the average point you may add your point to the given array!
-*/
-
-function betterThanAverage(classPoints, yourPoints) {
-    return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length;
+function checkAlive(health) {
+    return health > 0;
 }
 
 
-// Fun with ES6 Classes #1 - People, people, people.
+// Formatting decimal places #0.
 
 /*
 Description:
-Fun with ES6 Classes #1 - People, people, people
-Time for some OOP fun!
-Define a class Person with the following properties:
-A constructor that accepts 4 arguments: firstName/FirstName (defaults to "John" if not set), lastName/LastName (defaults to "Doe" if not set), age/Age (defaults to 0 if not set) and gender/Gender (defaults to "Male" if not set). These should be stored in this.firstName/this.FirstName, this.lastName/this.LastName, this.age/this.Age and this.gender/this.Gender respectively.
-A method sayFullName/SayFullName that accepts no arguments and returns the full name (e.g. "John Doe")
-A class/static method greetExtraTerrestrials/GreetExtraTerrestrials that accepts one parameter raceName and returns "Welcome to Planet Earth raceName". For example, if the race name is "Martians", it should say "Welcome to Planet Earth Martians"
-You may use any valid syntax you like; however, it is highly recommended that you complete this Kata using ES6 syntax and features.
-Have fun! :D
+Each number should be formatted that it is rounded to two decimal places. You don't need to check whether the input is a valid number because only valid numbers are used in the tests.
+Example:
+5.5589 is rounded 5.56
+3.3424 is rounded 3.34
 */
 
-class Person {
-    constructor(firstName = 'John', lastName = 'Doe', age = 0, gender = 'Male') {
-        Object.assign(this, {firstName, lastName, age, gender});
-    }
+function twoDecimalPlaces(n) {
+    return +n.toFixed(2);
+}
 
-    sayFullName() {
-        return `${this.firstName} ${this.lastName}`;
-    }
 
+<<<<<<< HEAD
     static greetExtraTerrestrials(raceName) {
         return `Welcome to Planet Earth ${raceName}`;
     }
@@ -3091,3 +3091,66 @@ const fiveLine = s => {
 
     return result;
 };
+=======
+// Beginner Series #1 School Paperwork.
+
+/*
+Description:
+Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+Your task is to calculate how many blank pages do you need.
+Example:
+paperwork(5, 5) == 25
+Note! if n or m < 0 return 0! Waiting for translations and Feedback! Thanks!
+*/
+
+function paperwork(n, m) {
+    return n > 0 && m > 0 ? n * m : 0;
+}
+
+
+//  Super Duper Easy.
+
+/*
+Description:
+Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+Note: in C#, you'll always get the input as a string, so the above applies if the string isn't representing a double value.
+*/
+
+function problem(x) {
+    return (typeof x === 'number') ? x * 50 + 6 : 'Error';
+}
+
+
+// Online RPG: player to qualifying stage?.
+
+/*
+Description:
+Let's imagine we have a popular online RPG. A player begins with a score of 0 in class E5. A1 is the highest level a player can achieve.
+Now let's say the players wants to rank up to class E4. To do so the player needs to achieve at least 100 points to enter the qualifying stage.
+Write a script that will check to see if the player has achieved at least 100 points in his class. If so, he enters the qualifying stage.
+In that case, we return, "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.".
+Otherwise return, False/false (according to the language n use).
+NOTE
+: Remember, in C# you have to cast your output value to Object type!
+*/
+
+function playerRankUp(points) {
+    if (points >= 100) return 'Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up.';
+    return false;
+}
+
+
+// Keep up the hoop.
+
+/*
+Description:
+Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him
+Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message :)
+-If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
+-If he doesn't get 10 hoops, return the string "Keep at it until you get it".
+*/
+
+function hoopCount(n) {
+    return n >= 10 ? 'Great, now move on to tricks' : 'Keep at it until you get it';
+}
+>>>>>>> 01ededb3a6f83c2df0318d4e5ea6cdad7922ea59
