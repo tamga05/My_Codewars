@@ -2104,10 +2104,7 @@ function main(verb, noun) {
 //
 // So the years 0, -64 and 2016 will return 366 days. Whilst 1974, -10 and 666 will return 365 days.
 
-const yearDays = year =>
-    `${year} has ${
-        (!(year % 100) && year % 400) || year % 4 ? '365' : '366'
-    } days`;
+const yearDays = year => `${year} has ${(!(year % 100) && year % 400) || year % 4 ? '365' : '366'} days`;
 
 
 // Pick a set of first elements.
@@ -2297,9 +2294,7 @@ const animals = (heads, legs) => {
     const cows = legs / 2 - heads;
     const chickens = heads - cows;
 
-    return isNatural(chickens) && isNatural(cows)
-        ? [chickens, cows]
-        : 'No solutions';
+    return isNatural(chickens) && isNatural(cows) ? [chickens, cows] : 'No solutions';
 };
 
 
@@ -2355,13 +2350,7 @@ Output must be returned as a number data-type, greater than or equal to 0, with 
 Using these parameters, create the function that will calculate Bob's and other partier's BAC.
 */
 
-const bloodAlcoholContent = ({ounces, abv}, weight, sex, time) =>
-    Number(
-        (
-            ounces * abv * 5.14 / weight * (sex === 'male' ? 0.73 : 0.66) -
-            0.015 * time
-        ).toFixed(4)
-    );
+const bloodAlcoholContent = ({ounces, abv}, weight, sex, time) => Number((ounces * abv * 5.14 / weight * (sex === 'male' ? 0.73 : 0.66) - 0.015 * time).toFixed(4));
 
 
 // isReallyNaN.
@@ -2556,10 +2545,7 @@ const firstLetter = str => str[0].toUpperCase();
 
 const isValidName = name => /[a-z]/gi.test(name);
 
-const aliasGen = (fName, sName) =>
-    isValidName(fName[0]) && isValidName(sName[0])
-        ? `${firstName[firstLetter(fName)]} ${surname[firstLetter(sName)]}`
-        : 'Your name must start with a letter from A - Z.';
+const aliasGen = (fName, sName) => isValidName(fName[0]) && isValidName(sName[0]) ? `${firstName[firstLetter(fName)]} ${surname[firstLetter(sName)]}` : 'Your name must start with a letter from A - Z.';
 
 
 // Thinkful - Number Drills: Blue and red marbles.
@@ -2664,10 +2650,7 @@ let health = 100;
 let position = 0;
 let coins = 0;
 
-const main = () =>
-    [rollDice, move, combat, getCoins, buyHealth, printStatus].forEach(action =>
-        action()
-    );
+const main = () => [rollDice, move, combat, getCoins, buyHealth, printStatus].forEach(action => action());
 
 
 // Find the Difference in Age between Oldest and Youngest Family Members.
@@ -2893,12 +2876,7 @@ You are using a library (Game.Logic in C#) that already has the functions below.
 */
 
 function doTurn() {
-    rollDice(),
-        move(),
-        combat(),
-        getCoins(),
-        buyHealth(),
-        printStatus();
+    rollDice(), move(), combat(), getCoins(), buyHealth(), printStatus();
 }
 
 
@@ -3055,8 +3033,7 @@ countBy(2,5) === [2,4,6,8,10]
 
 function countBy(x, n) {
     const z = [];
-    for (let i = 1; i <= n * x; i++)
-        if (i % x === 0) z.push(i);
+    for (let i = 1; i <= n * x; i++) if (i % x === 0) z.push(i);
     return z;
 }
 
@@ -3871,9 +3848,7 @@ Also, check out the new Pirates!! Kata: https://www.codewars.com/kata/57e2d5f473
 */
 
 const cannonsReady = (gunners) => {
-    return Object.values(gunners).every(response => response === 'aye')
-        ? 'Fire!'
-        : 'Shiver me timbers!';
+    return Object.values(gunners).every(response => response === 'aye') ? 'Fire!' : 'Shiver me timbers!';
 };
 
 
@@ -3894,8 +3869,7 @@ For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should r
 function countPositivesSumNegatives(A) {
     if (!A || !A.length) return [];
 
-    let pos = A.filter(x => x > 0),
-        neg = A.filter(x => x <= 0);
+    let pos = A.filter(x => x > 0), neg = A.filter(x => x <= 0);
 
     return [pos.length, Math.floor(neg.reduce((s, v) => s + v, 0))];
 }
@@ -4015,10 +3989,7 @@ This is a modification on the Kata: Array2Binary addition hope you like it
 
 function arr2bin(arr) {
     return arr
-        .reduce(
-            (total, value) => (typeof value === 'number' ? total + value : total),
-            0
-        )
+        .reduce((total, value) => (typeof value === 'number' ? total + value : total), 0)
         .toString(2);
 }
 
@@ -4218,8 +4189,7 @@ The size will always be positive and will only use whole numbers.
 
 function stringy(size) {
     let str = '';
-    for (let i = 1; i <= size; i++)
-        str += i % 2;
+    for (let i = 1; i <= size; i++) str += i % 2;
     return str;
 }
 
@@ -4847,8 +4817,7 @@ I have also created other katas. Take a look if you enjoyed this kata!
 
 const isSquareRootInteger = num => Number.isInteger(Math.sqrt(num));
 
-const squareOrSquareRoot = array =>
-    array.map(num => (isSquareRootInteger(num) ? Math.sqrt(num) : num ** 2));
+const squareOrSquareRoot = array => array.map(num => (isSquareRootInteger(num) ? Math.sqrt(num) : num ** 2));
 
 
 // Lexical this.
@@ -4864,9 +4833,7 @@ Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Fun
 
 const Person = function () {
     const person = {
-        _name: 'Leroy',
-        _friends: [],
-        fillFriends(f) {
+        _name: 'Leroy', _friends: [], fillFriends(f) {
             this._friends.push(...f);
         }
     };
@@ -5067,4 +5034,16 @@ Some useful associations relevant to this kata: 1 Imperial Gallon = 4.54609188 l
 
 function converter(mpg) {
     return +(mpg * 0.3540060435382138).toFixed(2);
+}
+
+
+// Enumerable Magic - Does My List Include This?
+
+/*
+Description:
+Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.
+*/
+
+function include(arr, item) {
+    return arr.includes(item);
 }
