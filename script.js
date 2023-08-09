@@ -5047,3 +5047,39 @@ Create a method that accepts a list and an item, and returns true if the item be
 function include(arr, item) {
     return arr.includes(item);
 }
+
+
+// Sum of differences in array.
+
+/*
+Description:
+Your task is to sum the differences between consecutive pairs in the array in descending order.
+
+For example: sumOfDifferences([1, 2, 10] Returns 9
+
+Descending order: [10, 2, 1]
+
+Sum: (10 - 2) + (2 - 1) = 8 + 1 = 9
+
+If the array is empty or the array has only one element the result should be 0.
+*/
+
+function sumOfDifferences(arr) {
+    return arr.length > 1 ? Math.max(...arr) - Math.min(...arr) : 0;
+}
+
+
+// Enumerable Magic #25 - Take the First N Elements.
+
+/*
+Description:
+Create a method take that accepts a list/array and a number n, and returns a list/array array of the first n elements from the list/array.
+
+If you need help, here's a reference:
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+*/
+
+// function take(arr, n) {
+//     return arr.slice(0, n);
+// }
