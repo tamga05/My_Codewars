@@ -5144,3 +5144,656 @@ class Ghost {
         return this.colors[randomPosition];
     }
 }
+
+
+// Invalid Login - Bug Fixing #11.
+
+/*
+Description:
+Invalid Login - Bug Fixing #11
+Oh NO! Timmy has moved divisions... but now he's in the field of security. Timmy being the top coder he is has allowed some bad code through, you must help Timmy and filter out any injected code!
+
+Task
+Your task is simple, search the password string for any injected code (Injected code is anything that would be used to exploit flaws in the current code, so basically anything that contains || or //) if you find any you must return "Wrong username or password!" because no one likes someone trying to cheat their way in!
+
+Preloaded
+You will be given a preloaded class called Database with a method login this takes two parameters username and password. This is a generic login function which will check the database for the user it will return either 'Successfully Logged in!' if it passes the test or 'Wrong username or password!' if either the password is wrong or username does not exist.
+
+Usage
+var database = new Database();
+database.login('Timmy', 'password');
+*/
+
+function validate(username, password) {
+    if (password.includes('||') || password.includes('//'))
+        return 'Wrong username or password!';
+    const database = new Database();
+    return database.login(username, password);
+}
+
+
+// Enumerable Magic #4 - True for None?
+
+/*
+Description:
+Create a method none? (JS none) that accepts an array and a block (JS: a function), and returns true if the block (/function) returns true for none of the items in the array. An empty list should return true.
+*/
+
+// function none(arr, fun) {
+//     return !arr.some(fun);
+// }
+
+
+// Swap Values.
+
+/*
+Description:
+I would like to be able to pass an array with two elements to my swapValues function to swap the values. However it appears that the values aren't changing.
+
+Can you figure out what's wrong here?
+*/
+
+// function swapValues(arr) {
+//     return arr.reverse();
+// }
+
+
+// How many lightsabers do you own?
+
+/*
+Description:
+Inspired by the development team at Vooza, write the function howManyLightsabersDoYouOwn that
+
+accepts the name of a programmer, and
+returns the number of lightsabers owned by that person.
+The only person who owns lightsabers is Zach, by the way. He owns 18, which is an awesome number of lightsabers. Anyone else owns 0.
+
+No starting help here -- you'll need to know how to write a function that accepts a parameter and returns a value based on that parameter.
+
+howManyLightsabersDoYouOwn("anyone else") \\ should === 0
+howManyLightsabersDoYouOwn("Zach") \\ should === 18
+*/
+
+// function howManyLightsabersDoYouOwn(name) {
+//     return name == 'Zach' ? 18 : 0;
+// }
+
+
+// Welcome to the City.
+
+/*
+Description:
+Create a method sayHello/say_hello/SayHello that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space betweeen each, and the length of the name array in test cases will vary.
+
+Example:
+
+sayHello(['John', 'Smith'], 'Phoenix', 'Arizona')
+This example will return the string Hello, John Smith! Welcome to Phoenix, Arizona!
+*/
+
+// function sayHello(name, city, state) {
+//     return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`;
+// }
+
+
+// Sleigh Authentication.
+
+/*
+Description:
+Christmas is coming and many people dreamed of having a ride with Santa's sleigh. But, of course, only Santa himself is allowed to use this wonderful transportation. And in order to make sure, that only he can board the sleigh, there's an authentication mechanism.
+
+Your task is to implement the authenticate() method of the sleigh, which takes the name of the person, who wants to board the sleigh and a secret password. If, and only if, the name equals "Santa Claus" and the password is "Ho Ho Ho!" (yes, even Santa has a secret password with uppercase and lowercase letters and special characters :D), the return value must be true. Otherwise it should return false.
+
+Examples:
+
+var sleigh = new Sleigh();
+sleigh.authenticate("Santa Claus", "Ho Ho Ho!"); // must return TRUE
+
+sleigh.authenticate("Santa", "Ho Ho Ho!"); // must return FALSE
+sleigh.authenticate("Santa Claus", "Ho Ho!"); // must return FALSE
+sleigh.authenticate("jhoffner", "CodeWars"); // Nope, even Jake is not allowed to use the sleigh ;)
+*/
+
+// function Sleigh() {}
+// Sleigh.prototype.authenticate = function(name, password) {
+//     return name === 'Santa Claus' && password === 'Ho Ho Ho!';
+// };
+
+
+// Switch/Case - Bug Fixing #6.
+
+/*
+Description:
+Switch/Case - Bug Fixing #6
+Oh no! Timmy's evalObject function doesn't work. He uses Switch/Cases to evaluate the given properties of an object, can you fix timmy's function?
+*/
+
+// function evalObject(value) {
+//     switch (value.operation) {
+//         case'+':
+//             return value.a + value.b;
+//         case'-':
+//             return value.a - value.b;
+//         case'/':
+//             return value.a / value.b;
+//         case'*':
+//             return value.a * value.b;
+//         case'%':
+//             return value.a % value.b;
+//         case'^':
+//             return Math.pow(value.a, value.b);
+//     }
+// }
+
+
+// Be Concise II - I Need Squares.
+
+/*
+Description:
+Be Concise II - I Need Squares
+You are given a program squaresOnly that accepts an array of natural numbers up to and including
+100
+(and including 0) of length >= 1, array, and returns a new array containing only square numbers that have appeared in the input array.
+
+Refactor the solution to use as few characters as possible. There is a maximum character limit of 127. Here are a few hints:
+
+There are a lot of handy built-in Array methods in Javascript that you may have never heard of even after completing a basic course in Javascript (e.g. those provided by Codecademy) - well, at least I haven't heard of until quite recently. You may also want to research any new built-in methods offered by ES6, the newest specification of Javascript at the time of writing.
+Don't you think the array parameter is a bit wordy? ;)
+Good luck! :D
+*/
+
+// function squaresOnly(array) {
+//     return array.filter(num => Number.isInteger(Math.sqrt(num)));
+// }
+
+
+// Collatz Conjecture (3n+1).
+
+/*
+Description:
+The Collatz conjecture (also known as 3n+1 conjecture) is a conjecture that applying the following algorithm to any number we will always eventually reach one:
+
+[This is writen in pseudocode]
+if(number is even) number = number / 2
+if(number is odd) number = 3*number + 1
+#Task
+
+Your task is to make a function hotpo that takes a positive n as input and returns the number of times you need to perform this algorithm to get n = 1.
+
+#Examples
+
+hotpo(1) returns 0
+(1 is already 1)
+
+hotpo(5) returns 5
+5 -> 16 -> 8 -> 4 -> 2 -> 1
+
+hotpo(6) returns 8
+6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
+
+hotpo(23) returns 15
+23 -> 70 -> 35 -> 106 -> 53 -> 160 -> 80 -> 40 -> 20 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
+#References
+
+Collatz conjecture wikipedia page: https://en.wikipedia.org/wiki/Collatz_conjecture
+*/
+
+// const hotpo = (n, acc = 0) =>
+//     n <= 1 ? acc : hotpo(n % 2 === 0 ? n / 2 : 3 * n + 1, acc + 1);
+
+
+// Training JS #34: methods of Math---pow() sqrt() and cbrt().
+
+/*
+Description:
+Training JS #34:
+methods of Math---pow() sqrt() and cbrt()
+
+In this lesson we learn three methods of Math: pow() sqrt() and cbrt(). Their usage is very simple: sqrt() returns the square root of a number; cbrt() returns the cube root of a number; pow() returns the base to the exponent power.
+
+Their definitions and detailed information:
+
+Math.pow()
+Math.sqrt()
+Math.cbrt()
+Here we use some examples to understand their usage:
+
+var arr1=[1,4,9];
+var sqroot=arr1.map(Math.sqrt);
+console.log(sqroot);            //output: [1,2,3]
+
+var arr2=[1,8,27];
+var cbroot=arr2.map(Math.cbrt);
+console.log(cbroot);            //output: [1,2,3]
+
+var arr3=[1,2,3];
+var pow2=arr3.map(x=>Math.pow(x,2));
+var pow3=arr3.map(x=>Math.pow(x,3));
+console.log(pow2);                  //output: [1,4,9]
+console.log(pow3);                  //output: [1,8,27]
+pow() can use a simplified form: ** operatorcan. See example:
+
+var n=2
+console.log(Math.pow(n,2));      //output: 4
+console.log(n*n);                //output: 4
+console.log(n**2);               //output: 4
+
+console.log(Math.pow(n,3));      //output: 8
+console.log(n*n*n);              //output: 8
+console.log(n**3);               //output: 8
+The second parameters of the pow() can be used as a fractional or decimal fraction, thus getting the same results as sqrt() and cbrt(). See example:
+
+var n=64;
+console.log(Math.sqrt(n));     //output: 8
+console.log(Math.pow(n,0.5));  //output: 8
+console.log(Math.pow(n,1/2));  //output: 8
+
+console.log(Math.cbrt(n));                      //output: 3.9999999999999996
+console.log(Math.pow(n,0.333333333333333333));  //output: 3.9999999999999996
+console.log(Math.pow(n,1/3));                   //output: 3.9999999999999996
+Look at the example above, what's the problem? Yes, the cube root of 64 should be 4, but we have not seen the 4, but see 3.9999999999999996. Due to the numerical precision of JS, the error will be produced in the calculation. This is a problem that can't be avoided. We should pay attention to this problem in use, look at the following example:
+
+function isCube(m,n){
+  return Math.cbrt(m)==n;
+}
+console.log(isCube(27,3))               //output: true
+console.log(isCube(64,4))               //output: false
+console.log(isCube(125,5))               //output: false
+This function is used to verify whether n is the cube root of m. It is obvious that the result is wrong. We should verify like this:
+
+function isCube(m,n){
+  return m==n**3;
+  //or: return m==n*n*n
+}
+console.log(isCube(27,3))               //output: true
+console.log(isCube(64,4))               //output: true
+console.log(isCube(125,5))              //output: true
+This method can also be used to verify the number of squares. The following three methods are used to verify that the square root of a number is an integer:
+
+function intRoot1(n){
+  return Number.isInteger(Math.sqrt(n));
+}
+function intRoot2(n){
+  return Math.sqrt(n)%1==0;
+}
+function intRoot3(n){
+  var x=Math.round(Math.sqrt(n));
+  return x*x==n;
+}
+
+console.log(intRoot1(16))               //output: true
+console.log(intRoot2(16))               //output: true
+console.log(intRoot3(16))               //output: true
+The third method is the longest, but it is the most stable one.
+
+Ok, lesson is over. let's us do some task.
+
+#Task
+Coding in function ```cutCube```. function accept 2 parameter: ```volume``` and ```n```. ```volume``` is the volume of a cube. If we cut the cube into ```n``` block. please determine whether the length of the cube is an integer. return true or false.
+
+For exmaple:
+
+volume=27, it can be divided into 27 blocks, each small cube side length is 1
+```
+cutCube(27,27) should return true
+```
+volume=512, it can be divided into 8 blocks, each small cube side length is 4
+```
+cutCube(512,8) should return true
+```
+volume=512, it can be divided into 64 blocks, each small cube side length is 2
+```
+cutCube(512,64) should return true
+```
+If the side length of small cube is not a integer, should return false.
+```
+cutCube(256,8) should return false
+cutCube(27,3) should return false
+cutCube(123,456) should return false
+```
+If it can't be divided evenly into ```n``` small cubes, should return false too.
+```
+cutCube(50000,50) should return false
+cutCube(256,4) should return false
+```
+The two examples above seems to meet our requirements, but please note: a cube is unable to evenly divided into 50 pieces or 4 pieces. Only cubic numbers(such as 8,27,64,125,216...) can be used to divide the cube evenly.
+
+*/
+
+// const isIntegerCube = n => Number.isInteger(Math.cbrt(n));
+//
+// const cutCube = (volume, n) => isIntegerCube(n) && isIntegerCube(volume / n);
+
+
+// Training JS #18: Methods of String object--concat() split() and its good friend join().
+
+/*
+Description:
+Training JS #18:
+Methods of String object--concat() split() and its good friend join()
+
+This time we learn two methods to split or merge string:split() and concat(). also learn a good friend of the split() method: join(). It is an Array method. Their usage:
+
+stringObject.split(separator,howmany)
+stringObject.concat(string1,string2,...,stringx)
+arrayObject.join(separator)
+split() can divided a string into several parts by a specified separator. The result is an array of strings. The split string does not include the separator itself. One of its classic uses is to divide a sentence into an array of words:
+
+var str="My name is John";
+var words=str.split(" ");
+console.log(words);
+//output:
+[ 'My', 'name', 'is', 'John' ]
+In the example above, we use the space as the separator, divide a sentence into 4 words. If we specify the second parameters, it will be like this:
+
+var str="My name is John";
+var words1=str.split(" ",3);
+console.log("words1:",words1);
+var words2=str.split(" ",5);
+console.log("words2:",words2);
+
+//output:
+words1:[ 'My', 'name', 'is' ]
+words2:[ 'My', 'name', 'is', 'John' ]
+When we specify the number of fewer than 4, the result will be a specified number of strings; if the number of the partition is too many, the results will only be the same as the default results.
+
+If we use the empty string as the separator, we'll get an array of strings containing each character:
+
+var str="My name is John";
+var words=str.split("");
+console.log(words);
+
+//output:
+[ 'M', 'y', ' ', 'n', 'a', 'm', 'e', ' ', 'i', 's', ' ', 'J', 'o', 'h', 'n' ]
+Split can use regular expressions to split the string. But because we have not learned the use of regular expressions, so we do not have to learn this usage.
+
+concat() can merge many strings into a string like this:
+
+var str="My".concat("name","is","John");
+console.log(str);
+
+//output:
+MynameisJohn
+In fact, we rarely see the actual use of concat(), because we have a more simple way. that is using the + operator:
+
+var str="My"+"name"+"is"+"John";
+console.log(str);
+
+//output:
+MynameisJohn
+But even using the + operator, the four words are not the perfect combination of a sentence, because there is no space separator. What should we do? Using join() is the best choice.
+
+join() is the reverse operation of the split() method. We can see a lot of code in the actual use:
+
+var str="My name is John";
+var words=str.split(" ");
+console.log("use split():",words);
+var s=words.join(" ");
+console.log("use join():",s);
+console.log("use split() and join():",str.split(" ").join(" "))
+//output:
+use split():[ 'My', 'name', 'is', 'John' ]
+use join():My name is John
+use split() and join():My name is John
+Ok, lesson is over. let's us do some task.
+
+Task
+Coding in function splitAndMerge, function accept 2 parameters:str and sp. str is a sentence. sp is a char as separator.
+
+First we need to divide the sentence into words(Use separator space); and then divide each word into characters(Use separator empty string); and then merge each characters with the specified sp; at last merge all the words(Use separator space) and return it.
+
+for example:
+
+splitAndMerge("My name is John"," ") should return "M y n a m e i s J o h n"
+splitAndMerge("My name is John","-") should return "M-y n-a-m-e i-s J-o-h-n"
+splitAndMerge("Hello World!",".") should return "H.e.l.l.o W.o.r.l.d.!"
+splitAndMerge("Hello World!",",") should return "H,e,l,l,o W,o,r,l,d,!"
+*/
+
+// function splitAndMerge(str, sp) {
+//     return str.split(' ').map(word => word.split('').join(sp)).join(' ');
+// }
+
+
+// Semi-Optional.
+
+/*
+Description:
+We have implemented a function wrap(value) that takes a value of arbitrary type and wraps it in a new Javascript Object setting the 'value' key on the new Object to the passed-in value.
+
+So, for example, if we execute the following code:
+
+var wrappedObj = wrap("MyWrappedString");
+ // wrappedObject should be  {"value":"MyWrappedString"}
+We would then expect the following statement to be true:
+
+wrappedObj.value === "MyWrappedString"
+Unfortunately, the code is not working as designed. Please fix the code so that it behaves as specified.
+*/
+
+// function wrap(value) {
+//     return ({value});
+// }
+
+
+// Do something "n.times" (Simplifying "for" loops).
+
+/*
+Description:
+Do something "n.times" (Simplifying "for" loops)
+Overview
+In computer programming, we have a very basic but key principle called the DRY principle. DRY stands for "Don't Repeat Yourself" which basically means that if you have multiple identical (or very similar) blocks of code you should probably simplify it. This is very important because it usually makes the code more readable and understandable to fellow developers and because it always improves performance.
+
+For example, if we wanted to print "Hello World" to the console 100 times, we could write something like this:
+
+// UGH!  Disgusting!
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+console.log("Hello World");
+However, the problem is, the code is barely readable and looks very ugly. How many times exactly is the string "Hello World" printed to the console? Maybe it is only printed 99 times? Maybe 1000? Also, if there is an error in the statement/code (console.log), the same bug will have to be fixed 100 times and I doubt anyone would enjoy doing that.
+
+Luckily, in just about every modern high-level programming language, there exists a for loop that makes the code much more readable and DRY:
+
+// Much better :D
+for (var i = 0; i < 100; i++) {
+  console.log("Hello World");
+}
+By executing the same action 100 times by using a single for loop instead of copying and pasting the same code 100 times, the code becomes much more readable and easy to debug. For example, if I misspelt "Hello World" I only need to fix it in one place to eliminate the bug as opposed to fixing it in every console.log statement.
+
+Task
+However, I myself find the for loop very complex and unreadable. Think about it - would you know what the for loop does if you've never learned computer programming? For example, if you've never coded before, would you have any idea what this thing in the for loop: i = 0; i < number; i++ means?
+
+Therefore, I would like you to define a method callable on integers, Number.prototype.times, that effectively replaces the for loop. It should work like this:
+
+// Prints "Hello World" to the console 100 times
+// Isn't this much more readable?  At least a non-programmer
+// knows that something is being executed 100 times!
+(100).times(_ => {
+  console.log("Hello World");
+});
+Sometimes, we also want to loop through an array. For example, if we have an array example = [1,2,3,4], we could use our newly defined method to loop over the array like this:
+
+example.length.times(_ => {
+  // Code to be executed
+});
+However, here lies the problem - since the function does not accept any arguments, how can we use this method to loop over every element in the array? Therefore, your Number.prototype.times method should supply the iteration variable i to the anonymous function being executed to support this feature of looping through every element in an array, like such:
+
+example.length.times(i => {
+  console.log(example[i]);
+});
+/* Prints the following to the console:
+1
+2
+3
+4
+*/
+
+/*The iteration variable supplied to the anonymous function could also be used like this:
+
+(100).times(i => {
+    console.log(i);
+});
+/* Prints all integers from 0 (inclusive) to 100 (exclusive) */
+/*Task Summary
+In case you got lost, here's precisely what you have to do: define a method Number.prototype.times that accepts a function f as an argument and executes it as many times as the integer it is called on (e.g. (100).times would execute something 100 times). The iteration variable i should be supplied to the anonymous function being executed in order to support looping through array elements.
+
+FUNDAMENTALS
+*/
+
+// Number.prototype.times = function (f) {
+//     for (let i = 0; i < this; i++) f(i);
+// };
+
+
+// Sentence Smash.
+
+/*
+Description:
+Sentence Smash
+Write a method smash that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
+
+Example
+var words = ['hello', 'world', 'this', 'is', 'great'];
+smash(words); // returns "hello world this is great"
+Assumptions
+You can assume that you are only given words.
+You cannot assume the size of the array.
+You can assume that you will always get an array.
+What We're Testing
+We're testing basic loops and string manipulation. This is for beginners who are just learning loops and string manipulation.
+
+Disclaimer
+This is for beginners so we want to test basic loops and string manipulation. Advanced users should easily be able to do this in one line.
+*/
+
+// Smash Words
+
+// function smash(words) {
+//     'use strict';
+//     return words.join(' ');
+// }
+
+
+// Basic subclasses - Adam and Eve.
+
+/*
+Description:
+According to the creation myths of the Abrahamic religions, Adam and Eve were the first Humans to wander the Earth.
+
+You have to do God's job. The creation method must return an array of length 2 containing objects (representing Adam and Eve). The first object in the array should be an instance of the class Man. The second should be an instance of the class Woman. Both objects have to be subclasses of Human. Your job is to implement the Human, Man and Woman classes.
+*/
+
+// class God {
+//     /**
+//      * @returns Human[]
+//      */
+//     static create() {
+//         return [new Man, new Woman];
+//     }
+// }
+//
+// class Human {
+// }
+//
+// class Man extends Human {
+// }
+//
+// class Woman extends Human {
+// }
