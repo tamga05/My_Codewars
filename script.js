@@ -5214,9 +5214,9 @@ howManyLightsabersDoYouOwn("anyone else") \\ should === 0
 howManyLightsabersDoYouOwn("Zach") \\ should === 18
 */
 
-// function howManyLightsabersDoYouOwn(name) {
-//     return name == 'Zach' ? 18 : 0;
-// }
+function howManyLightsabersDoYouOwn(name) {
+    return name == 'Zach' ? 18 : 0;
+}
 
 
 // Welcome to the City.
