@@ -5304,9 +5304,9 @@ Don't you think the array parameter is a bit wordy? ;)
 Good luck! :D
 */
 
-// function squaresOnly(array) {
-//     return array.filter(num => Number.isInteger(Math.sqrt(num)));
-// }
+function squaresOnly(array) {
+    return array.filter(num => Number.isInteger(Math.sqrt(num)));
+}
 
 
 // Collatz Conjecture (3n+1).
