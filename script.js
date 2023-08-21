@@ -5340,8 +5340,8 @@ hotpo(23) returns 15
 Collatz conjecture wikipedia page: https://en.wikipedia.org/wiki/Collatz_conjecture
 */
 
-// const hotpo = (n, acc = 0) =>
-//     n <= 1 ? acc : hotpo(n % 2 === 0 ? n / 2 : 3 * n + 1, acc + 1);
+const hotpo = (n, acc = 0) =>
+    n <= 1 ? acc : hotpo(n % 2 === 0 ? n / 2 : 3 * n + 1, acc + 1);
 
 
 // Training JS #34: methods of Math---pow() sqrt() and cbrt().
