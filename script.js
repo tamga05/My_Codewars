@@ -5552,9 +5552,9 @@ splitAndMerge("Hello World!",".") should return "H.e.l.l.o W.o.r.l.d.!"
 splitAndMerge("Hello World!",",") should return "H,e,l,l,o W,o,r,l,d,!"
 */
 
-// function splitAndMerge(str, sp) {
-//     return str.split(' ').map(word => word.split('').join(sp)).join(' ');
-// }
+function splitAndMerge(str, sp) {
+    return str.split(' ').map(word => word.split('').join(sp)).join(' ');
+}
 
 
 // Semi-Optional.
