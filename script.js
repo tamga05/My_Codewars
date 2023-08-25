@@ -5739,9 +5739,9 @@ In case you got lost, here's precisely what you have to do: define a method Numb
 FUNDAMENTALS
 */
 
-// Number.prototype.times = function (f) {
-//     for (let i = 0; i < this; i++) f(i);
-// };
+Number.prototype.times = function (f) {
+    for (let i = 0; i < this; i++) f(i);
+};
 
 
 // Sentence Smash.
