@@ -5799,3 +5799,191 @@ class Man extends Human {
 
 class Woman extends Human {
 }
+
+
+// Regular Ball Super Ball.
+
+/*
+Description:
+Regular Ball Super Ball
+Create a class Ball.
+
+Ball objects should accept one argument for "ball type" when instantiated.
+
+If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+
+ball1 = new Ball();
+ball2 = new Ball("super");
+
+ball1.ballType     //=> "regular"
+ball2.ballType     //=> "super"
+*/
+
+class Ball {
+    constructor(ballType = 'regular') {
+        this.ballType = ballType;
+    }
+}
+
+
+// Reverse List Order.
+
+/*
+Description:
+In this kata you will create a function that takes in a list and returns a list with the reverse order.
+
+Examples
+reverseList([1,2,3,4]) == [4,3,2,1]
+reverseList([3,1,5,4]) == [4,5,1,3]
+*/
+
+// function reverseList(list) {
+//     return list.reverse();
+// }
+
+
+// What's up next?
+
+/*
+Description:
+Given a sequence of items and a specific item in that sequence, return the item immediately following the item specified. If the item occurs more than once in a sequence, return the item after the first occurence. This should work for a sequence of any type.
+
+When the item isn't present or nothing follows it, the function should return nil in Clojure and Elixir, Nothing in Haskell, undefined in JavaScript.
+
+nextItem([1, 2, 3, 4, 5, 6, 7], 3) # 4
+nextItem("testing", "t") # "e"
+*/
+
+// const nextItem = (xs, item) => {
+//     let found = false;
+//     let finalValue;
+//
+//     for (const i of xs) {
+//         if (found) {
+//             finalValue = i;
+//             break;
+//         }
+//
+//         if (i === item) found = true;
+//     }
+//
+//     return finalValue;
+// };
+
+
+// A Strange Trip to the Market.
+
+/*
+Description:
+You're on your way to the market when you hear beautiful music coming from a nearby street performer. The notes come together like you wouln't believe as the musician puts together patterns of tunes. As you wonder what kind of algorithm you could use to shift octaves by 8 pitches or something silly like that, it dawns on you that you have been watching the musician for some 10 odd minutes. You ask, "How much do people normally tip for something like this?" The artist looks up. "Its always gonna be about tree fiddy."
+
+It was then that you realize the musician was a 400 foot tall beast from the paleolithic era. The Loch Ness Monster almost tricked you!
+
+There are only 2 guaranteed ways to tell if you are speaking to The Loch Ness Monster: A.) It is a 400 foot tall beast from the paleolithic era B.) It will ask you for tree fiddy
+
+Since Nessie is a master of disguise, the only way accurately tell is to look for the phrase "tree fiddy". Since you are tired of being grifted by this monster, the time has come to code a solution for finding The Loch Ness Monster. Note: It can also be written as 3.50 or three fifty.
+*/
+
+// function isLockNessMonster(s) {
+//     return /tree fiddy| three fifty|3.50/.test(s);
+// }
+
+
+// Regexp Basics - is it a digit?
+
+/*
+Description:
+Implement String#digit? (in Java StringUtils.isDigit(String)), which should return true if given object is a digit (0-9), false otherwise.
+*/
+
+// String.prototype.digit = function () {
+//     return /^\d$/g.test(this);
+// };
+
+
+// Regex count lowercase letters.
+
+/*
+Description:
+Your task is simply to count the total number of lowercase letters in a string.
+
+Examples
+lowercaseCount("abc"); ===> 3
+
+lowercaseCount("abcABC123"); ===> 3
+
+lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"); ===> 3
+
+lowercaseCount(""); ===> 0;
+
+lowercaseCount("ABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"); ===> 0
+
+lowercaseCount("abcdefghijklmnopqrstuvwxyz"); ===> 26
+*/
+
+// function lowercaseCount(str) {
+//     return (str.match(/[a-z]/g) || []).length;
+// }
+
+
+// Simple validation of a username with regex.
+
+/*
+Description:
+Write a simple regex to validate a username. Allowed characters are:
+
+lowercase letters,
+numbers,
+underscore
+Length should be between 4 and 16 characters (both included).
+*/
+
+// function validateUsr(username) {
+//     return /^([a-z0-9_]){4,16}$/.test(username);
+// }
+
+
+// Validate code with simple regex.
+
+/*
+Description:
+Basic regex tasks. Write a function that takes in a numeric code of any length. The function should check if the code begins with 1, 2, or 3 and return true if so. Return false otherwise.
+
+You can assume the input will always be a number.
+*/
+
+// function validateCode(code) {
+//     return /^[1-3]/g.test(code);
+// }
+
+
+// They say that only the name is long enough to attract attention. They also said that only a simple Kata will have someone to solve it. This is a sadly story #1: Are they opposite?
+
+/*
+Description:
+They say that only the name is long enough to attract attention. They also said that only a simple Kata will have someone to solve it series #1:
+Are they opposite?
+
+#Task
+Give you two strings: s1 and s2. If they are opposite, return true; otherwise, return false. Note: The result should be a boolean value, instead of a string.
+
+The opposite means: All letters of the two strings are the same, but the case is opposite. you can assume that the string only contains letters, or it's a empty string
+
+#Some examples:
+isOpposite("ab","AB") should return true;
+isOpposite("aB","Ab") should return true;
+isOpposite("aBcd","AbCD") should return true;
+isOpposite("AB","Ab") should return false;
+isOpposite("","") should return false;
+*/
+
+// const isOpposite = (s1, s2) => {
+//     if (s1 === s2 || s1.toLowerCase() !== s2.toLowerCase()) return false;
+//
+//     for (let i = 0; i < s1.length; i++) {
+//         if (s1.charAt(i) === s2.charAt(i)) return false;
+//     }
+//
+//     return true;
+// };
+
