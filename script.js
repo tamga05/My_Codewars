@@ -47,7 +47,7 @@ function capitalizeWord(word) {
 console.log(capitalizeWord('andrey'));
 
 
-// Beginner Series #2 Clock shows h hours, m minutes and s seconds after midnight. Your task is to write a function which returns the time since midnight in milliseconds.
+// Beginner Series #2 Clock shows h hours, m minutes and s seconds after midnight. Your task is to write a function which returns the time since    midnight in milliseconds.
 
 function past(h, m, s) {
     let secPerMin = 60;
@@ -5884,9 +5884,9 @@ There are only 2 guaranteed ways to tell if you are speaking to The Loch Ness Mo
 Since Nessie is a master of disguise, the only way accurately tell is to look for the phrase "tree fiddy". Since you are tired of being grifted by this monster, the time has come to code a solution for finding The Loch Ness Monster. Note: It can also be written as 3.50 or three fifty.
 */
 
-// function isLockNessMonster(s) {
-//     return /tree fiddy| three fifty|3.50/.test(s);
-// }
+function isLockNessMonster(s) {
+    return /tree fiddy| three fifty|3.50/.test(s);
+}
 
 
 // Regexp Basics - is it a digit?
