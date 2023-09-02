@@ -5921,9 +5921,9 @@ lowercaseCount("ABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"); ===> 0
 lowercaseCount("abcdefghijklmnopqrstuvwxyz"); ===> 26
 */
 
-// function lowercaseCount(str) {
-//     return (str.match(/[a-z]/g) || []).length;
-// }
+function lowercaseCount(str) {
+    return (str.match(/[a-z]/g) || []).length;
+}
 
 
 // Simple validation of a username with regex.
