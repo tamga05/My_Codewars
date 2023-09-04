@@ -5952,9 +5952,9 @@ Basic regex tasks. Write a function that takes in a numeric code of any length. 
 You can assume the input will always be a number.
 */
 
-// function validateCode(code) {
-//     return /^[1-3]/g.test(code);
-// }
+function validateCode(code) {
+    return /^[1-3]/g.test(code);
+}
 
 
 // They say that only the name is long enough to attract attention. They also said that only a simple Kata will have someone to solve it. This is a sadly story #1: Are they opposite?
