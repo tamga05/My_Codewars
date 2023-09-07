@@ -6031,8 +6031,8 @@ function between(a, b) {
 // For JavaScript: return true or false
 // Other languages: return 1 or 0 or refer to Sample Tests.
 
-// function isPythagoreanTriple(integers) {
-//     let [a, b, c] = integers.sort((a, b) => a - b);
-//     return a ** 2 + b ** 2 == c ** 2;
-// }
+function isPythagoreanTriple(integers) {
+    let [a, b, c] = integers.sort((a, b) => a - b);
+    return a ** 2 + b ** 2 == c ** 2;
+}
 
