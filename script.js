@@ -6036,3 +6036,27 @@ function isPythagoreanTriple(integers) {
     return a ** 2 + b ** 2 == c ** 2;
 }
 
+
+// ASCII Total.
+
+// You'll be given a string, and have to return the sum of all characters as an int. The function should be able to handle all printable ASCII characters.
+//
+// Examples:
+//
+//     uniTotal('a') == 97;
+// uniTotal('aaa') == 291;
+
+const uniTotal = string => [...string].reduce((result, currentElement) => result + currentElement.charCodeAt(), 0);
+
+
+// Find variable which breaks strict comparison!
+
+// In JavaScript, there is a special case where strict comparison of the same variable returns false! Try to find out what must be done to get such result!
+//
+// var x = something;
+// x === x // returns false!
+// Write a function which will return value for which strict comparison will give false!
+
+// function findStrangeValue() {
+//     return NaN;
+// }
