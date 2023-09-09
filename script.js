@@ -6057,6 +6057,6 @@ const uniTotal = string => [...string].reduce((result, currentElement) => result
 // x === x // returns false!
 // Write a function which will return value for which strict comparison will give false!
 
-// function findStrangeValue() {
-//     return NaN;
-// }
+function findStrangeValue() {
+    return NaN;
+}
