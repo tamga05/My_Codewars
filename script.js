@@ -6149,6 +6149,6 @@ const configuration = {
 //
 // As you can see, the lists are cascading; ie, they overlap, but never out of order.
 
-// function eachCons(array, n) {
-//     return array.map((x, y) => array.slice(y, y + n)).filter(x => x.length == n);
-// }
+function eachCons(array, n) {
+    return array.map((x, y) => array.slice(y, y + n)).filter(x => x.length == n);
+}
