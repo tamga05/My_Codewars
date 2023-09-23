@@ -6331,7 +6331,6 @@ function solve(arr) {
 }
 
 
-<<<<<<< HEAD
 // All Inclusive?
 
 // DESCRIPTION:
@@ -6363,7 +6362,9 @@ function containAllRots(str, arr) {
         }
     }
     return true;
-=======
+}
+
+
 // 8 towers.
 
 /*
@@ -6416,5 +6417,22 @@ towerCombination(3) returns 6, because only the following possibilities can be a
 
 function towerCombination(n) {
     return n === 1 ? 1 : n * towerCombination(n - 1);
->>>>>>> 72627342a2ced7820aa8807cf47f2b5b83aae47c
 }
+
+
+// Arithmetic List!
+
+// In this kata, you will write an arithmetic list which is basically a list that contains consecutive terms in the sequence.
+// You will be given three parameters :
+//
+// first the first term in the sequence
+// c the constant that you are going to ADD ( since it is an arithmetic sequence...)
+// l the number of terms that should be returned
+// Useful link: Sequence
+//
+// Be sure to check out my Arithmetic sequence Kata first ;)
+// Don't forget about the indexing pitfall ;)
+
+const seqlist = function (first, c, l) {
+    return Array.from({length: l}, (value, index) => first + c * index);
+};
