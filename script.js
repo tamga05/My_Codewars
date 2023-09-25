@@ -6241,8 +6241,7 @@ function Ship(draft, crew) {
 // Even-odd disparity
 
 function capitalize(s) {
-    return [s.split('').map((v, i) => i % 2 == 0 ? v.toUpperCase() : v.toLowerCase()).join(''),
-        s.split('').map((v, i) => i % 2 !== 0 ? v.toUpperCase() : v.toLowerCase()).join('')];
+    return [s.split('').map((v, i) => i % 2 == 0 ? v.toUpperCase() : v.toLowerCase()).join(''), s.split('').map((v, i) => i % 2 !== 0 ? v.toUpperCase() : v.toLowerCase()).join('')];
 }
 
 
@@ -6457,4 +6456,26 @@ function calculate(num1, operation, num2) {
     if (operation === '/' && num2 === 0) return null;
     if (eval(`${num1}${operation}${num2}`) == -0) return 0;
     return (eval(`${num1}${operation}${num2}`));
+}
+
+
+// Arithmetic progression.
+
+// DESCRIPTION:
+// In your class, you have started lessons about arithmetic progression. Since you are also a programmer, you have decided to write a function that will return the first n elements of the sequence with the given common difference d and first element a. Note that the difference may be zero!
+//
+// The result should be a string of numbers, separated by comma and space.
+//
+// Example
+// # first element: 1, difference: 2, how many: 5
+// arithmetic_sequence_elements(1, 2, 5) == "1, 3, 5, 7, 9"
+
+function arithmeticSequenceElements(a, r, n) {
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        {
+            arr.push(a + (r * i));
+        }
+    }
+    return arr.join(', ');
 }
