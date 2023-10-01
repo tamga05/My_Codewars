@@ -6598,3 +6598,57 @@ function generateShape(int) {
 function average(scores) {
     return Math.round(scores.reduce((first, next) => (first + next), 0) / scores.length);
 }
+
+
+// Calculate Julie's Age.
+
+/*
+Description:
+Julie is x years older than her brother, and she is also y times as old as him.
+
+Given x and y calculate Julie's age using the function age(x, y).
+
+For example:
+
+Age(6, 3) // returns 9
+Note also that x can be negative, and y can be a decimal.
+
+Age(-15, 0.25) // returns 5
+That is, Julie is 15 years younger and 0.25 times the age of her brother.
+
+Do not concern yourself with the imperfections inherent in dividing by floating point numbers, as your answer will be rounded. Also, for the sake of simplicity, Julie is never the same age as her brother.
+*/
+
+function age(x, y) {
+    return x * y / (y - 1);
+}
+
+
+// Candy problem.
+
+// Description
+// "It's the end of trick-or-treating and we have a list/array representing how much candy each child in our group has made out with. We don't want the kids to start arguing, and using our parental intuition we know trouble is brewing as many of the children in the group have received different amounts of candy from each home.
+//
+// So we want each child to have the same amount of candies, only we can't exactly take any candy away from the kids, that would be even worse. Instead we decide to give each child extra candy until they all have the same amount.
+//
+// Task
+// Your job is to find out how much candy each child has, and give them each additional candy until they too have as much as the child(ren) with the most candy. You also want to keep a total of how much candy you've handed out because reasons."
+//
+// Your job is to give all the kids the same amount of candies as the kid with the most candies and then return the total number candies that have been given out. If there are no kids, or only one, return -1.
+//
+// In the first case (look below) the most candies are given to second kid (i.e second place in list/array), 8. Because of that we will give the first kid 3 so he can have 8 and the third kid 2 and the fourth kid 4, so all kids will have 8 candies.So we end up handing out 3 + 2 + 4 = 9.
+//
+// candies ([5,8,6,4]) // return 9
+//
+// candies ([1,2,4,6]) // return 11
+//
+// candies ([]) // return -1
+//
+// candies ([1,6]) // return 5
+
+// function candies(kids) {
+//     if (kids.length <= 1) return -1;
+//     const maxCandies = Math.max(...kids);
+//
+//     return kids.reduce((total, kid) => total + maxCandies - kid, 0);
+// }
