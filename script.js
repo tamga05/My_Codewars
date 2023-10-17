@@ -7044,3 +7044,15 @@ Given any number of boolean flags function should return true if and only if one
 */
 
 const onlyOne = (...args) => args.filter(Boolean).length === 1;
+
+
+// Shortest Word.
+
+// DESCRIPTION:
+// Simple, given a string of words, return the length of the shortest word(s).
+//
+// String will never be empty and you do not need to account for different data types.
+
+function findShort(s) {
+    return Math.min(...s.split(' ').map(s => s.length));
+}
