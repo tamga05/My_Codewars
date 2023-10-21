@@ -7158,3 +7158,242 @@ const _originalToString = function (func) {
     return Function.toString.apply(func);
 };
 
+
+// Rigged Dice.
+
+/*
+Description:
+Create a rigged dice function that 22% of the time returns the number 6. The rest of the time it returns the integers 1,2,3,4,5 uniformly.
+
+About the test case
+
+There will only be one test case which calls the throw_rigged function 100k times and checks that 6 is returned in the range of 21700-22300 (inclusive) times. The test does not check that 1-5 is returned uniformly or randomly, but it does check that your function returns integers in the range 1-6 (inclusive).
+
+The test works roughly 98% of the time, so you might want to run it twice if you are confident your solution is correct.
+
+In JS version, test for:
+
+return value should between 1-6;
+return value should be randomly;
+run your code 100000 times should produce 21700-22300 numbers 6
+Good Luck!
+*/
+
+function throwRigged() {
+    const random = Math.random();
+    if (random < 0.22) return 6;
+    return Math.floor(Math.random() * (6 - 1)) + 1;
+}
+
+
+// Reverse words.
+
+// DESCRIPTION:
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+//
+// Examples
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+// function reverseWords(str) {
+//     return str.split('').reverse().join('').split(' ').reverse().join(' ');
+// }
+
+
+// Scrabble Score.
+
+/*
+Description:
+Write a program that, given a word, computes the scrabble score for that word.
+
+Letter Values
+You'll need these:
+
+Letter                           Value
+A, E, I, O, U, L, N, R, S, T       1
+D, G                               2
+B, C, M, P                         3
+F, H, V, W, Y                      4
+K                                  5
+J, X                               8
+Q, Z                               10
+There will be preloaded a $dict with all this values in your kata in form of a hash $dict["E"] => 1.
+
+Examples
+scrabbleScore('cabbage') // => 14
+"cabbage" should be scored as worth 14 points:
+
+3 points for C
+1 point for A, twice
+3 points for B, twice
+2 points for G
+1 point for E
+And to total:
+
+3 + 2*1 + 2*3 + 2 + 1
+= 3 + 2 + 6 + 3
+= 5 + 9
+= 14
+Empty string should return 0. The string can contain whitespaces, you should calculate the scrablle score only of the letters in that string.
+
+scrabbleScore('') // => 0
+scrabbleScore('ca bba g  e') // => 14
+*/
+
+// function scrabbleScore(str) {
+//     return str.replace(/[^a-z]/gi, '').split('').reduce((a, b) => a + $dict[b.toUpperCase()] * 1, 0);
+// }
+
+
+// Row Weights.
+
+/*
+Description:
+Scenario
+Several people are standing in a row divided into two teams.
+The first person goes into team 1, the second goes into team 2, the third goes into team 1, and so on.
+
+Task
+Given an array of positive integers (the weights of the people), return a new array/tuple of two integers, where the first one is the total weight of team 1, and the second one is the total weight of team 2.
+
+Notes
+Array size is at least 1.
+All numbers will be positive.
+Input >> Output Examples
+1- rowWeights([13, 27, 49])  ==>  return (62, 27)
+Explanation:
+The first element 62 is the total weight of team 1, and the second element 27 is the total weight of team 2.
+
+2- rowWeights([50, 60, 70, 80])  ==>  return (120, 140)
+Explanation:
+The first element 120 is the total weight of team 1, and the second element 140 is the total weight of team 2.
+
+3- rowWeights([80])  ==>  return (80, 0)
+Explanation:
+The first element 80 is the total weight of team 1, and the second element 0 is the total weight of team 2.
+*/
+
+// rowWeights = arr => arr.reduce((a, b, i) => (a[i % 2] += b, a), [0, 0]);
+
+
+// Rock Off!
+
+/*
+Alice and Bob have participated to a Rock Off with their bands. A jury of true metalheads rates the two challenges, awarding points to the bands on a scale from 1 to 50 for three categories: Song Heaviness, Originality, and Members' outfits.
+
+For each one of these 3 categories they are going to be awarded one point, should they get a better judgement from the jury. No point is awarded in case of an equal vote.
+
+You are going to receive two arrays, containing first the score of Alice's band and then those of Bob's. Your task is to find their total score by comparing them in a single line.
+
+Example:
+
+Alice's band plays a Nirvana inspired grunge and has been rated 20 for Heaviness, 32 for Originality and only 18 for Outfits. Bob listens to Slayer and has gotten a good 48 for Heaviness, 25 for Originality and a rather honest 40 for Outfits.
+
+The total score should be followed by a colon : and by one of the following quotes: if Alice's band wins: Alice made "Kurt" proud! if Bob's band wins: Bob made "Jeff" proud! if they end up with a draw: that looks like a "draw"! Rock on!
+
+The solution to the example above should therefore appear like '1, 2: Bob made "Jeff" proud!'.
+
+*/
+
+// function solve(a, b) {
+//     const [x, y] = a.reduce((p, a, i) => a == b[i] ? p : (++p[a > b[i] ? 0 : 1], p), [0, 0]);
+//     const m = (x == y) ? 'that looks like a "draw"! Rock on!' : (x > y) ? 'Alice made "Kurt" proud!' : 'Bob made "Jeff" proud!';
+//     return `${x}, ${y}: ${m}`;
+// }
+
+
+// Ski Jump.
+
+/*
+Description:
+You are a skier (marked below by the 'X'). You have made it to the Olympics! Well done.
+
+___X_
+*****\
+******\
+*******\
+********\
+*********\.____/
+Your job in this kata is to calculate the maximum speed you will achieve during your downhill run. The speed is dictated by the height of the mountain. Each element of the array is a layer of the mountain as indicated by the diagram above (and further below). So for this example the mountain has a value of 5 (5 rows of stars). Speed is mountain height * 1.5.
+
+The jump length is calculated by (mountain height * speed * 9) / 10. Jump length should be to two dp.
+
+You must return the length of the resulting jump as a string in the following format:
+
+Jump < 10 = 'X metres: He's crap!'
+Jump > 10 && < 25 = 'X metres: He's ok!'
+Jump > 10 && < 50 = 'X metres: He's flying!'
+Jump > 50 = 'X metres: Gold!!'
+
+In this case the right answer would be '33.75 metres: He\'s flying!'
+
+Sadly it takes a lot of time to make arrays look like mountains, so the tests wont all look so nice. To give an example, the above mountain would look as follows in most cases:
+
+[*****, ******, *******, ********, *********]
+Not as much fun, eh?
+*/
+
+// function skiJump(mountain) {
+//     const height = mountain.length;
+//     const speed = height * 1.5;
+//     const length = ((height * speed * 9) / 10).toFixed(2);
+//     if (length < 10) return `${length} metres: He's crap!`;
+//     if (length < 25) return `${length} metres: He's ok!`;
+//     if (length < 50) return `${length} metres: He's flying!`;
+//     return `${length} metres: Gold!!`;
+// }
+
+
+// Sorted Union.
+
+/*
+Description:
+Write a function that takes one or more arrays and returns a new array of unique values in the order of the original provided arrays.
+
+In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array.
+
+The unique numbers should be sorted by their original order, but the final array should not be sorted in numerical order.
+
+Check the assertion tests for examples.
+
+Courtesy of FreeCodeCamp, a great place to learn web-dev; plus, its founder Quincy Larson is pretty cool and amicable. I made the original one slightly more tricky ;)
+*/
+
+// function uniteUnique(...arrays) {
+//     const flatArray = [].concat(...arrays);
+//     return [...new Set(flatArray)];
+// }
+
+
+// Slamming Lockers.
+
+/*
+Description:
+Johnny is a boy who likes to open and close lockers. He loves it so much that one day, when school was out, he snuck in just to play with the lockers.
+
+Each locker can either be open or closed. If a locker is closed when Johnny gets to it, he opens it, and vice versa.
+
+The lockers are numbered sequentially, starting at 1.
+
+Starting at the first locker, Johnny runs down the row, opening each locker.
+
+Then he runs all the way back to the beginning and runs down the row again, this time skipping to every other locker. (2,4,6, etc)
+
+Then he runs all the way back and runs through again, this time skipping two lockers for every locker he opens or closes. (3,6,9, etc)
+
+He continues this until he has finished running past the last locker (i.e. when the number of lockers he skips is greater than the number of lockers he has).
+
+The equation could be stated as follows:
+
+Johnny runs down the row of lockers n times, starting at the first locker each run and skipping i lockers as he runs, where n is the number of lockers there are in total and i is the current run.
+
+The goal of this kata is to determine which lockers are open at the end of Johnny's running.
+
+The program accepts an integer giving the total number of lockers, and should output an array filled with the locker numbers of those which are open at the end of his run.
+*/
+
+// function lockerRun(lockers) {
+//     let arr = [];
+//     for (let i = 1; i * i <= lockers; i++) arr.push(i * i);
+//     return arr;
+// }
