@@ -7359,10 +7359,10 @@ Check the assertion tests for examples.
 Courtesy of FreeCodeCamp, a great place to learn web-dev; plus, its founder Quincy Larson is pretty cool and amicable. I made the original one slightly more tricky ;)
 */
 
-// function uniteUnique(...arrays) {
-//     const flatArray = [].concat(...arrays);
-//     return [...new Set(flatArray)];
-// }
+function uniteUnique(...arrays) {
+    const flatArray = [].concat(...arrays);
+    return [...new Set(flatArray)];
+}
 
 
 // Slamming Lockers.
