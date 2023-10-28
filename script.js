@@ -7392,8 +7392,8 @@ The goal of this kata is to determine which lockers are open at the end of Johnn
 The program accepts an integer giving the total number of lockers, and should output an array filled with the locker numbers of those which are open at the end of his run.
 */
 
-// function lockerRun(lockers) {
-//     let arr = [];
-//     for (let i = 1; i * i <= lockers; i++) arr.push(i * i);
-//     return arr;
-// }
+function lockerRun(lockers) {
+    let arr = [];
+    for (let i = 1; i * i <= lockers; i++) arr.push(i * i);
+    return arr;
+}
