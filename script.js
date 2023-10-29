@@ -7437,9 +7437,9 @@ const printerError = s => `${s.replace(/[a-m]/gi, '').length}/${s.length}`;
 // isPowerOfTwo(333)  // -> false
 // Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
 
-// function isPowerOfTwo(n) {
-//     return Number.isInteger(Math.log2(n));
-// }
+function isPowerOfTwo(n) {
+    return Number.isInteger(Math.log2(n));
+}
 
 
 // Powers of 3.
