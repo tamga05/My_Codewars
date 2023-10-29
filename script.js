@@ -7397,3 +7397,437 @@ function lockerRun(lockers) {
     for (let i = 1; i * i <= lockers; i++) arr.push(i * i);
     return arr;
 }
+
+
+// Printer Errors.
+
+// DESCRIPTION:
+// In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
+//
+// The colors used by the printer are recorded in a control string. For example a "good" control string would be aaabbbbhaijjjm meaning that the printer used three times color a, four times color b, one time color h then one time color a...
+//
+// Sometimes there are problems: lack of colors, technical malfunction and a "bad" control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
+//
+// You have to write a function printer_error which given a string will return the error rate of the printer as a string representing a rational whose numerator is the number of errors and the denominator the length of the control string. Don't reduce this fraction to a simpler expression.
+//
+// The string has a length greater or equal to one and contains only letters from ato z.
+//
+// Examples:
+// s="aaabbbbhaijjjm"
+// printer_error(s) => "0/14"
+//
+// s="aaaxbbbbyyhwawiwjjjwwm"
+// printer_error(s) => "8/22"
+
+const printerError = s => `${s.replace(/[a-m]/gi, '').length}/${s.length}`;
+
+
+// Power of two.
+
+// DESCRIPTION:
+// Complete the function power_of_two/powerOfTwo (or equivalent, depending on your language) that determines if a given non-negative integer is a power of two. From the corresponding Wikipedia entry:
+//
+// a power of two is a number of the form 2n where n is an integer, i.e. the result of exponentiation with number two as the base and integer n as the exponent.
+//
+// You may assume the input is always valid.
+//
+// Examples
+// isPowerOfTwo(1024) // -> true
+// isPowerOfTwo(4096) // -> true
+// isPowerOfTwo(333)  // -> false
+// Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
+
+// function isPowerOfTwo(n) {
+//     return Number.isInteger(Math.log2(n));
+// }
+
+
+// Powers of 3.
+
+// DESCRIPTION:
+// Given a positive integer N, return the largest integer k such that 3^k < N.
+//
+// For example,
+//
+// largest_power(3) == 0
+// largest_power(4) == 1
+// You may assume that the input to your function is always a positive integer.
+
+// function largestPower(n) {
+//     let res = 0;
+//     while (3 ** res < n) res++;
+//     return res - 1;
+// }
+
+
+// Powers of i.
+
+/*
+Description:
+i is the imaginary unit, it is defined by i² = -1, therefore it is a solution to x²+1=0.
+
+Your Task
+is to write a function pofi that returns i to the power of a given non-negative integer in its simplest form as a string (answer may contain i).
+*/
+
+// function pofi(n) {
+//     return ['1', 'i', '-1', '-i'][n % 4];
+// }
+
+
+// Product Array (Array Series #5).
+
+/*
+Description:
+Introduction and Warm-up (Highly recommended)
+Playing With Lists/Arrays Series
+Task
+Given an array/list [] of integers , Construct a product array Of same size Such That prod[i] is equal to The Product of all the elements of Arr[] except Arr[i].
+
+Notes
+Array/list size is at least 2 .
+
+Array/list's numbers Will be only Postives
+
+Repeatition of numbers in the array/list could occur.
+
+Input >> Output Examples
+1- productArray ({12,20}) ==>  return {20,12}
+Explanation:
+The first element in prod [] array 12 is the product of all array's elements except the first element
+
+The second element 20 is the product of all array's elements except the second element .
+
+2- productArray ({1,5,2}) ==> return {10,2,5}
+Explanation:
+The first element 10 is the product of all array's elements except the first element 1
+
+The second element 2 is the product of all array's elements except the second element 5
+
+The Third element 5 is the product of all array's elements except the Third element 2.
+
+3- productArray ({10,3,5,6,2}) return ==> {180,600,360,300,900}
+Explanation:
+The first element 180 is the product of all array's elements except the first element 10
+
+The second element 600 is the product of all array's elements except the second element 3
+
+The Third element 360 is the product of all array's elements except the third element 5
+
+The Fourth element 300 is the product of all array's elements except the fourth element 6
+
+Finally ,The Fifth element 900 is the product of all array's elements except the fifth element 2
+*/
+
+// function productArray(numbers) {
+//     return numbers.map(x => numbers.reduce((a, b) => a * b) / x);
+// }
+
+
+// Product Of Maximums Of Array (Array Series #2).
+
+/*
+Description:
+Introduction and Warm-up (Highly recommended)
+Playing With Lists/Arrays Series
+Task
+Given an array/list [] of integers , Find the product of the k maximal numbers.
+
+Notes
+Array/list size is at least 3 .
+
+Array/list's numbers Will be mixture of positives , negatives and zeros
+
+Repeatition of numbers in the array/list could occur.
+
+Input >> Output Examples
+1- maxProduct ({4, 3, 5}, 2) ==>  return (20)
+Explanation:
+Since the size (k) equal 2 , then the subsequence of size 2 whose gives product of maxima is 5 * 4 = 20 .
+2- maxProduct ({8, 10 , 9, 7}, 3) ==>  return (720)
+Explanation:
+Since the size (k) equal 3 , then the subsequence of size 2 whose gives product of maxima is 8 * 9 * 10 = 720 .
+3- maxProduct ({10, 8, 3, 2, 1, 4, 10}, 5) ==> return (9600)
+Explanation:
+Since the size (k) equal 5 , then the subsequence of size 2 whose gives product of maxima is 10 * 10 * 8 * 4 * 3 = 9600 .
+4- maxProduct ({-4, -27, -15, -6, -1}, 2) ==> return (4)
+Explanation:
+Since the size (k) equal 2 , then the subsequence of size 2 whose gives product of maxima is -4 * -1 = 4 .
+5- maxProduct ({10, 3, -1, -27} , 3)  return (-30)
+Explanation:
+Since the size (k) equal 3 , then the subsequence of size 2 whose gives product of maxima is 10 * 3 * -1 = -30 .
+*/
+
+// function maxProduct(numbers, size) {
+//     return numbers.sort((a, b) => a - b).slice(numbers.length - size).reduce((a, b) => a * b, 1);
+// }
+
+
+// Refactored Greeting.
+
+// DESCRIPTION:
+// The following code could use a bit of object-oriented artistry. While it's a simple method and works just fine as it is, in a larger system it's best to organize methods into classes/objects. (Or, at least, something similar depending on your language)
+//
+// Refactor the following code so that it belongs to a Person class/object. Each Person instance will have a greet method. The Person instance should be instantiated with a name so that it no longer has to be passed into each greet method call.
+//
+// Here is how the final refactored code would be used:
+//
+// var joe = new Person('Joe');
+// joe.greet('Kate'); // should return 'Hello Kate, my name is Joe'
+// joe.name           // should == 'Joe'
+
+// class Person {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//
+//     greet(yourName) {
+//         return `Hello ${yourName}, my name is ${this.name}`;
+//     }
+// }
+
+
+// Remove duplicate words.
+
+// DESCRIPTION:
+// Your task is to remove all duplicate words from a string, leaving only single (first) words entries.
+//
+// Example:
+//
+// Input:
+//
+// 'alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta'
+//
+// Output:
+//
+// 'alpha beta gamma delta'
+
+// const removeDuplicateWords = s => [...new Set(s.split(' '))].join(' ');
+
+
+// Replace every nth.
+
+// DESCRIPTION:
+// Task
+// Write a method, that replaces every nth char oldValue with char newValue.
+//
+// Inputs
+// text: the string to modify
+// n: change the target letter every nth occurrencies
+// old_value (or similar): the targetted character
+// new_value (or similar): the character to use as replacement
+// Note for untyped languages: all inputs are always valid and of their expected type.
+//
+// Rules
+// Your method has to be case sensitive!
+// If n is 0 or negative or if it is larger than the count of the oldValue, return the original text without a change.
+// Example:
+// n:         2
+// old_value: 'a'
+// new_value: 'o'
+// "Vader said: No, I am your father!"
+//   1     2          3        4       -> 2nd and 4th occurence are replaced
+// "Vader soid: No, I am your fother!"
+// As you can see in the example: The first changed is the 2nd 'a'. So the start is always at the nth suitable char and not at the first!
+
+// function replaceNth(text, n, oldValue, newValue) {
+//     let i = 0;
+//     return n > 0 ? text.replace(new RegExp(oldValue, 'g'), c => ++i % n === 0 ? newValue : c) : text;
+// }
+
+
+// Remove anchor from URL.
+
+// DESCRIPTION:
+// Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+//
+// Examples
+// "www.codewars.com#about" --> "www.codewars.com"
+// "www.codewars.com?page=1" -->"www.codewars.com?page=1"
+
+// function removeUrlAnchor(url) {
+//     return url.replace(/#.*/, '');
+// }
+
+
+// Remove the minimum.
+
+// DESCRIPTION:
+// The museum of incredible dull things
+// The museum of incredible dull things wants to get rid of some exhibitions. Miriam, the interior architect, comes up with a plan to remove the most boring exhibitions. She gives them a rating, and then removes the one with the lowest rating.
+//
+// However, just as she finished rating all exhibitions, she's off to an important fair, so she asks you to write a program that tells her the ratings of the items after one removed the lowest one. Fair enough.
+//
+// Task
+// Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
+//
+// Don't change the order of the elements that are left.
+//
+// Examples
+// * Input: [1,2,3,4,5], output = [2,3,4,5]
+// * Input: [5,3,2,1,4], output = [5,3,2,4]
+// * Input: [2,2,1,2,1], output = [2,2,2,1]
+
+// function removeSmallest(numbers) {
+//     let indexOfMin = numbers.indexOf(Math.min(...numbers));
+//     return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
+// }
+
+
+// Remove the noise from the string.
+
+/*
+Description:
+We have a broken message machine that introduces noise to our incoming messages. We know that our messages can't be written using %$&/#·@|º\ª and white characters (like spaces or tabs). Unfortunately our machine introduces noise, which means that our message arrives with characters like: %$&/#·@|º\ª within our original message.
+
+Your mission is to write a function which removes this noise from the message.
+
+Notice that noise can only be
+%$&/#·@|º\ª
+charaters, other characteres are not considered noise
+
+For example:
+
+removeNoise("h%e&·%$·llo w&%or&$l·$%d")
+// returns hello world
+*/
+
+// function removeNoise(str) {
+//     return str.replace(/[%$&/#·@|º\\ª]/gi, '');
+// }
+
+
+// Run your String.
+
+/*
+Description:
+1) Function should accept two arguments:
+
+arg: any type
+
+object with properties:
+
+param: string type.
+func: string type. This string is a body of executable function
+2) Function should evaluate code of string passed as 'func' with parameter arg passed as argument and return result of execution
+
+Example:
+
+var arg = 4,                         // arg for "string" function call
+    obj = {
+      param: 'num',                  // parameter name for function in string
+      func: 'return Math.sqrt(num)'  // function that need call with arg var
+    };
+
+runYourString(arg, obj)              // we expect it should return 2 which is a result of square root of 4
+ps: Solution of this Kata just fun language trick.
+
+Usage of this code in production is not recommended.
+*/
+
+// function runYourString(arg, obj) {
+//     return new Function(obj.param, obj.func)(arg);
+// }
+
+
+// Return the Missing Element.
+
+// DESCRIPTION:
+// Fellow code warrior, we need your help! We seem to have lost one of our sequence elements, and we need your help to retrieve it!
+//
+// Our sequence given was supposed to contain all of the integers from 0 to 9 (in no particular order), but one of them seems to be missing.
+//
+// Write a function that accepts a sequence of unique integers between 0 and 9 (inclusive), and returns the missing element.
+//
+// Examples:
+// [0, 5, 1, 3, 2, 9, 7, 6, 4] --> 8
+// [9, 2, 4, 5, 7, 0, 8, 6, 1] --> 3
+
+// function getMissingElement(superImportantArray) {
+//     let count = 0;
+//     let arr = superImportantArray.sort((a, b) => a - b);
+//     for (let i = 0; i <= arr.length; i++) {
+//         if (i == arr[i]) count++;
+//     }
+//     return count;
+// }
+
+
+// Selective fear of numbers.
+
+/*
+Description:
+I've got a crazy mental illness. I dislike numbers a lot. But it's a little complicated: The number I'm feared of depends on which day of week it is... This a concrete description of my mental illness:
+
+Monday --> 12
+
+Tuesday --> numbers greater than 95
+
+Wednesday --> 34
+
+Thursday --> 0
+
+Friday --> numbers divisable by 2
+
+Saturday --> 56
+
+Sunday --> 666 or -666
+
+Write a function which takes a string (day of week) and an integer (number to be tested) so it tells the doctor if I'm feared or not. (return a boolean)
+*/
+
+// const AmIAfraid = function (day, num) {
+//     if (day == 'Monday' && num === 12) return true;
+//     if (day == 'Tuesday' && num > 95) return true;
+//     if (day == 'Wednesday' && num === 34) return true;
+//     if (day == 'Thursday' && num === 0) return true;
+//     if (day == 'Friday' && num % 2 == 0) return true;
+//     if (day == 'Saturday' && num === 56) return true;
+//     else if (day == 'Sunday' && (num == 666 || num === -666)) return true;
+//     return false;
+// };
+
+
+// Simple Fun #7: Will You?.
+
+/*
+Description:
+Story&Task
+Once Mary heard a famous song, and a line from it stuck in her head. That line was "Will you still love me when I'm no longer young and beautiful?". Mary believes that a person is loved if and only if he/she is both young and beautiful, but this is quite a depressing thought, so she wants to put her belief to the test.
+
+Knowing whether a person is young, beautiful and loved, find out if they contradict Mary's belief.
+
+A person contradicts Mary's belief if one of the following statements is true:
+
+they are young and beautiful but not loved;
+they are loved but not young or not beautiful.
+Example
+For young = true, beautiful = true and loved = true, the output should be false.
+
+Young and beautiful people are loved according to Mary's belief.
+
+For young = true, beautiful = false and loved = true, the output should be true.
+
+Mary doesn't believe that not beautiful people can be loved.
+
+Input/Output
+[input] boolean young
+
+[input] boolean beautiful
+
+[input] boolean loved
+
+[output] a boolean value
+
+true if the person contradicts Mary's belief, false otherwise.
+*/
+
+// function willYou(y, b, l) {
+//     if (y === true && b === true && l === true || y === false && b === false && l === false) return false;
+//     if (y === false && b === true && l === false) return false;
+//     else if (y === true && b === false && l === false) return false;
+//     return true;
+// }
+
+
+
