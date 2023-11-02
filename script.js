@@ -7519,9 +7519,9 @@ The Fourth element 300 is the product of all array's elements except the fourth 
 Finally ,The Fifth element 900 is the product of all array's elements except the fifth element 2
 */
 
-// function productArray(numbers) {
-//     return numbers.map(x => numbers.reduce((a, b) => a * b) / x);
-// }
+function productArray(numbers) {
+    return numbers.map(x => numbers.reduce((a, b) => a * b) / x);
+}
 
 
 // Product Of Maximums Of Array (Array Series #2).
