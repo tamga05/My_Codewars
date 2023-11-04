@@ -6419,9 +6419,6 @@ function towerCombination(n) {
 }
 
 
-<<<<<<< HEAD
-// 
-=======
 // Arithmetic List!
 
 // In this kata, you will write an arithmetic list which is basically a list that contains consecutive terms in the sequence.
@@ -7579,15 +7576,15 @@ function maxProduct(numbers, size) {
 // joe.greet('Kate'); // should return 'Hello Kate, my name is Joe'
 // joe.name           // should == 'Joe'
 
-// class Person {
-//     constructor(name) {
-//         this.name = name;
-//     }
-//
-//     greet(yourName) {
-//         return `Hello ${yourName}, my name is ${this.name}`;
-//     }
-// }
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+
+    greet(yourName) {
+        return `Hello ${yourName}, my name is ${this.name}`;
+    }
+}
 
 
 // Remove duplicate words.
@@ -7834,4 +7831,4 @@ true if the person contradicts Mary's belief, false otherwise.
 
 
 
->>>>>>> origin/main
+
