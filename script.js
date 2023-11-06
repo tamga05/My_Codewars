@@ -7630,10 +7630,10 @@ const removeDuplicateWords = s => [...new Set(s.split(' '))].join(' ');
 // "Vader soid: No, I am your fother!"
 // As you can see in the example: The first changed is the 2nd 'a'. So the start is always at the nth suitable char and not at the first!
 
-// function replaceNth(text, n, oldValue, newValue) {
-//     let i = 0;
-//     return n > 0 ? text.replace(new RegExp(oldValue, 'g'), c => ++i % n === 0 ? newValue : c) : text;
-// }
+function replaceNth(text, n, oldValue, newValue) {
+    let i = 0;
+    return n > 0 ? text.replace(new RegExp(oldValue, 'g'), c => ++i % n === 0 ? newValue : c) : text;
+}
 
 
 // Remove anchor from URL.
