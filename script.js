@@ -7645,9 +7645,9 @@ function replaceNth(text, n, oldValue, newValue) {
 // "www.codewars.com#about" --> "www.codewars.com"
 // "www.codewars.com?page=1" -->"www.codewars.com?page=1"
 
-// function removeUrlAnchor(url) {
-//     return url.replace(/#.*/, '');
-// }
+function removeUrlAnchor(url) {
+    return url.replace(/#.*/, '');
+}
 
 
 // Remove the minimum.
