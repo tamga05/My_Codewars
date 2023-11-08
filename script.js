@@ -7692,9 +7692,9 @@ removeNoise("h%e&·%$·llo w&%or&$l·$%d")
 // returns hello world
 */
 
-// function removeNoise(str) {
-//     return str.replace(/[%$&/#·@|º\\ª]/gi, '');
-// }
+function removeNoise(str) {
+    return str.replace(/[%$&/#·@|º\\ª]/gi, '');
+}
 
 
 // Run your String.
