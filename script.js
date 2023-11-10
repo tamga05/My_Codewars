@@ -7725,9 +7725,9 @@ ps: Solution of this Kata just fun language trick.
 Usage of this code in production is not recommended.
 */
 
-// function runYourString(arg, obj) {
-//     return new Function(obj.param, obj.func)(arg);
-// }
+function runYourString(arg, obj) {
+    return new Function(obj.param, obj.func)(arg);
+}
 
 
 // Return the Missing Element.
@@ -7828,7 +7828,5 @@ true if the person contradicts Mary's belief, false otherwise.
 //     else if (y === true && b === false && l === false) return false;
 //     return true;
 // }
-
-
 
 
