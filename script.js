@@ -7842,11 +7842,11 @@ function willYou(y, b, l) {
 //
 // It expects Calculator.average(3,4,5) to return 4.
 
-// const Calculator = {
-//     average: function (...args) {
-//         return args.length == 0 ? 0 : args.reduce((a, b) => b + a) / args.length;
-//     }
-// };
+const Calculator = {
+    average: function (...args) {
+        return args.length == 0 ? 0 : args.reduce((a, b) => b + a) / args.length;
+    }
+};
 
 
 // Help the Fruit Guy.
