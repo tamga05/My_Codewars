@@ -8009,9 +8009,9 @@ function incrementer(num) {
 //
 // String array revisal
 
-// function capitalize(s, arr) {
-//     return s.split('').map((val, i) => (arr.includes(i)) ? val.toUpperCase() : val).join('');
-// }
+function capitalize(s, arr) {
+    return s.split('').map((val, i) => (arr.includes(i)) ? val.toUpperCase() : val).join('');
+}
 
 
 // Initialize my name.
