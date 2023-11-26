@@ -8112,10 +8112,10 @@ const encryption = message => [...message].map(v => CHAR_TO_MORSE[v] || v).join(
 //
 // For a visual representation: --> https://imgur.com/a/AN8A5DJ
 
-// function notVisibleCubes(n) {
-//     console.log(n);
-//     return n > 3 ? (n - 2) * (n - 2) * (n - 2) : n == 3 ? 1 : 0;
-// }
+function notVisibleCubes(n) {
+    console.log(n);
+    return n > 3 ? (n - 2) * (n - 2) * (n - 2) : n == 3 ? 1 : 0;
+}
 
 
 // Isograms.
