@@ -8131,9 +8131,9 @@ function notVisibleCubes(n) {
 // isIsogram "moose" = false
 // isIsogram "aba" = false
 
-// function isIsogram(str) {
-//     return !str.match(/([a-z]).*\1/i);
-// }
+function isIsogram(str) {
+    return !str.match(/([a-z]).*\1/i);
+}
 
 
 // Is that a real phone number? (British version).
