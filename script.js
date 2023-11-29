@@ -8181,11 +8181,11 @@ function validateNumber(str) {
 //
 // Given an earthquake and the age of a building, write a function that returns "Safe!" if the building is strong enough, or "Needs Reinforcement!" if it falls.
 
-// function strongEnough(earthquake, age) {
-//     earthquake = earthquake.reduce((s, v) => s * v.reduce((x, s) => x + s, 0), 1);
-//     const strength = 1000 * Math.pow(.99, age);
-//     return strength > earthquake ? 'Safe!' : 'Needs Reinforcement!';
-// }
+function strongEnough(earthquake, age) {
+    earthquake = earthquake.reduce((s, v) => s * v.reduce((x, s) => x + s, 0), 1);
+    const strength = 1000 * Math.pow(.99, age);
+    return strength > earthquake ? 'Safe!' : 'Needs Reinforcement!';
+}
 
 
 // Keypad horror.
