@@ -8340,7 +8340,7 @@ function isLucky(ticket) {
 //
 // The input will always be made of only lowercase letters and will never be empty.
 
-// const wordsToMarks = s => [...s].reduce((res, c) => res += c.charCodeAt() - 96, 0);
+const wordsToMarks = s => [...s].reduce((res, c) => res += c.charCodeAt() - 96, 0);
 
 
 // Magic Sum of 3s.
