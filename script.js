@@ -8354,9 +8354,9 @@ Example: [3, 12, 5, 8, 30, 13] results in 16 (3 + 13)
 If the sum cannot be calculated, 0 should be returned.
 */
 
-// function magicSum(numbers) {
-//     return numbers && Array.isArray(numbers) ? numbers.reduce((a, b) => a + (b % 2 !== 0 && b.toString().split('').includes('3') ? b : 0), 0) : 0;
-// }
+function magicSum(numbers) {
+    return numbers && Array.isArray(numbers) ? numbers.reduce((a, b) => a + (b % 2 !== 0 && b.toString().split('').includes('3') ? b : 0), 0) : 0;
+}
 
 
 // List of Presents.
