@@ -8408,9 +8408,9 @@ function howManyGifts(maxBudget, gifts) {
 // t = [1, 7, 3, 4]
 // tCopy = [1, 2, 3, 4]
 
-// function copyList(l) {
-//     return [...l];
-// }
+function copyList(l) {
+    return [...l];
+}
 
 
 // Match My Husband.
