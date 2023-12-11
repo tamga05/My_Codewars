@@ -8251,7 +8251,7 @@ let kookaCounter = function (laughing) {
         }
     }
     return count;
-}
+};
 
 
 // Largest Elements.
@@ -8470,11 +8470,11 @@ Enjoy Learning !!
 Zizou
 */
 
-// function adjacentElementsProduct(array) {
-//     let cache = (-Infinity);
-//     array.map((v, i, arr) => arr[i] * arr[i + 1] > cache ? cache = arr[i] * arr[i + 1] : cache);
-//     return cache;
-// }
+function adjacentElementsProduct(array) {
+    let cache = (-Infinity);
+    array.map((v, i, arr) => arr[i] * arr[i + 1] > cache ? cache = arr[i] * arr[i + 1] : cache);
+    return cache;
+}
 
 
 // Most digits.
@@ -8488,4 +8488,254 @@ Zizou
 // }
 
 
-// 
+// First-Class Function Factory.
+
+/*
+Description:
+Write a function, factory, that takes a number as its parameter and returns another function.
+
+The returned function should take an array of numbers as its parameter, and return an array of those numbers multiplied by the number that was passed into the first function.
+
+In the example below, 5 is the number passed into the first function. So it returns a function that takes an array and multiplies all elements in it by five.
+
+Translations and comments (and upvotes) welcome!
+
+Example
+var fives = factory(5);       // returns a function - fives
+var myArray = [1, 2, 3];
+fives(myArray);               //returns [5, 10, 15];
+*/
+
+// function factory(x) {
+//     return array => array.map(a => a * x);
+// }
+
+
+// Flatten.
+
+// DESCRIPTION:
+// Write a function that flattens an Array of Array objects into a flat Array. Your function must only do one level of flattening.
+//
+// flatten([1,2,3]) // => [1,2,3]
+// flatten([[1,2,3],["a","b","c"],[1,2,3]])  // => [1,2,3,"a","b","c",1,2,3]
+// flatten([[[1,2,3]]]) // => [[1,2,3]]
+
+// const flatten = (array) => [].concat(...array);
+
+
+// Flatten and sort an array.
+
+// DESCRIPTION:
+// Challenge:
+//
+// Given a two-dimensional array of integers, return the flattened version of the array with all the integers in the sorted (ascending) order.
+//
+// Example:
+//
+// Given [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], your function should return [1, 2, 3, 4, 5, 6, 7, 8, 9].
+//
+// Addendum:
+//
+// Please, keep in mind, that JavaScript is by default sorting objects alphabetically. For more information, please consult:
+//
+// http://stackoverflow.com/questions/6093874/why-doesnt-the-sort-function-of-javascript-work-well
+
+// 'use strict';
+//
+// function flattenAndSort(array) {
+//     return [].concat(...array).sort((a, b) => a - b);
+// }
+
+
+// Form The Minimum.
+
+// DESCRIPTION:
+// Task
+// Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).
+//
+// Notes:
+// Only positive integers will be passed to the function (> 0 ), no negatives or zeros.
+// Input >> Output Examples
+// minValue ({1, 3, 1})  ==> return (13)
+// Explanation:
+// (13) is the minimum number could be formed from {1, 3, 1} , Without duplications
+//
+// minValue({5, 7, 5, 9, 7})  ==> return (579)
+// Explanation:
+// (579) is the minimum number could be formed from {5, 7, 5, 9, 7} , Without duplications
+//
+// minValue({1, 9, 3, 1, 7, 4, 6, 6, 7}) return  ==> (134679)
+// Explanation:
+// (134679) is the minimum number could be formed from {1, 9, 3, 1, 7, 4, 6, 6, 7} , Without duplications
+//
+// Playing with Numbers Series
+// Playing With Lists/Arrays Series
+// Bizarre Sorting-katas
+// For More Enjoyable Katas
+// ALL translations are welcomed
+// Enjoy Learning !!
+// Zizou
+
+// function minValue(values) {
+//     return +(Array.from(new Set(values))).sort((a, b) => a - b).join('');
+// }
+
+
+// Fun with lists: indexOf.
+
+/*
+Description:
+Implement the method indexOf (index_of in PHP), which accepts a linked list (head) and a value, and returns the index (zero based) of the first occurrence of that value if exists, or -1 otherwise.
+
+For example: Given the list: 1 -> 2 -> 3 -> 3, and the value 3, indexOf / index_of should return 2.
+
+The linked list is defined as follows:
+
+function Node(data, next = null) {
+  this.data = data;
+  this.next = next;
+}
+Note: the list may be null and can hold any type of value.
+
+Good luck!
+*/
+
+// function indexOf(head, value) {
+//     let count = 0;
+//     while (head) {
+//         if (head.data === value) {
+//             return count;
+//         }
+//         head = head.next;
+//         count++;
+//     }
+//     return -1;
+// }
+
+
+// Fun with lists: lastIndexOf.
+
+/*
+Description:
+Implement the method lastIndexOf (last_index_of in PHP), which accepts a linked list (head) and a value, and returns the index (zero based) of the last occurrence of that value if exists, or -1 otherwise.
+
+For example: Given the list: 1 -> 2 -> 3 -> 3, and the value 3, lastIndexOf / last_index_of should return 3.
+
+The linked list is defined as follows:
+
+function Node(data, next = null) {
+  this.data = data;
+  this.next = next;
+}
+Note: the list may be null and can hold any type of value.
+
+Good luck!
+*/
+
+// function lastIndexOf(head, value) {
+//     let count = 0, current = head;
+//     let arr = [];
+//     while (current !== null) {
+//         arr.push(current.data);
+//         current = current.next;
+//         count++;
+//     }
+//     return arr.lastIndexOf(value);
+// }
+
+
+// Fun with lists: length.
+
+/*
+Description:
+Implement the method length, which accepts a linked list (head), and returns the length of the list.
+
+For example: Given the list: 1 -> 2 -> 3 -> 4, length should return 4.
+
+The linked list is defined as follows:
+
+function Node(data, next = null) {
+  this.data = data;
+  this.next = next;
+}
+Note: the list may be null and can hold any type of value.
+
+Good luck!
+*/
+
+// function length(head) {
+//     let count = 0;
+//     while (head) {
+//         head = head.next;
+//         count++;
+//     }
+//     return count;
+// }
+
+
+// Functional Addition.
+
+// DESCRIPTION:
+// Create a function add(n)/Add(n) which returns a function that always adds n to any number
+//
+// Note for Java: the return type and methods have not been provided to make it a bit more challenging.
+//
+// var addOne = add(1);
+// addOne(3); // 4
+//
+// var addThree = add(3);
+// addThree(3); // 6
+
+// function add(n) {
+//     return function (m) {
+//         return n + m;
+//     };
+// }
+
+
+// Geometric Mean I.
+
+/*
+For a variable, x, that may have different values, the geometric mean is defined as:
+
+Suposse that you have to calculate the geometric mean for a research where the amount of values of x is rather small.
+
+Implement the function geometric_meanI(), (geometricMeanI javascript)that receives an array with the different values of the variable and outputs the geometric mean value.
+
+The negative values and strings will be discarded for the calculations.
+
+Nevertheless if the amount of total invalid values is too high, the function will return 0 (Nothing in Haskell). The tolerance for invalid values of the variable will be as follows:
+
+amount of entries      maximum invalid entries
+  2 - 10                       1
+  From 11 and above       10 % of total of entries
+You do not have to round the results.
+*/
+
+// function geometricMeanI(arr) {
+//     const gm = arr.filter(a => typeof (a) === 'number' && a >= 0);
+//     if ((arr.length - gm.length) > 1) return 0;
+//     return Math.pow(gm.reduce((a, b) => a * b), 1 / gm.length);
+// }
+
+
+// Geometric Progression Sequence.
+
+/*
+Description:
+In your class, you have started lessons about geometric progression. Since you are also a programmer, you have decided to write a function that will print first n elements of the sequence with the given constant r and first element a.
+
+Result should be separated by comma and space.
+
+Example
+geometricSequenceElements(2, 3, 5) == '2, 6, 18, 54, 162'
+More info: https://en.wikipedia.org/wiki/Geometric_progression
+*/
+
+// function geometricSequenceElements(a, r, n) {
+//     let arr = [a];
+//     for (let i = 0; i < n - 1; i++) {
+//         arr.push(arr[i] * r);
+//     }
+//     return arr.join(', ');
+// }
