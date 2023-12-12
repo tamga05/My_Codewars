@@ -8483,9 +8483,9 @@ function adjacentElementsProduct(array) {
 //
 // If two numbers in the argument array have the same number of digits, return the first one in the array.
 
-// function findLongest(array) {
-//     return array.reduce((a, b) => (`${b}`.length > `${a}`.length ? b : a));
-// }
+function findLongest(array) {
+    return array.reduce((a, b) => (`${b}`.length > `${a}`.length ? b : a));
+}
 
 
 // First-Class Function Factory.
