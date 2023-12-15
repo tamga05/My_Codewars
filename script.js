@@ -8540,11 +8540,11 @@ const flatten = (array) => [].concat(...array);
 //
 // http://stackoverflow.com/questions/6093874/why-doesnt-the-sort-function-of-javascript-work-well
 
-// 'use strict';
-//
-// function flattenAndSort(array) {
-//     return [].concat(...array).sort((a, b) => a - b);
-// }
+'use strict';
+
+function flattenAndSort(array) {
+    return [].concat(...array).sort((a, b) => a - b);
+}
 
 
 // Form The Minimum.
