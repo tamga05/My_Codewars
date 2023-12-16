@@ -8576,9 +8576,9 @@ function flattenAndSort(array) {
 // Enjoy Learning !!
 // Zizou
 
-// function minValue(values) {
-//     return +(Array.from(new Set(values))).sort((a, b) => a - b).join('');
-// }
+function minValue(values) {
+    return +(Array.from(new Set(values))).sort((a, b) => a - b).join('');
+}
 
 
 // Fun with lists: indexOf.
