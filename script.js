@@ -8600,17 +8600,17 @@ Note: the list may be null and can hold any type of value.
 Good luck!
 */
 
-// function indexOf(head, value) {
-//     let count = 0;
-//     while (head) {
-//         if (head.data === value) {
-//             return count;
-//         }
-//         head = head.next;
-//         count++;
-//     }
-//     return -1;
-// }
+function indexOf(head, value) {
+    let count = 0;
+    while (head) {
+        if (head.data === value) {
+            return count;
+        }
+        head = head.next;
+        count++;
+    }
+    return -1;
+}
 
 
 // Fun with lists: lastIndexOf.
