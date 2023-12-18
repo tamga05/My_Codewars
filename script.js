@@ -8632,16 +8632,16 @@ Note: the list may be null and can hold any type of value.
 Good luck!
 */
 
-// function lastIndexOf(head, value) {
-//     let count = 0, current = head;
-//     let arr = [];
-//     while (current !== null) {
-//         arr.push(current.data);
-//         current = current.next;
-//         count++;
-//     }
-//     return arr.lastIndexOf(value);
-// }
+function lastIndexOf(head, value) {
+    let count = 0, current = head;
+    let arr = [];
+    while (current !== null) {
+        arr.push(current.data);
+        current = current.next;
+        count++;
+    }
+    return arr.lastIndexOf(value);
+}
 
 
 // Fun with lists: length.
@@ -8738,4 +8738,278 @@ More info: https://en.wikipedia.org/wiki/Geometric_progression
 //         arr.push(arr[i] * r);
 //     }
 //     return arr.join(', ');
+// }
+
+
+// Name Array Capping.
+
+// DESCRIPTION:
+// Create a method that accepts an array of names, and returns an array of each name with its first letter capitalized.
+//
+// example
+//
+// capMe(['jo', 'nelson', 'jurie'])     // returns ['Jo', 'Nelson', 'Jurie']
+// capMe(['KARLY', 'DANIEL', 'KELSEY']) // returns ['Karly', 'Daniel', 'Kelsey']
+
+// function capMe(names) {
+//     return names.map(value => value.slice(0, 1).toUpperCase() + value.toLowerCase().slice(1));
+// }
+
+
+// Name That Number!
+
+/*
+Description:
+In this kata, you'll be given an integer of range 0 <= x <= 99 and have to return that number spelt out in English. A few examples:
+
+nameThatNumber(4)   // returns "four"
+nameThatNumber(19)  // returns "nineteen"
+nameThatNumber(99)  // returns "ninety nine"
+Words should be seperated by only spaces and not hyphens. No need to validate parameters, they will always be in the range [0, 99]. Make sure that the returned String has no leading of trailing spaces. Good luck!
+*/
+
+// function nameThatNumber(x) {
+//     let returnedValue = '';
+//     let tens = {2: 'twenty', 3: 'thirty', 4: 'forty', 5: 'fifty', 6: 'sixty', 7: 'seventy', 8: 'eighty', 9: 'ninety'};
+//     let units = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+//     if (x == 0) {
+//         returnedValue = 'zero';
+//     }
+//     if (x < 20 && x > 0) {
+//         returnedValue = units[x];
+//     }
+//     if (x >= 20) {
+//         returnedValue = tens[Math.floor((x / 10))] + ((x % 10 != 0) ? ' ' : '') + units[x % 10];
+//     }
+//     return returnedValue;
+// }
+
+
+// Naughty or Nice.
+
+/*
+Description:
+Santa is coming to town and he needs your help finding out who's been naughty or nice. You will be given an entire year of JSON data following this format:
+
+{
+    January: {
+        '1': 'Naughty','2': 'Naughty', ..., '31': 'Nice'
+    },
+    February: {
+        '1': 'Nice','2': 'Naughty', ..., '28': 'Nice'
+    },
+    ...
+    December: {
+        '1': 'Nice','2': 'Nice', ..., '31': 'Naughty'
+    }
+}
+Your function should return "Naughty!" or "Nice!" depending on the total number of occurrences in a given year (whichever one is greater). If both are equal, return "Nice!"
+*/
+
+// function naughtyOrNice(data) {
+//     let count = 0;
+//     for (let month in data) {
+//         [data[month]].map(v => Object.values(v).map(v => v === 'Naughty' ? count-- : count++));
+//     }
+//     return count >= 0 ? 'Nice!' : 'Naughty!';
+// }
+
+
+// New £5 notes collectors!.
+
+/*
+Description:
+The new £5 notes have been recently released in the UK and they've certainly became a sensation! Even those of us who haven't been carrying any cash around for a while, having given in to the convenience of cards, suddenly like to have some of these in their purses and pockets. But how many of them could you get with what's left from your salary after paying all bills? The programme that you're about to write will count this for you!
+
+Given a salary and the array of bills, calculate your disposable income for a month and return it as a number of new £5 notes you can get with that amount. If the money you've got (or do not!) doesn't allow you to get any £5 notes return 0.
+
+£££ GOOD LUCK! £££
+*/
+
+// function getNewNotes(salary, bills) {
+//     let sum = salary - bills.reduce((a, b) => a + b, 0);
+//     return sum > 0 ? Math.floor(sum / 5) : 0;
+// }
+
+
+// Next Palindromic Number.
+
+/*
+Description:
+There were and still are many problem in CW about palindrome numbers and palindrome strings. We suposse that you know which kind of numbers they are. If not, you may search about them using your favourite search engine.
+
+In this kata you will be given a positive integer, val and you have to create the function next_pal()(nextPal Javascript) that will output the smallest palindrome number higher than val.
+
+Let's see:
+
+For Javascript
+nextPal(11) == 22
+
+nextPal(188) == 191
+
+nextPal(191) == 202
+
+nextPal(2541) == 2552
+You will be receiving values higher than 10, all valid.
+
+Enjoy it!!
+*/
+
+// function nextPal(val) {
+//     let pal = 0;
+//     for (let i = val + 1; ; i++) {
+//         if (palindrom(i)) {
+//             pal = i;
+//             break;
+//         }
+//     }
+//     return pal;
+// }
+//
+// function palindrom(i) {
+//     return i.toString() === i.toString().split('').reverse().join('');
+// }
+
+
+// Next Prime.
+
+/*
+Description:
+Get the next prime number!
+
+You will get a numbern (>= 0) and your task is to find the next prime number.
+
+Make sure to optimize your code: there will numbers tested up to about 1012
+
+Examples
+5  ==> 7
+12 ==> 13
+*/
+
+// function nextPrime(n) {
+//     let count = 0;
+//     for (let i = n + 1; i > 0; i++) {
+//         if (isPrime(i)) {
+//             count = i;
+//             break;
+//         }
+//     }
+//     return count;
+// }
+//
+// function isPrime(n) {
+//     let rt = Math.sqrt(n);
+//     for (let i = 2; i <= rt; i++) {
+//         if (n % i === 0) return false;
+//     }
+//     return n !== 1;
+// }
+
+
+// Next birth-day of the week finder.
+
+/*
+Description:
+Can you find after how many years will a person's birthday fall on the same day of the week that he was born?
+
+For example, Joy's birthday is on 16th October, 1990 which falls on Friday. After how many years will his birthday fall on Friday again? (That would be 11 years)
+
+nextBirthdayOfTheWeek(new Date(1990, 10, 16)) //11
+nextBirthdayOfTheWeek(new Date(2012, 5, 20))  //6
+nextBirthdayOfTheWeek(new Date(1975, 2, 22))  //5
+*/
+
+// let nextBirthdayOfTheWeek = function (birthday) {
+//     let weekday = birthday.getDay();
+//     let yr = birthday.getFullYear();
+//     yr += 1;
+//     let month = birthday.getMonth();
+//     let day = birthday.getDate();
+//
+//     while (weekday !== new Date(yr, month, day).getDay()) {
+//         yr++;
+//     }
+//     return yr - birthday.getFullYear();
+// };
+
+
+// Nice Array.
+
+/*
+Description:
+A Nice array is defined to be an array where for every value n in the array, there is also an element n-1 or n+1 in the array.
+
+example:
+
+[2,10,9,3] is Nice array because
+
+2=3-1
+10=9+1
+3=2+1
+9=10-1
+Write a function named isNice/IsNice that returns true if its array argument is a Nice array, else false. You should also return false if input array has no elements.
+*/
+
+// function isNice(arr) {
+//     if (arr.length === 0) return false;
+//     return arr.every(v => arr.includes(v + 1) || arr.includes(v - 1));
+// }
+
+
+// Nickname Generator.
+
+/*
+Description:
+Nickname Generator
+
+Write a function, nicknameGenerator that takes a string name as an argument and returns the first 3 or 4 letters as a nickname.
+
+If the 3rd letter is a consonant, return the first 3 letters.
+
+nickname("Robert") //=> "Rob"
+nickname("Kimberly") //=> "Kim"
+nickname("Samantha") //=> "Sam"
+If the 3rd letter is a vowel, return the first 4 letters.
+
+nickname("Jeannie") //=> "Jean"
+nickname("Douglas") //=> "Doug"
+nickname("Gregory") //=> "Greg"
+If the string is less than 4 characters, return "Error: Name too short".
+
+Notes:
+
+Vowels are "aeiou", so discount the letter "y".
+Input will always be a string.
+Input will always have the first letter capitalised and the rest lowercase (e.g. Sam).
+The input can be modified
+*/
+
+// function nicknameGenerator(name) {
+//     if (name.length < 4) return 'Error: Name too short';
+//     if (name[2].match(/[aeuio]/)) return name.slice(0, 4);
+//     return name.slice(0, 3);
+// }
+
+
+// Ninja vs Samurai: Strike.
+
+// DESCRIPTION:
+// Something is wrong with our Warrior class. The strike method does not work correctly. The following shows an example of this code being used:
+//
+// var ninja = new Warrior('Ninja');
+// var samurai = new Warrior('Samurai');
+//
+// samurai.strike(ninja, 3);
+// // ninja.health should == 70
+// Can you figure out what is wrong?
+
+// class Warrior {
+//     constructor(name) {
+//         this.name = name;
+//         this.health = 100;
+//     }
+//
+//     strike(enemy, swings) {
+//         enemy.health = Math.max(0, enemy.health - (swings * 10));
+//     }
 // }
