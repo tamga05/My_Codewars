@@ -8663,14 +8663,14 @@ Note: the list may be null and can hold any type of value.
 Good luck!
 */
 
-// function length(head) {
-//     let count = 0;
-//     while (head) {
-//         head = head.next;
-//         count++;
-//     }
-//     return count;
-// }
+function length(head) {
+    let count = 0;
+    while (head) {
+        head = head.next;
+        count++;
+    }
+    return count;
+}
 
 
 // Functional Addition.
