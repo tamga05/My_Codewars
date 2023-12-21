@@ -8712,11 +8712,11 @@ amount of entries      maximum invalid entries
 You do not have to round the results.
 */
 
-// function geometricMeanI(arr) {
-//     const gm = arr.filter(a => typeof (a) === 'number' && a >= 0);
-//     if ((arr.length - gm.length) > 1) return 0;
-//     return Math.pow(gm.reduce((a, b) => a * b), 1 / gm.length);
-// }
+function geometricMeanI(arr) {
+    const gm = arr.filter(a => typeof (a) === 'number' && a >= 0);
+    if ((arr.length - gm.length) > 1) return 0;
+    return Math.pow(gm.reduce((a, b) => a * b), 1 / gm.length);
+}
 
 
 // Geometric Progression Sequence.
