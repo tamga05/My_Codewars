@@ -8855,20 +8855,20 @@ You will be receiving values higher than 10, all valid.
 Enjoy it!!
 */
 
-// function nextPal(val) {
-//     let pal = 0;
-//     for (let i = val + 1; ; i++) {
-//         if (palindrom(i)) {
-//             pal = i;
-//             break;
-//         }
-//     }
-//     return pal;
-// }
-//
-// function palindrom(i) {
-//     return i.toString() === i.toString().split('').reverse().join('');
-// }
+function nextPal(val) {
+    let pal = 0;
+    for (let i = val + 1; ; i++) {
+        if (palindrom(i)) {
+            pal = i;
+            break;
+        }
+    }
+    return pal;
+}
+
+function palindrom(i) {
+    return i.toString() === i.toString().split('').reverse().join('');
+}
 
 
 // Next Prime.
