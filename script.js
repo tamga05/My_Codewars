@@ -7630,10 +7630,10 @@ const removeDuplicateWords = s => [...new Set(s.split(' '))].join(' ');
 // "Vader soid: No, I am your fother!"
 // As you can see in the example: The first changed is the 2nd 'a'. So the start is always at the nth suitable char and not at the first!
 
-// function replaceNth(text, n, oldValue, newValue) {
-//     let i = 0;
-//     return n > 0 ? text.replace(new RegExp(oldValue, 'g'), c => ++i % n === 0 ? newValue : c) : text;
-// }
+function replaceNth(text, n, oldValue, newValue) {
+    let i = 0;
+    return n > 0 ? text.replace(new RegExp(oldValue, 'g'), c => ++i % n === 0 ? newValue : c) : text;
+}
 
 
 // Remove anchor from URL.
@@ -7645,9 +7645,9 @@ const removeDuplicateWords = s => [...new Set(s.split(' '))].join(' ');
 // "www.codewars.com#about" --> "www.codewars.com"
 // "www.codewars.com?page=1" -->"www.codewars.com?page=1"
 
-// function removeUrlAnchor(url) {
-//     return url.replace(/#.*/, '');
-// }
+function removeUrlAnchor(url) {
+    return url.replace(/#.*/, '');
+}
 
 
 // Remove the minimum.
@@ -7668,10 +7668,10 @@ const removeDuplicateWords = s => [...new Set(s.split(' '))].join(' ');
 // * Input: [5,3,2,1,4], output = [5,3,2,4]
 // * Input: [2,2,1,2,1], output = [2,2,2,1]
 
-// function removeSmallest(numbers) {
-//     let indexOfMin = numbers.indexOf(Math.min(...numbers));
-//     return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
-// }
+function removeSmallest(numbers) {
+    let indexOfMin = numbers.indexOf(Math.min(...numbers));
+    return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
+}
 
 
 // Remove the noise from the string.
@@ -7692,9 +7692,9 @@ removeNoise("h%e&·%$·llo w&%or&$l·$%d")
 // returns hello world
 */
 
-// function removeNoise(str) {
-//     return str.replace(/[%$&/#·@|º\\ª]/gi, '');
-// }
+function removeNoise(str) {
+    return str.replace(/[%$&/#·@|º\\ª]/gi, '');
+}
 
 
 // Run your String.
@@ -7725,9 +7725,9 @@ ps: Solution of this Kata just fun language trick.
 Usage of this code in production is not recommended.
 */
 
-// function runYourString(arg, obj) {
-//     return new Function(obj.param, obj.func)(arg);
-// }
+function runYourString(arg, obj) {
+    return new Function(obj.param, obj.func)(arg);
+}
 
 
 // Return the Missing Element.
@@ -7743,14 +7743,14 @@ Usage of this code in production is not recommended.
 // [0, 5, 1, 3, 2, 9, 7, 6, 4] --> 8
 // [9, 2, 4, 5, 7, 0, 8, 6, 1] --> 3
 
-// function getMissingElement(superImportantArray) {
-//     let count = 0;
-//     let arr = superImportantArray.sort((a, b) => a - b);
-//     for (let i = 0; i <= arr.length; i++) {
-//         if (i == arr[i]) count++;
-//     }
-//     return count;
-// }
+function getMissingElement(superImportantArray) {
+    let count = 0;
+    let arr = superImportantArray.sort((a, b) => a - b);
+    for (let i = 0; i <= arr.length; i++) {
+        if (i == arr[i]) count++;
+    }
+    return count;
+}
 
 
 // Selective fear of numbers.
@@ -7776,16 +7776,16 @@ Sunday --> 666 or -666
 Write a function which takes a string (day of week) and an integer (number to be tested) so it tells the doctor if I'm feared or not. (return a boolean)
 */
 
-// const AmIAfraid = function (day, num) {
-//     if (day == 'Monday' && num === 12) return true;
-//     if (day == 'Tuesday' && num > 95) return true;
-//     if (day == 'Wednesday' && num === 34) return true;
-//     if (day == 'Thursday' && num === 0) return true;
-//     if (day == 'Friday' && num % 2 == 0) return true;
-//     if (day == 'Saturday' && num === 56) return true;
-//     else if (day == 'Sunday' && (num == 666 || num === -666)) return true;
-//     return false;
-// };
+const AmIAfraid = function (day, num) {
+    if (day == 'Monday' && num === 12) return true;
+    if (day == 'Tuesday' && num > 95) return true;
+    if (day == 'Wednesday' && num === 34) return true;
+    if (day == 'Thursday' && num === 0) return true;
+    if (day == 'Friday' && num % 2 == 0) return true;
+    if (day == 'Saturday' && num === 56) return true;
+    else if (day == 'Sunday' && (num == 666 || num === -666)) return true;
+    return false;
+};
 
 
 // Simple Fun #7: Will You?.
@@ -7822,13 +7822,1215 @@ Input/Output
 true if the person contradicts Mary's belief, false otherwise.
 */
 
-// function willYou(y, b, l) {
-//     if (y === true && b === true && l === true || y === false && b === false && l === false) return false;
-//     if (y === false && b === true && l === false) return false;
-//     else if (y === true && b === false && l === false) return false;
-//     return true;
-// }
+function willYou(y, b, l) {
+    if (y === true && b === true && l === true || y === false && b === false && l === false) return false;
+    if (y === false && b === true && l === false) return false;
+    else if (y === true && b === false && l === false) return false;
+    return true;
+}
 
 
+// Basic JS - Calculating averages.
+
+// DESCRIPTION:
+// Let's build a calculator that can calculate the average for an arbitrary number of arguments.
+//
+// The test expects you to provide a Calculator object with an average method:
+//
+// Calculator.average()
+// The test also expects that when you pass no arguments, it returns 0. The arguments are expected to be integers.
+//
+// It expects Calculator.average(3,4,5) to return 4.
+
+const Calculator = {
+    average: function (...args) {
+        return args.length == 0 ? 0 : args.reduce((a, b) => b + a) / args.length;
+    }
+};
 
 
+// Help the Fruit Guy.
+
+// DESCRIPTION:
+// Our fruit guy has a bag of fruit (represented as an array of strings) where some fruits are rotten. He wants to replace all the rotten pieces of fruit with fresh ones. For example, given ["apple","rottenBanana","apple"] the replaced array should be ["apple","banana","apple"]. Your task is to implement a method that accepts an array of strings containing fruits should returns an array of strings where all the rotten fruits are replaced by good ones.
+//
+// Notes
+// If the array is null/nil/None or empty you should return empty array ([]).
+// The rotten fruit name will be in this camelcase (rottenFruit).
+// The returned array should be in lowercase.
+
+function removeRotten(bag) {
+    return bag ? bag.map(x => x.toLowerCase().replace(/rotten/ig, '')) : [];
+}
+
+
+// Help Mr. E.
+
+/*
+Description:
+Mr. E Ven only likes even length words. Please create a translator so that he doesn't have to hear those pesky odd length words. For some reason he also hates punctuation, he likes his sentences to flow.
+
+Your translator should take in a string and output it with all odd length words having an extra letter (the last letter in the word). It should also remove all punctuation (.,?!) as well as any underscores (_).
+
+"How did we end up here? We go?" translated becomes-> "Howw didd we endd up here We go"
+*/
+
+function evenator(str) {
+    return str.replace(/[.,?!_]/gi, '').split` `.map(v => v.length % 2 !== 0 ? v + v[v.length - 1] : v).join` `;
+}
+
+
+// HTML Generator.
+
+/*
+Description:
+Another rewarding day in the fast-paced world of WebDev. Man, you love your job! But as with any job, somtimes things can get a little tedious. Part of the website you're working on has a very repetitive structure, and writing all the HTML by hand is a bore. Time to automate! You want to write some functions that will generate the HTML for you.
+
+To organize your code, make of all your functions methods of a class called HTMLGen. Tag functions should be named after the tag of the element they create. Each function will take one argument, a string, which is the inner HTML of the element to be created. The functions will return the string for the appropriate HTML element.
+
+For example,
+
+In JavaScript:
+
+var g = new HTMLGen();
+var paragraph = g.p('Hello, World!');
+var block = g.div(paragraph);
+
+// The following are now true
+paragraph === '<p>Hello, World!</p>'
+block === '<div><p>Hello, World!</p></div>'
+In Python:
+
+g = HTMLGen();
+paragraph = g.p('Hello, World!')
+block = g.div(paragraph)
+
+# The following are now true
+paragraph == '<p>Hello, World!</p>'
+block == '<div><p>Hello, World!</p></div>'
+Your HTMLGen class should have methods to create the following elements:
+
+a
+b
+p
+body
+div
+span
+title
+comment
+Note: The comment method should wrap its argument with an HTML comment. It is the only method whose name does not match an HTML tag. So, g.comment('i am a comment') must produce <!--i am a comment-->.
+*/
+
+function HTMLGen() {
+    this.div = s => '<div>' + s + '</div>';
+    this.b = s => '<b>' + s + '</b>';
+    this.p = s => '<p>' + s + '</p>';
+    this.a = s => '<a>' + s + '</a>';
+    this.body = s => '<body>' + s + '</body>';
+    this.span = s => '<span>' + s + '</span>';
+    this.title = s => '<title>' + s + '</title>';
+    this.comment = s => '<!--' + s + '-->';
+}
+
+
+// Halving Sum.
+
+/*
+Description:
+Given a positive integer n, calculate the following sum: n + n/2 + n/4 + n/8 + .... All divisions are integer.
+
+Example
+For n = 25, the output should be halvingSum(n) = 47.
+
+The sum to be calculated is 25 + 12 + 6 + 3 + 1, which is 47.
+*/
+
+function halvingSum(n) {
+    let score = 0;
+    while (n >= 1) {
+        score += n;
+        n = Math.floor((n * 1) / 2);
+    }
+    return score;
+}
+
+
+// Identical Elements.
+
+/*
+Description:
+Given two arrays of integers m and n, test if they contain at least one identical element. Return true if they do; false if not.
+
+Your code must handle any value within the range of a 32-bit integer, and must be capable of handling either array being empty (which is a false result, as there are no duplicated elements).
+*/
+
+function duplicateElements(m, n) {
+    return m.some((v, i, arr) => arr.includes(n[i]));
+}
+
+
+// Incrementer.
+
+/*
+Description:
+Given an input of an array of digits num, return the array with each digit incremented by its position in the array. For example, the first digit will be incremented by 1, the second digit by 2 etc. Make sure to start counting your positions from 1 and not 0.
+
+incrementer([1,2,3]) => [2,4,6]
+Your result can only contain single digit numbers, so if adding a digit with it's position gives you a multiple-digit number, only the last digit of the number should be returned
+
+incrementer([4,6,9,1,3]) => [5,8,2,5,8]
+
+  - 9 + 3 (position of 9 in array) = 12
+  - Only its last digit 2 should be returned
+Lastly, return [] if your array is empty! Arrays will only contain numbers so don't worry about checking that.
+*/
+
+function incrementer(num) {
+    return num.map((v, i) => (v + i + 1) % 10);
+}
+
+
+// Indexed capitalization.
+
+// DESCRIPTION:
+// Given a string and an array of integers representing indices, capitalize all letters at the given indices.
+//
+// For example:
+//
+// capitalize("abcdef",[1,2,5]) = "aBCdeF"
+// capitalize("abcdef",[1,2,5,100]) = "aBCdeF". There is no index 100.
+// The input will be a lowercase string with no spaces and an array of digits.
+//
+// Good luck!
+//
+// Be sure to also try:
+//
+// Alternate capitalization
+//
+// String array revisal
+
+function capitalize(s, arr) {
+    return s.split('').map((val, i) => (arr.includes(i)) ? val.toUpperCase() : val).join('');
+}
+
+
+// Initialize my name.
+
+/*
+Description:
+Some people just have a first name; some people have first and last names and some people have first, middle and last names.
+
+You task is to initialize the middle names (if there is any).
+
+Examples
+'Jack Ryan'                   => 'Jack Ryan'
+'Lois Mary Lane'              => 'Lois M. Lane'
+'Dimitri'                     => 'Dimitri'
+'Alice Betty Catherine Davis' => 'Alice B. C. Davis'
+*/
+
+function initializeNames(name) {
+    const arr = name.split(' ');
+    for (let i = 1; i < arr.length - 1; i++)
+        arr[i] = arr[i].charAt(0) + '.';
+    return arr.join(' ');
+}
+
+
+// Inspiring Strings.
+
+// DESCRIPTION:
+// When given a string of space separated words, return the word with the longest length. If there are multiple words with the longest length, return the last instance of the word with the longest length.
+//
+// Example:
+//
+// 'red white blue' //returns string value of white
+//
+// 'red blue gold' //returns gold
+
+function longestWord(str) {
+    return str.split(' ').sort((a, b) => a.length - b.length).slice(-1).toString();
+}
+
+
+// Integer Difference.
+
+/*
+Description:
+Write a function that accepts two arguments: an array of integers and another integer n.
+
+Determine the number of times where two integers in the array have a difference of n.
+
+For example:
+
+int_diff([1, 1, 5, 6, 9, 16, 27], 4) # 3 ([1, 5], [1, 5], [5, 9])
+int_diff([1, 1, 3, 3], 2) # 4 ([1, 3], [1, 3], [1, 3], [1, 3])
+*/
+
+const intDiff = (arr, n) => {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if ((Math.abs(arr[j] - arr[i])) === n) {
+                count++;
+            }
+        }
+    }
+    return count;
+};
+
+
+// International Morse Code Encryption.
+
+/*
+Description:
+Write a function that will encrypt a given sentence into International Morse Code, both the input and out puts will be strings.
+
+Characters should be separated by a single space. Words should be separated by a triple space.
+
+For example, "HELLO WORLD" should return -> ".... . .-.. .-.. --- .-- --- .-. .-.. -.."
+
+To find out more about Morse Code follow this link: https://en.wikipedia.org/wiki/Morse_code
+
+A preloaded object/dictionary/hash called CHAR_TO_MORSE will be provided to help convert characters to Morse Code.
+*/
+
+const encryption = message => [...message].map(v => CHAR_TO_MORSE[v] || v).join(' ');
+
+
+// Invisible cubes.
+
+// DESCRIPTION:
+// Imagine there's a big cube consisting of
+// �
+// 3
+// n
+// 3
+//   small cubes. Calculate, how many small cubes are not visible from outside.
+//
+// For example, if we have a cube which has 4 cubes in a row, then the function should return 8, because there are 8 cubes inside our cube (2 cubes in each dimension)
+//
+// For a visual representation: --> https://imgur.com/a/AN8A5DJ
+
+function notVisibleCubes(n) {
+    console.log(n);
+    return n > 3 ? (n - 2) * (n - 2) * (n - 2) : n == 3 ? 1 : 0;
+}
+
+
+// Isograms.
+
+// DESCRIPTION:
+// An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+//
+// Example: (Input --> Output)
+//
+// "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+//
+// isIsogram "Dermatoglyphics" = true
+// isIsogram "moose" = false
+// isIsogram "aba" = false
+
+function isIsogram(str) {
+    return !str.match(/([a-z]).*\1/i);
+}
+
+
+// Is that a real phone number? (British version).
+
+/*
+Description:
+Congratulations! That Special Someone has given you their phone number.
+
+But WAIT, is it a valid number?
+
+Your task is to write a function that verifies whether a given string contains a valid British mobile (cell) phone number or not.
+
+If valid, return 'In with a chance'.
+
+If invalid, or if you're given an empty string, return 'Plenty more fish in the sea'.
+
+A number can be valid in the following ways:
+
+Here in the UK mobile numbers begin with '07' followed by 9 other digits, e.g. '07454876120'.
+
+Sometimes the number is preceded by the country code, the prefix '+44', which replaces the '0' in ‘07’, e.g. '+447454876120'.
+
+And sometimes you will find numbers with dashes in-between digits or on either side, e.g. '+44--745---487-6120' or '-074-54-87-61-20-'. As you can see, dashes may be consecutive.
+
+Good Luck Romeo/Juliette!
+*/
+
+function validateNumber(str) {
+    return /^(\+44|0|-0)?7(-*[0-9]){9}$/.test(str) ? 'In with a chance' : 'Plenty more fish in the sea';
+}
+
+
+// Katastrophe!
+
+// DESCRIPTION:
+// You have been employed by the Japanese government to write a function that tests whether or not a building is strong enough to withstand a simulated earthquake.
+//
+// A building will fall if the magnitude of the earthquake is greater than the strength of the building.
+//
+// An earthquake takes the form of a 2D-Array. Each element within the Outer-Array represents a shockwave, and each element within the Inner-Arrays represents a tremor. The magnitude of the earthquake is determined by the product of the values of its shockwaves. A shockwave is equal to the sum of the values of its tremors.
+//
+// Example earthquake --> [[5,3,7],[3,3,1],[4,1,2]] ((5+3+7) * (3+3+1) * (4+1+2)) = 735
+//
+// A building begins with a strength value of 1000 when first built, but this value is subject to exponential decay of 1% per year. For more info on exponential decay, follow this link - https://en.wikipedia.org/wiki/Exponential_decay
+//
+// Given an earthquake and the age of a building, write a function that returns "Safe!" if the building is strong enough, or "Needs Reinforcement!" if it falls.
+
+function strongEnough(earthquake, age) {
+    earthquake = earthquake.reduce((s, v) => s * v.reduce((x, s) => x + s, 0), 1);
+    const strength = 1000 * Math.pow(.99, age);
+    return strength > earthquake ? 'Safe!' : 'Needs Reinforcement!';
+}
+
+
+// Keypad horror.
+
+/*
+Description:
+Having two standards for a keypad layout is inconvenient!
+Computer keypad's layout:
+7 8 9  \n
+4 5 6  \n
+1 2 3  \n
+  0 \n
+
+Cell phone keypad's layout:
+1 2 3\n
+4 5 6\n
+7 8 9\n
+  0\n
+
+Solve the horror of unstandartized keypads by providing a function that converts computer input to a number as if it was typed by a phone.
+
+Example:
+"789" -> "123"
+
+Notes:
+You get a string with numbers only
+*/
+
+function computerToPhone(numbers) {
+    return numbers.replace(/[0-9]/g, v => v == 0 ? 0 : v == 7 ? 1 : v == 8 ? 2 : v == 9 ? 3 : v == 1 ? 7 : v == 2 ? 8 : v == 3 ? 9 : v);
+}
+
+
+// Kooka-Counter.
+
+/*
+Description:
+A family of kookaburras are in my backyard.
+
+I can't see them all, but I can hear them!
+
+How many kookaburras are there?
+
+Hint
+The trick to counting kookaburras is to listen carefully
+
+The males go HaHaHa...
+
+The females go hahaha...
+
+And they always alternate male/female
+
+^ Kata Note : No validation is necessary; only valid input will be passed :-)
+*/
+
+let kookaCounter = function (laughing) {
+    if (laughing.length === 0) return 0;
+    laughing = laughing.replace(/a/gi, '');
+    let count = 1;
+    for (let i = 0; i < laughing.length - 1; i++) {
+        if (laughing[i] !== laughing[i + 1]) {
+            count++;
+        }
+    }
+    return count;
+};
+
+
+// Largest Elements.
+
+// DESCRIPTION:
+// Write a program that outputs the top n elements from a list.
+//
+// Example:
+//
+// largest(2, [7,6,5,4,3,2,1])
+// // => [6,7]
+
+function largest(n, xs) {
+    return xs.sort((a, b) => a - b).slice(xs.length - n);
+}
+
+
+// Largest pair sum in array.
+
+/*
+Description:
+Given an array of numbers, find the largest pair sum in the array.
+
+For example
+
+[10,14,2,23,19] should return 42 (i.e. sum of 23,19)
+
+[99,2,2,23,19] should return 122 (i.e. sum of 99,23)
+
+Input array contains minimum two elements and every element is a number.
+*/
+
+function largestPairSum(numbers) {
+    return numbers.sort((a, b) => a - b).slice(-2).reduce((a, b) => a + b, 0);
+}
+
+
+// Leap Years.
+
+// DESCRIPTION:
+// In this kata you should simply determine, whether a given year is a leap year or not. In case you don't know the rules, here they are:
+//
+// Years divisible by 4 are leap years,
+// but years divisible by 100 are not leap years,
+// but years divisible by 400 are leap years.
+// Tested years are in range 1600 ≤ year ≤ 4000.
+
+function isLeapYear(year) {
+    return (year % 100 !== 0 && year % 4 === 0) || year % 400 === 0;
+}
+
+
+// Lucky Bus Ticket.
+
+/*
+Description:
+In Russia regular bus tickets usually consist of 6 digits. The ticket is called lucky when the sum of the first three digits equals to the sum of the last three digits. Write a function to find out whether the ticket is lucky or not. Return true if so, otherwise return false. Consider that input is always a string. Watch examples below.
+
+isLucky('123321') => 1+2+3 = 3+2+1 => true // The ticket is lucky
+isLucky('12341234') => false // Only six-digit numbers allowed :(
+isLucky('12a21a') => false // Letters are not allowed :(
+isLucky('100200') => false // :(
+isLucky('22') => false // :(
+isLucky('abcdef') => false // :(
+*/
+
+function isLucky(ticket) {
+    if (ticket.length != 6 || ticket.length === 0) return false;
+    return (ticket.slice(0, (Math.round(ticket.length) / 2))).split('').reduce((a, b) => a + b * 1, 0)
+        - (ticket.slice(Math.round(ticket.length) / 2)).split('').reduce((a, b) => a + b * 1, 0) === 0;
+}
+
+
+// Love vs friendship.
+
+// DESCRIPTION:
+// If　a = 1, b = 2, c = 3 ... z = 26
+//
+// Then l + o + v + e = 54
+//
+// and f + r + i + e + n + d + s + h + i + p = 108
+//
+// So friendship is twice as strong as love :-)
+//
+// Your task is to write a function which calculates the value of a word based off the sum of the alphabet positions of its characters.
+//
+// The input will always be made of only lowercase letters and will never be empty.
+
+const wordsToMarks = s => [...s].reduce((res, c) => res += c.charCodeAt() - 96, 0);
+
+
+// Magic Sum of 3s.
+
+/*
+Description:
+The magic sum of 3s is calculated on an array by summing up odd numbers which include the digit 3. Write a function magic_sum which accepts an array of integers and returns the sum.
+
+Example: [3, 12, 5, 8, 30, 13] results in 16 (3 + 13)
+
+If the sum cannot be calculated, 0 should be returned.
+*/
+
+function magicSum(numbers) {
+    return numbers && Array.isArray(numbers) ? numbers.reduce((a, b) => a + (b % 2 !== 0 && b.toString().split('').includes('3') ? b : 0), 0) : 0;
+}
+
+
+// List of Presents.
+
+/*
+Description:
+Task:
+Leo's girlfriend asked him to buy a gift list during his next trip, now he wants to know how many of them will he be able to buy.
+
+Write the following function to help Leo out:
+
+function howManyGifts(maxBudget, gifts)
+The first parameter is Leo's budget; he second one is an array (a list in Groovy) containing the price of each gift. You should return an integer representing the maximum amount of gifts Leo can buy.
+
+Example:
+Maximum budget: 20
+Gift List: [13, 2, 4, 6, 1]
+Should return 4.
+
+_ NOTE: All numbers will be integers >= 0, and the array will never be empty. _
+*/
+
+function howManyGifts(maxBudget, gifts) {
+    gifts = gifts.sort((a, b) => a - b);
+    let sum = 0;
+    let i = 0;
+    while (maxBudget >= sum) {
+        sum += gifts[i];
+        i++;
+    }
+    return i - 1;
+}
+
+
+// Making Copies.
+
+// DESCRIPTION:
+// Write a function that takes a list (in Python) or array (in other languages) of numbers, and makes a copy of it.
+//
+// Note that you may have troubles if you do not return an actual copy, item by item, just a pointer or an alias for an existing list or array.
+//
+// If not a list or array is given as a parameter in interpreted languages, the function should raise an error.
+//
+// Examples:
+//
+// t = [1, 2, 3, 4]
+// tCopy = copyList(t)
+// t[1] += 5
+// t = [1, 7, 3, 4]
+// tCopy = [1, 2, 3, 4]
+
+function copyList(l) {
+    return [...l];
+}
+
+
+// Match My Husband.
+
+/*
+Description:
+It is 2050 and romance has long gone, relationships exist solely for practicality.
+
+MatchMyHusband is a website that matches busy working women with perfect house husbands. You have been employed by MatchMyHusband to write a function that determines who matches!!
+
+The rules are... a match occurs providing the husband's "usefulness" rating is greater than or equal to the woman's "needs".
+
+The husband's "usefulness" is the SUM of his cooking, cleaning and childcare abilities and takes the form of an array .
+
+usefulness example --> [15, 26, 19]   (15 + 26 + 19) = 60
+
+Every woman that signs up, begins with a "needs" rating of 100. However, it's realised that the longer women wait for their husbands, the more disatisfied they become with our service. They also become less picky, therefore their needs are subject to exponential decay of 15% per month. https://en.wikipedia.org/wiki/Exponential_decay
+
+Given the number of months since sign up, write a function that returns "Match!" if the husband is useful enough, or "No match!" if he's not.
+*/
+
+function match(usefulness, months) {
+    const husband = usefulness.reduce((a, b) => a + b, 0);
+    const wife = 100 * Math.pow(0.85, months);
+    return husband >= wife ? 'Match!' : 'No match!';
+}
+
+
+// Maximum Product.
+
+/*
+Description:
+Task
+Given an array of integers , Find the maximum product obtained from multiplying 2 adjacent numbers in the array.
+
+Notes
+Array/list size is at least 2 .
+
+Array/list numbers could be a mixture of positives , ngatives also zeros .
+
+Input >> Output Examples
+adjacentElementsProduct([1,2,3])  ==>  return 6
+Explanation:
+The maximum product obtained from multiplying 2 * 3 = 6, and they're adjacent numbers in the array.
+adjacentElementsProduct([9, 5, 10, 2, 24, -1, -48])  ==>  return 50
+Explanation:
+Max product obtained from multiplying 5 * 10 = 50 .
+
+adjacentElementsProduct([-23, 4, -5, 99, -27, 329, -2, 7, -921])  ==>  return -14
+Explanation:
+The maximum product obtained from multiplying -2 * 7 = -14, and they're adjacent numbers in the array.
+Playing with Numbers Series
+Playing With Lists/Arrays Series
+For More Enjoyable Katas
+ALL translations are welcomed
+Enjoy Learning !!
+Zizou
+*/
+
+function adjacentElementsProduct(array) {
+    let cache = (-Infinity);
+    array.map((v, i, arr) => arr[i] * arr[i + 1] > cache ? cache = arr[i] * arr[i + 1] : cache);
+    return cache;
+}
+
+
+// Most digits.
+
+// Find the number with the most digits.
+//
+// If two numbers in the argument array have the same number of digits, return the first one in the array.
+
+function findLongest(array) {
+    return array.reduce((a, b) => (`${b}`.length > `${a}`.length ? b : a));
+}
+
+
+// First-Class Function Factory.
+
+/*
+Description:
+Write a function, factory, that takes a number as its parameter and returns another function.
+
+The returned function should take an array of numbers as its parameter, and return an array of those numbers multiplied by the number that was passed into the first function.
+
+In the example below, 5 is the number passed into the first function. So it returns a function that takes an array and multiplies all elements in it by five.
+
+Translations and comments (and upvotes) welcome!
+
+Example
+var fives = factory(5);       // returns a function - fives
+var myArray = [1, 2, 3];
+fives(myArray);               //returns [5, 10, 15];
+*/
+
+function factory(x) {
+    return array => array.map(a => a * x);
+}
+
+
+// Flatten.
+
+// DESCRIPTION:
+// Write a function that flattens an Array of Array objects into a flat Array. Your function must only do one level of flattening.
+//
+// flatten([1,2,3]) // => [1,2,3]
+// flatten([[1,2,3],["a","b","c"],[1,2,3]])  // => [1,2,3,"a","b","c",1,2,3]
+// flatten([[[1,2,3]]]) // => [[1,2,3]]
+
+const flatten = (array) => [].concat(...array);
+
+
+// Flatten and sort an array.
+
+// DESCRIPTION:
+// Challenge:
+//
+// Given a two-dimensional array of integers, return the flattened version of the array with all the integers in the sorted (ascending) order.
+//
+// Example:
+//
+// Given [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], your function should return [1, 2, 3, 4, 5, 6, 7, 8, 9].
+//
+// Addendum:
+//
+// Please, keep in mind, that JavaScript is by default sorting objects alphabetically. For more information, please consult:
+//
+// http://stackoverflow.com/questions/6093874/why-doesnt-the-sort-function-of-javascript-work-well
+
+'use strict';
+
+function flattenAndSort(array) {
+    return [].concat(...array).sort((a, b) => a - b);
+}
+
+
+// Form The Minimum.
+
+// DESCRIPTION:
+// Task
+// Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).
+//
+// Notes:
+// Only positive integers will be passed to the function (> 0 ), no negatives or zeros.
+// Input >> Output Examples
+// minValue ({1, 3, 1})  ==> return (13)
+// Explanation:
+// (13) is the minimum number could be formed from {1, 3, 1} , Without duplications
+//
+// minValue({5, 7, 5, 9, 7})  ==> return (579)
+// Explanation:
+// (579) is the minimum number could be formed from {5, 7, 5, 9, 7} , Without duplications
+//
+// minValue({1, 9, 3, 1, 7, 4, 6, 6, 7}) return  ==> (134679)
+// Explanation:
+// (134679) is the minimum number could be formed from {1, 9, 3, 1, 7, 4, 6, 6, 7} , Without duplications
+//
+// Playing with Numbers Series
+// Playing With Lists/Arrays Series
+// Bizarre Sorting-katas
+// For More Enjoyable Katas
+// ALL translations are welcomed
+// Enjoy Learning !!
+// Zizou
+
+function minValue(values) {
+    return +(Array.from(new Set(values))).sort((a, b) => a - b).join('');
+}
+
+
+// Fun with lists: indexOf.
+
+/*
+Description:
+Implement the method indexOf (index_of in PHP), which accepts a linked list (head) and a value, and returns the index (zero based) of the first occurrence of that value if exists, or -1 otherwise.
+
+For example: Given the list: 1 -> 2 -> 3 -> 3, and the value 3, indexOf / index_of should return 2.
+
+The linked list is defined as follows:
+
+function Node(data, next = null) {
+  this.data = data;
+  this.next = next;
+}
+Note: the list may be null and can hold any type of value.
+
+Good luck!
+*/
+
+function indexOf(head, value) {
+    let count = 0;
+    while (head) {
+        if (head.data === value) {
+            return count;
+        }
+        head = head.next;
+        count++;
+    }
+    return -1;
+}
+
+
+// Fun with lists: lastIndexOf.
+
+/*
+Description:
+Implement the method lastIndexOf (last_index_of in PHP), which accepts a linked list (head) and a value, and returns the index (zero based) of the last occurrence of that value if exists, or -1 otherwise.
+
+For example: Given the list: 1 -> 2 -> 3 -> 3, and the value 3, lastIndexOf / last_index_of should return 3.
+
+The linked list is defined as follows:
+
+function Node(data, next = null) {
+  this.data = data;
+  this.next = next;
+}
+Note: the list may be null and can hold any type of value.
+
+Good luck!
+*/
+
+function lastIndexOf(head, value) {
+    let count = 0, current = head;
+    let arr = [];
+    while (current !== null) {
+        arr.push(current.data);
+        current = current.next;
+        count++;
+    }
+    return arr.lastIndexOf(value);
+}
+
+
+// Fun with lists: length.
+
+/*
+Description:
+Implement the method length, which accepts a linked list (head), and returns the length of the list.
+
+For example: Given the list: 1 -> 2 -> 3 -> 4, length should return 4.
+
+The linked list is defined as follows:
+
+function Node(data, next = null) {
+  this.data = data;
+  this.next = next;
+}
+Note: the list may be null and can hold any type of value.
+
+Good luck!
+*/
+
+function length(head) {
+    let count = 0;
+    while (head) {
+        head = head.next;
+        count++;
+    }
+    return count;
+}
+
+
+// Functional Addition.
+
+// DESCRIPTION:
+// Create a function add(n)/Add(n) which returns a function that always adds n to any number
+//
+// Note for Java: the return type and methods have not been provided to make it a bit more challenging.
+//
+// var addOne = add(1);
+// addOne(3); // 4
+//
+// var addThree = add(3);
+// addThree(3); // 6
+
+function add(n) {
+    return function (m) {
+        return n + m;
+    };
+}
+
+
+// Geometric Mean I.
+
+/*
+For a variable, x, that may have different values, the geometric mean is defined as:
+
+Suposse that you have to calculate the geometric mean for a research where the amount of values of x is rather small.
+
+Implement the function geometric_meanI(), (geometricMeanI javascript)that receives an array with the different values of the variable and outputs the geometric mean value.
+
+The negative values and strings will be discarded for the calculations.
+
+Nevertheless if the amount of total invalid values is too high, the function will return 0 (Nothing in Haskell). The tolerance for invalid values of the variable will be as follows:
+
+amount of entries      maximum invalid entries
+  2 - 10                       1
+  From 11 and above       10 % of total of entries
+You do not have to round the results.
+*/
+
+function geometricMeanI(arr) {
+    const gm = arr.filter(a => typeof (a) === 'number' && a >= 0);
+    if ((arr.length - gm.length) > 1) return 0;
+    return Math.pow(gm.reduce((a, b) => a * b), 1 / gm.length);
+}
+
+
+// Geometric Progression Sequence.
+
+/*
+Description:
+In your class, you have started lessons about geometric progression. Since you are also a programmer, you have decided to write a function that will print first n elements of the sequence with the given constant r and first element a.
+
+Result should be separated by comma and space.
+
+Example
+geometricSequenceElements(2, 3, 5) == '2, 6, 18, 54, 162'
+More info: https://en.wikipedia.org/wiki/Geometric_progression
+*/
+
+function geometricSequenceElements(a, r, n) {
+    let arr = [a];
+    for (let i = 0; i < n - 1; i++) {
+        arr.push(arr[i] * r);
+    }
+    return arr.join(', ');
+}
+
+
+// Name Array Capping.
+
+// DESCRIPTION:
+// Create a method that accepts an array of names, and returns an array of each name with its first letter capitalized.
+//
+// example
+//
+// capMe(['jo', 'nelson', 'jurie'])     // returns ['Jo', 'Nelson', 'Jurie']
+// capMe(['KARLY', 'DANIEL', 'KELSEY']) // returns ['Karly', 'Daniel', 'Kelsey']
+
+function capMe(names) {
+    return names.map(value => value.slice(0, 1).toUpperCase() + value.toLowerCase().slice(1));
+}
+
+
+// Name That Number!
+
+/*
+Description:
+In this kata, you'll be given an integer of range 0 <= x <= 99 and have to return that number spelt out in English. A few examples:
+
+nameThatNumber(4)   // returns "four"
+nameThatNumber(19)  // returns "nineteen"
+nameThatNumber(99)  // returns "ninety nine"
+Words should be seperated by only spaces and not hyphens. No need to validate parameters, they will always be in the range [0, 99]. Make sure that the returned String has no leading of trailing spaces. Good luck!
+*/
+
+function nameThatNumber(x) {
+    let returnedValue = '';
+    let tens = {2: 'twenty', 3: 'thirty', 4: 'forty', 5: 'fifty', 6: 'sixty', 7: 'seventy', 8: 'eighty', 9: 'ninety'};
+    let units = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+    if (x == 0) {
+        returnedValue = 'zero';
+    }
+    if (x < 20 && x > 0) {
+        returnedValue = units[x];
+    }
+    if (x >= 20) {
+        returnedValue = tens[Math.floor((x / 10))] + ((x % 10 != 0) ? ' ' : '') + units[x % 10];
+    }
+    return returnedValue;
+}
+
+
+// Naughty or Nice.
+
+/*
+Description:
+Santa is coming to town and he needs your help finding out who's been naughty or nice. You will be given an entire year of JSON data following this format:
+
+{
+    January: {
+        '1': 'Naughty','2': 'Naughty', ..., '31': 'Nice'
+    },
+    February: {
+        '1': 'Nice','2': 'Naughty', ..., '28': 'Nice'
+    },
+    ...
+    December: {
+        '1': 'Nice','2': 'Nice', ..., '31': 'Naughty'
+    }
+}
+Your function should return "Naughty!" or "Nice!" depending on the total number of occurrences in a given year (whichever one is greater). If both are equal, return "Nice!"
+*/
+
+function naughtyOrNice(data) {
+    let count = 0;
+    for (let month in data) {
+        [data[month]].map(v => Object.values(v).map(v => v === 'Naughty' ? count-- : count++));
+    }
+    return count >= 0 ? 'Nice!' : 'Naughty!';
+}
+
+
+// New £5 notes collectors!.
+
+/*
+Description:
+The new £5 notes have been recently released in the UK and they've certainly became a sensation! Even those of us who haven't been carrying any cash around for a while, having given in to the convenience of cards, suddenly like to have some of these in their purses and pockets. But how many of them could you get with what's left from your salary after paying all bills? The programme that you're about to write will count this for you!
+
+Given a salary and the array of bills, calculate your disposable income for a month and return it as a number of new £5 notes you can get with that amount. If the money you've got (or do not!) doesn't allow you to get any £5 notes return 0.
+
+£££ GOOD LUCK! £££
+*/
+
+function getNewNotes(salary, bills) {
+    let sum = salary - bills.reduce((a, b) => a + b, 0);
+    return sum > 0 ? Math.floor(sum / 5) : 0;
+}
+
+
+// Next Palindromic Number.
+
+/*
+Description:
+There were and still are many problem in CW about palindrome numbers and palindrome strings. We suposse that you know which kind of numbers they are. If not, you may search about them using your favourite search engine.
+
+In this kata you will be given a positive integer, val and you have to create the function next_pal()(nextPal Javascript) that will output the smallest palindrome number higher than val.
+
+Let's see:
+
+For Javascript
+nextPal(11) == 22
+
+nextPal(188) == 191
+
+nextPal(191) == 202
+
+nextPal(2541) == 2552
+You will be receiving values higher than 10, all valid.
+
+Enjoy it!!
+*/
+
+function nextPal(val) {
+    let pal = 0;
+    for (let i = val + 1; ; i++) {
+        if (palindrom(i)) {
+            pal = i;
+            break;
+        }
+    }
+    return pal;
+}
+
+function palindrom(i) {
+    return i.toString() === i.toString().split('').reverse().join('');
+}
+
+
+// Next Prime.
+
+/*
+Description:
+Get the next prime number!
+
+You will get a numbern (>= 0) and your task is to find the next prime number.
+
+Make sure to optimize your code: there will numbers tested up to about 1012
+
+Examples
+5  ==> 7
+12 ==> 13
+*/
+
+function nextPrime(n) {
+    let count = 0;
+    for (let i = n + 1; i > 0; i++) {
+        if (isPrime(i)) {
+            count = i;
+            break;
+        }
+    }
+    return count;
+}
+
+function isPrime(n) {
+    let rt = Math.sqrt(n);
+    for (let i = 2; i <= rt; i++) {
+        if (n % i === 0) return false;
+    }
+    return n !== 1;
+}
+
+
+// Next birth-day of the week finder.
+
+/*
+Description:
+Can you find after how many years will a person's birthday fall on the same day of the week that he was born?
+
+For example, Joy's birthday is on 16th October, 1990 which falls on Friday. After how many years will his birthday fall on Friday again? (That would be 11 years)
+
+nextBirthdayOfTheWeek(new Date(1990, 10, 16)) //11
+nextBirthdayOfTheWeek(new Date(2012, 5, 20))  //6
+nextBirthdayOfTheWeek(new Date(1975, 2, 22))  //5
+*/
+
+let nextBirthdayOfTheWeek = function (birthday) {
+    let weekday = birthday.getDay();
+    let yr = birthday.getFullYear();
+    yr += 1;
+    let month = birthday.getMonth();
+    let day = birthday.getDate();
+
+    while (weekday !== new Date(yr, month, day).getDay()) {
+        yr++;
+    }
+    return yr - birthday.getFullYear();
+};
+
+
+// Nice Array.
+
+/*
+Description:
+A Nice array is defined to be an array where for every value n in the array, there is also an element n-1 or n+1 in the array.
+
+example:
+
+[2,10,9,3] is Nice array because
+
+2=3-1
+10=9+1
+3=2+1
+9=10-1
+Write a function named isNice/IsNice that returns true if its array argument is a Nice array, else false. You should also return false if input array has no elements.
+*/
+
+function isNice(arr) {
+    if (arr.length === 0) return false;
+    return arr.every(v => arr.includes(v + 1) || arr.includes(v - 1));
+}
+
+
+// Nickname Generator.
+
+/*
+Description:
+Nickname Generator
+
+Write a function, nicknameGenerator that takes a string name as an argument and returns the first 3 or 4 letters as a nickname.
+
+If the 3rd letter is a consonant, return the first 3 letters.
+
+nickname("Robert") //=> "Rob"
+nickname("Kimberly") //=> "Kim"
+nickname("Samantha") //=> "Sam"
+If the 3rd letter is a vowel, return the first 4 letters.
+
+nickname("Jeannie") //=> "Jean"
+nickname("Douglas") //=> "Doug"
+nickname("Gregory") //=> "Greg"
+If the string is less than 4 characters, return "Error: Name too short".
+
+Notes:
+
+Vowels are "aeiou", so discount the letter "y".
+Input will always be a string.
+Input will always have the first letter capitalised and the rest lowercase (e.g. Sam).
+The input can be modified
+*/
+
+function nicknameGenerator(name) {
+    if (name.length < 4) return 'Error: Name too short';
+    if (name[2].match(/[aeuio]/)) return name.slice(0, 4);
+    return name.slice(0, 3);
+}
+
+
+// Ninja vs Samurai: Strike.
+
+// DESCRIPTION:
+// Something is wrong with our Warrior class. The strike method does not work correctly. The following shows an example of this code being used:
+//
+// var ninja = new Warrior('Ninja');
+// var samurai = new Warrior('Samurai');
+//
+// samurai.strike(ninja, 3);
+// // ninja.health should == 70
+// Can you figure out what is wrong?
+
+class Warrior {
+    constructor(name) {
+        this.name = name;
+        this.health = 100;
+    }
+
+    strike(enemy, swings) {
+        enemy.health = Math.max(0, enemy.health - (swings * 10));
+    }
+}
+
+
+// Closest to Zero.
+
+/*
+Description:
+Simply find the closest value to zero from the list. Notice that there are negatives in the list.
+
+List is always not empty and contains only integers. Return None if it is not possible to define only one of such values. And of course, we are expecting 0 as closest value to zero.
+
+Examples:
+
+[2, 4, -1, -3]  => -1
+[5, 2, -2]      => None
+[5, 2, 2]       => 2
+[13, 0, -6]     => 0
+*/
+
+function closest(arr) {
+  return arr.sort((a, b) => Math.abs(a) - Math.abs(b)).includes(arr[0] * -1) && arr[0] !== 0 ? null : arr[0];
+}
