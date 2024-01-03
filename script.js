@@ -7327,7 +7327,7 @@ Jump > 50 = 'X metres: Gold!!'
 
 In this case the right answer would be '33.75 metres: He\'s flying!'
 
-Sadly it takes a lot of time to make arrays look like mountains, so the tests wont all look so nice. To give an example, the above mountain would look as follows in most cases:
+Sadly it takes a lot of time to make arrays look like mountains, so the tests won’t all look so nice. To give an example, the above mountain would look as follows in most cases:
 
 [*****, ******, *******, ********, *********]
 Not as much fun, eh?
