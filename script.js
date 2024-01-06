@@ -8998,11 +8998,6 @@ function closest(arr) {
 
 // ToLeetSpeak.
 
-<<<<<<< HEAD
-=======
-// ToLeetSpeak.
-
->>>>>>> ff6b8e50439032b3d2b82f2341b867eaba38cf7e
 /* DESCRIPTION:
 Your task is to write a function toLeetSpeak that converts a regular english sentence to Leetspeak.
 
@@ -9044,23 +9039,22 @@ In this kata we use a simple LeetSpeak dialect. Use this alphabet:
   Z : '2'
 } */
 
-<<<<<<< HEAD
-const toLeetSpeak = (s) => s.replace(/[ABCEGHILOSTZ]/g, (c) => D[c]);
+// const toLeetSpeak = (s) => s.replace(/[ABCEGHILOSTZ]/g, (c) => D[c]);
 
-const D = {
-	A: "@",
-	B: "8",
-	C: "(",
-	E: "3",
-	G: "6",
-	H: "#",
-	I: "!",
-	L: "1",
-	O: "0",
-	S: "$",
-	T: "7",
-	Z: "2",
-};
+// const D = {
+// 	A: "@",
+// 	B: "8",
+// 	C: "(",
+// 	E: "3",
+// 	G: "6",
+// 	H: "#",
+// 	I: "!",
+// 	L: "1",
+// 	O: "0",
+// 	S: "$",
+// 	T: "7",
+// 	Z: "2",
+// };
 
 // Trigrams.
 
@@ -9086,12 +9080,12 @@ function trigrams( phrase ) {
 
 // True Min.
 
-// function min(a, b){
-//     a === null && (a = 0);
-//     b === null && (b = 0);
-//     if (isNaN(a) || isNaN(b)) { return NaN; }
-//     return (a < b) ? a : b;
-// }
+function min(a, b){
+    a === null && (a = 0);
+    b === null && (b = 0);
+    if (isNaN(a) || isNaN(b)) { return NaN; }
+    return (a < b) ? a : b;
+}
 
 // Two to One.
 
@@ -9166,7 +9160,7 @@ function trigrams( phrase ) {
 // const vampire_test = function(a, b){
 //     return (''+a+b).split('').sort().join() == (a*b+'').split('').sort().join();
 // }
-=======
+
 const toLeetSpeak = s => s.replace(/[ABCEGHILOSTZ]/g, c => D[c]);
 
 const D = {
@@ -9174,4 +9168,3 @@ const D = {
   G: '6', H: '#', I: '!', L: '1',
   O: '0', S: '$', T: '7', Z: '2'
 };
->>>>>>> ff6b8e50439032b3d2b82f2341b867eaba38cf7e
