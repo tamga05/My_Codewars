@@ -9089,7 +9089,7 @@ function min(a, b){
 
 // Two to One.
 
-// const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
+const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
 
 // UVB-76 Message Validator.
 
