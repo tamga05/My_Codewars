@@ -9169,7 +9169,7 @@ function validate(message){
 
 // Two Oldest Ages.
 
-// const twoOldestAges = (ages) => ages.sort((a, b) => a - b).slice(-2)
+const twoOldestAges = (ages) => ages.sort((a, b) => a - b).slice(-2)
 
 // Two fighters, one winner.
 
