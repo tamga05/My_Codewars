@@ -8989,9 +8989,12 @@ Examples:
 */
 
 function closest(arr) {
-  return arr.sort((a, b) => Math.abs(a) - Math.abs(b)).includes(arr[0] * -1) && arr[0] !== 0 ? null : arr[0];
+	return arr
+		.sort((a, b) => Math.abs(a) - Math.abs(b))
+		.includes(arr[0] * -1) && arr[0] !== 0
+		? null
+		: arr[0];
 }
-
 
 // Coding 3min : A*B=C.
 
@@ -9019,7 +9022,6 @@ The result will be the first pair of numbers, for example,findAB([1,2,3,4,5,6],6
 //    }
 //   return null
 // }
-
 
 // Coding 3min : toLoverCase().
 
@@ -9059,12 +9061,10 @@ How to convert? see this example:
 //     return this.toLowerCase().replace(/[a-z]/g, v => 'LOVE'[(v.charCodeAt(0) - 97) % 4]).toUpperCase();
 // }
 
-	return arr
-		.sort((a, b) => Math.abs(a) - Math.abs(b))
-		.includes(arr[0] * -1) && arr[0] !== 0
-		? null
-		: arr[0];
-
+return arr.sort((a, b) => Math.abs(a) - Math.abs(b)).includes(arr[0] * -1) &&
+	arr[0] !== 0
+	? null
+	: arr[0];
 
 // ToLeetSpeak.
 
@@ -9140,63 +9140,68 @@ Example:
 trigrams('the quick red') == the he_ e_q _qu qui uic ick ck_ k_r _re red
 */
 
-function trigrams( phrase ) {
-    const arr=[];
-    for (let i=0; i<phrase.length-2;i++){
-    arr.push(phrase.slice(i,i+3))
-    }
-    return arr.map(v=>v.replace(/\s/g,'_')).join(' ')
+function trigrams(phrase) {
+	const arr = [];
+	for (let i = 0; i < phrase.length - 2; i++) {
+		arr.push(phrase.slice(i, i + 3));
+	}
+	return arr.map((v) => v.replace(/\s/g, "_")).join(" ");
 }
 
 // True Min.
 
-function min(a, b){
-    a === null && (a = 0);
-    b === null && (b = 0);
-    if (isNaN(a) || isNaN(b)) { return NaN; }
-    return (a < b) ? a : b;
+function min(a, b) {
+	a === null && (a = 0);
+	b === null && (b = 0);
+	if (isNaN(a) || isNaN(b)) {
+		return NaN;
+	}
+	return a < b ? a : b;
 }
 
 // Two to One.
 
-const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
+const longest = (s1, s2) => [...new Set(s1 + s2)].sort().join("");
 
 // UVB-76 Message Validator.
 
-function validate(message){
-    return /^MDZHB\s\d{2}\s\d{3}\s[A-Z]+\s\d{2}\s\d{2}\s\d{2}\s\d{2}$/.test(message)
+function validate(message) {
+	return /^MDZHB\s\d{2}\s\d{3}\s[A-Z]+\s\d{2}\s\d{2}\s\d{2}\s\d{2}$/.test(
+		message
+	);
 }
 
 // Two Oldest Ages.
 
-const twoOldestAges = (ages) => ages.sort((a, b) => a - b).slice(-2)
+const twoOldestAges = (ages) => ages.sort((a, b) => a - b).slice(-2);
 
 // Two fighters, one winner.
 
 function declareWinner(fighter1, fighter2, firstAttacker) {
-    const f1 = Math.ceil(fighter1.health / fighter2.damagePerAttack)
-    const f2 = Math.ceil(fighter2.health / fighter1.damagePerAttack)
-    return f1 < f2 ? fighter2.name : f2 < f1 ? fighter1.name : firstAttacker
+	const f1 = Math.ceil(fighter1.health / fighter2.damagePerAttack);
+	const f2 = Math.ceil(fighter2.health / fighter1.damagePerAttack);
+	return f1 < f2 ? fighter2.name : f2 < f1 ? fighter1.name : firstAttacker;
 }
 
 // Ultimate Array Reverser.
 
-const ultimateReverse = s => {
-    let str=s.join('').split('').reverse()
-    let arr=[]
-    for (let i=0;i<s.length;i++){
-    arr.push(str.splice(0,s[i].length).join(''))
-    }
-    return arr
+const ultimateReverse = (s) => {
+	let str = s.join("").split("").reverse();
+	let arr = [];
+	for (let i = 0; i < s.length; i++) {
+		arr.push(str.splice(0, s[i].length).join(""));
+	}
+	return arr;
 };
 
 // Triple Shiftian Numbers.
 
-// function tripleShiftian(base,n){
-//     for (let i = 2; i < n; i++) {
-//         base.push(4 * base[i] - 5 * base[i-1] + 3 * base[i-2]);}
-//     return base[n];
-// }
+function tripleShiftian(base, n) {
+	for (let i = 2; i < n; i++) {
+		base.push(4 * base[i] - 5 * base[i - 1] + 3 * base[i - 2]);
+	}
+	return base[n];
+}
 
 // Unflatten a list (Easy).
 
@@ -9215,7 +9220,6 @@ const ultimateReverse = s => {
 //     return lst.length?[...new Set(lst)].reduce((a,b)=>a+b,0):null
 // }
 
-
 // Unique string characters.
 
 // function solve(a,b){
@@ -9223,7 +9227,6 @@ const ultimateReverse = s => {
 //     let str2=b.split('').filter(v=>!a.split('').includes(v)).join('')
 //     return str1+str2
 // };
-
 
 // Vampire Numbers.
 
