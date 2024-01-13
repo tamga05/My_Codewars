@@ -9205,14 +9205,17 @@ function tripleShiftian(base, n) {
 
 // Unflatten a list (Easy).
 
-// function unflatten (flatArray)
-// {
-// let res = []
-//   while (flatArray.length>0) {
-//     res.push(flatArray[0]<3 ? flatArray.shift() : flatArray.splice(0,flatArray[0]))
-//   }
-//   return res
-// }
+function unflatten(flatArray) {
+	let res = [];
+	while (flatArray.length > 0) {
+		res.push(
+			flatArray[0] < 3
+				? flatArray.shift()
+				: flatArray.splice(0, flatArray[0])
+		);
+	}
+	return res;
+}
 
 // Unique Sum.
 
