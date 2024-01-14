@@ -9219,9 +9219,9 @@ function unflatten(flatArray) {
 
 // Unique Sum.
 
-// function uniqueSum(lst){
-//     return lst.length?[...new Set(lst)].reduce((a,b)=>a+b,0):null
-// }
+function uniqueSum(lst) {
+	return lst.length ? [...new Set(lst)].reduce((a, b) => a + b, 0) : null;
+}
 
 // Unique string characters.
 
@@ -9244,3 +9244,5 @@ function unflatten(flatArray) {
 //   G: '6', H: '#', I: '!', L: '1',
 //   O: '0', S: '$', T: '7', Z: '2'
 // };
+
+//
