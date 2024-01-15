@@ -9225,11 +9225,11 @@ function uniqueSum(lst) {
 
 // Unique string characters.
 
-// function solve(a,b){
-//     let str1=a.split('').filter(v=>!b.split('').includes(v)).join('')
-//     let str2=b.split('').filter(v=>!a.split('').includes(v)).join('')
-//     return str1+str2
-// };
+function solve(a,b){
+    let str1=a.split('').filter(v=>!b.split('').includes(v)).join('')
+    let str2=b.split('').filter(v=>!a.split('').includes(v)).join('')
+    return str1+str2
+};
 
 // Vampire Numbers.
 
@@ -9245,4 +9245,238 @@ function uniqueSum(lst) {
 //   O: '0', S: '$', T: '7', Z: '2'
 // };
 
-//
+// All Star Code Challenge #1.
+
+// function sumPPG(playerOne, playerTwo) {
+// 	return playerOne.ppg + playerTwo.ppg;
+// }
+
+// All Star Code Challenge #13.
+
+// const translate = function (word) {
+// 	if (word.length == 1) return word;
+// 	if (word.length >= 2) {
+// 		if (/[aeiou]/.test(word.slice(0, 1))) return word + "ay";
+// 		return word.slice(1) + word.slice(0, 1) + "ay";
+// 	}
+// 	return "";
+// };
+
+// All Star Code Challenge #16.
+
+// function noRepeat(str) {
+// 	for (var i of str) if (str.split(i).length == 2) return i;
+// }
+
+// 99 bottles of beer.
+
+// const sing = function () {
+// 	// The most evil kata so far :)
+// 	let lyrics = [];
+// 	for (var i = 99; i >= 3; i--) {
+// 		lyrics.push(
+// 			i + " bottles of beer on the wall, " + i + " bottles of beer."
+// 		);
+// 		lyrics.push(
+// 			"Take one down and pass it around, " +
+// 				(i - 1) +
+// 				" bottles of beer on the wall."
+// 		);
+// 	}
+// 	return lyrics.concat([
+// 		"2 bottles of beer on the wall, 2 bottles of beer.",
+// 		"Take one down and pass it around, 1 bottle of beer on the wall.",
+// 		"1 bottle of beer on the wall, 1 bottle of beer.",
+// 		"Take one down and pass it around, no more bottles of beer on the wall.",
+// 		"No more bottles of beer on the wall, no more bottles of beer.",
+// 		"Go to the store and buy some more, 99 bottles of beer on the wall.",
+// 	]);
+// };
+
+// 254 shades of grey.
+
+// function shadesOfGrey(n) {
+// 	const shades = [];
+
+// 	for (let i = 1; i <= Math.min(n, 254); i++) {
+// 		const grey = ("0" + i.toString(16)).slice(-2);
+// 		shades.push("#" + grey + grey + grey);
+// 	}
+
+// 	return shades;
+// }
+
+// 7 kyu Count all the sheep on farm in the heights of New Zealand.
+
+// function lostSheep(friday, saturday, total) {
+// 	return (
+// 		total -
+// 		friday.reduce((acc, next) => acc + next, 0) -
+// 		saturday.reduce((acc, next) => acc + next, 0)
+// 	);
+// }
+
+// 80's Kids #1: How Many Licks Does it Take?
+
+// const totalLicks = (env) => {
+// 	var licks = 252;
+// 	let challenge;
+
+// 	for (const effect in env) {
+// 		if (env[effect] > 0 && (!challenge || env[effect] > env[challenge])) {
+// 			challenge = effect;
+// 		}
+// 		licks += env[effect];
+// 	}
+// 	return (
+// 		`It took ${licks} licks to get to the tootsie roll center of a tootsie pop.` +
+// 		(challenge ? ` The toughest challenge was ${challenge}.` : "")
+// 	);
+// };
+
+// Waiting room.
+
+// function lastChair(N) {
+// 	return N - 1;
+// }
+
+// We Have Liftoff.
+
+// function liftoff(ins) {
+// 	return `${ins.sort((a, b) => b - a).join(" ")} liftoff!`;
+// }
+
+// Weight of its Contents.
+
+// function contentWeight(bottleWeight, scale) {
+// 	var s = parseInt(scale);
+// 	return /larger/.test(scale)
+// 		? (bottleWeight * s) / (s + 1)
+// 		: bottleWeight / (s + 1);
+// }
+
+// Weird words.
+
+// function nextLetter(str) {
+// 	let arr_en = [
+// 		"a",
+// 		"b",
+// 		"c",
+// 		"d",
+// 		"e",
+// 		"f",
+// 		"g",
+// 		"h",
+// 		"i",
+// 		"j",
+// 		"k",
+// 		"l",
+// 		"m",
+// 		"n",
+// 		"o",
+// 		"p",
+// 		"q",
+// 		"r",
+// 		"s",
+// 		"t",
+// 		"u",
+// 		"v",
+// 		"w",
+// 		"x",
+// 		"y",
+// 		"z",
+// 	];
+// 	let arr_EN = [
+// 		"A",
+// 		"B",
+// 		"C",
+// 		"D",
+// 		"E",
+// 		"F",
+// 		"G",
+// 		"H",
+// 		"I",
+// 		"J",
+// 		"K",
+// 		"L",
+// 		"M",
+// 		"N",
+// 		"O",
+// 		"P",
+// 		"Q",
+// 		"R",
+// 		"S",
+// 		"T",
+// 		"U",
+// 		"V",
+// 		"W",
+// 		"X",
+// 		"Y",
+// 		"Z",
+// 	];
+// 	return str.replace(/[a-z]/gi, (v) => {
+// 		if (v === v.toLowerCase()) {
+// 			const index = arr_en.indexOf(v);
+// 			return (v = arr_en[(index + 1) % 26]);
+// 		}
+// 		if (v === v.toUpperCase()) {
+// 			const index = arr_EN.indexOf(v);
+// 			return (v = arr_EN[(index + 1) % 26]);
+// 		}
+// 	});
+// }
+
+// Well of Ideas - Harder Version.
+
+// function well(x) {
+// 	let count = 0;
+// 	x.map((v) =>
+// 		v.map((v) => (String(v).toLowerCase() === "good" ? (count += 1) : 1))
+// 	);
+// 	return count < 1 ? "Fail!" : count > 2 ? "I smell a series!" : "Publish!";
+// }
+
+// What dominates your array?
+
+// function dominator(arr) {
+// 	const obj = {};
+// 	arr.map((v) => (obj[v] = obj[v] ? obj[v] + 1 : 1));
+// 	const keys = Object.keys(obj);
+// 	const value = Object.values(obj);
+// 	if (Math.max(...value) < arr.length / 2) return -1;
+// 	return value.indexOf(Math.max(...value)) === 0
+// 		? -1
+// 		: keys[value.indexOf(Math.max(...value))] * 1;
+// }
+
+// What is my name score? #1
+
+// function nameScore(name) {
+// 	let nameList = name.replace(/\s+/gi, "").toUpperCase().split("");
+// 	let score = 0,
+// 		result = {};
+// 	for (let x in alpha) {
+// 		for (let i = 0; i < nameList.length; i++) {
+// 			if (x.indexOf(nameList[i]) !== -1) {
+// 				score += alpha[x];
+// 			}
+// 		}
+// 	}
+
+// 	result[name] = score;
+// 	return result;
+// }
+
+// What's my golf score?
+
+// function golfScoreCalculator(parList, scoreList) {
+// 	const par = parList.split("").reduce((a, b) => a + b * 1, 0);
+// 	const score = scoreList.split("").reduce((a, b) => a + b * 1, 0);
+// 	return score - par;
+// }
+
+// Where's Wally.
+
+// function wheresWally(string) {
+// 	return (" " + string).search(/ Wally\b/);
+// }
