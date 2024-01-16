@@ -9233,9 +9233,9 @@ function solve(a,b){
 
 // Vampire Numbers.
 
-// const vampire_test = function(a, b){
-//     return (''+a+b).split('').sort().join() == (a*b+'').split('').sort().join();
-// }
+const vampire_test = function(a, b){
+    return (''+a+b).split('').sort().join() == (a*b+'').split('').sort().join();
+}
 
 // const toLeetSpeak = s => s.replace(/[ABCEGHILOSTZ]/g, c => D[c]);
 
