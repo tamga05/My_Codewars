@@ -9225,25 +9225,43 @@ function uniqueSum(lst) {
 
 // Unique string characters.
 
-function solve(a,b){
-    let str1=a.split('').filter(v=>!b.split('').includes(v)).join('')
-    let str2=b.split('').filter(v=>!a.split('').includes(v)).join('')
-    return str1+str2
-};
+function solve(a, b) {
+	let str1 = a
+		.split("")
+		.filter((v) => !b.split("").includes(v))
+		.join("");
+	let str2 = b
+		.split("")
+		.filter((v) => !a.split("").includes(v))
+		.join("");
+	return str1 + str2;
+}
 
 // Vampire Numbers.
 
-const vampire_test = function(a, b){
-    return (''+a+b).split('').sort().join() == (a*b+'').split('').sort().join();
-}
+const vampire_test = function (a, b) {
+	return (
+		("" + a + b).split("").sort().join() ==
+		(a * b + "").split("").sort().join()
+	);
+};
 
-const toLeetSpeak = s => s.replace(/[ABCEGHILOSTZ]/g, c => D[c]);
+const toLeetSpeak = (s) => s.replace(/[ABCEGHILOSTZ]/g, (c) => D[c]);
 
-// const D = {
-//   A: '@', B: '8', C: '(', E: '3',
-//   G: '6', H: '#', I: '!', L: '1',
-//   O: '0', S: '$', T: '7', Z: '2'
-// };
+const D = {
+	A: "@",
+	B: "8",
+	C: "(",
+	E: "3",
+	G: "6",
+	H: "#",
+	I: "!",
+	L: "1",
+	O: "0",
+	S: "$",
+	T: "7",
+	Z: "2",
+};
 
 // All Star Code Challenge #1.
 
