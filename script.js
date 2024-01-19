@@ -9265,9 +9265,9 @@ const D = {
 
 // All Star Code Challenge #1.
 
-// function sumPPG(playerOne, playerTwo) {
-// 	return playerOne.ppg + playerTwo.ppg;
-// }
+function sumPPG(playerOne, playerTwo) {
+	return playerOne.ppg + playerTwo.ppg;
+}
 
 // All Star Code Challenge #13.
 
