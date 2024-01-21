@@ -9282,9 +9282,9 @@ const translate = function (word) {
 
 // All Star Code Challenge #16.
 
-// function noRepeat(str) {
-// 	for (var i of str) if (str.split(i).length == 2) return i;
-// }
+function noRepeat(str) {
+	for (var i of str) if (str.split(i).length == 2) return i;
+}
 
 // 99 bottles of beer.
 
