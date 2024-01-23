@@ -9313,16 +9313,16 @@ const sing = function () {
 
 // 254 shades of grey.
 
-// function shadesOfGrey(n) {
-// 	const shades = [];
+function shadesOfGrey(n) {
+	const shades = [];
 
-// 	for (let i = 1; i <= Math.min(n, 254); i++) {
-// 		const grey = ("0" + i.toString(16)).slice(-2);
-// 		shades.push("#" + grey + grey + grey);
-// 	}
+	for (let i = 1; i <= Math.min(n, 254); i++) {
+		const grey = ("0" + i.toString(16)).slice(-2);
+		shades.push("#" + grey + grey + grey);
+	}
 
-// 	return shades;
-// }
+	return shades;
+}
 
 // 7 kyu Count all the sheep on farm in the heights of New Zealand.
 
