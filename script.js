@@ -9326,13 +9326,13 @@ function shadesOfGrey(n) {
 
 // 7 kyu Count all the sheep on farm in the heights of New Zealand.
 
-// function lostSheep(friday, saturday, total) {
-// 	return (
-// 		total -
-// 		friday.reduce((acc, next) => acc + next, 0) -
-// 		saturday.reduce((acc, next) => acc + next, 0)
-// 	);
-// }
+function lostSheep(friday, saturday, total) {
+	return (
+		total -
+		friday.reduce((acc, next) => acc + next, 0) -
+		saturday.reduce((acc, next) => acc + next, 0)
+	);
+}
 
 // 80's Kids #1: How Many Licks Does it Take?
 
