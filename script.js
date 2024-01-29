@@ -9375,74 +9375,74 @@ function contentWeight(bottleWeight, scale) {
 
 // Weird words.
 
-// function nextLetter(str) {
-// 	let arr_en = [
-// 		"a",
-// 		"b",
-// 		"c",
-// 		"d",
-// 		"e",
-// 		"f",
-// 		"g",
-// 		"h",
-// 		"i",
-// 		"j",
-// 		"k",
-// 		"l",
-// 		"m",
-// 		"n",
-// 		"o",
-// 		"p",
-// 		"q",
-// 		"r",
-// 		"s",
-// 		"t",
-// 		"u",
-// 		"v",
-// 		"w",
-// 		"x",
-// 		"y",
-// 		"z",
-// 	];
-// 	let arr_EN = [
-// 		"A",
-// 		"B",
-// 		"C",
-// 		"D",
-// 		"E",
-// 		"F",
-// 		"G",
-// 		"H",
-// 		"I",
-// 		"J",
-// 		"K",
-// 		"L",
-// 		"M",
-// 		"N",
-// 		"O",
-// 		"P",
-// 		"Q",
-// 		"R",
-// 		"S",
-// 		"T",
-// 		"U",
-// 		"V",
-// 		"W",
-// 		"X",
-// 		"Y",
-// 		"Z",
-// 	];
-// 	return str.replace(/[a-z]/gi, (v) => {
-// 		if (v === v.toLowerCase()) {
-// 			const index = arr_en.indexOf(v);
-// 			return (v = arr_en[(index + 1) % 26]);
-// 		}
-// 		if (v === v.toUpperCase()) {
-// 			const index = arr_EN.indexOf(v);
-// 			return (v = arr_EN[(index + 1) % 26]);
-// 		}
-// 	});
-// }
+function nextLetter(str) {
+	let arr_en = [
+		"a",
+		"b",
+		"c",
+		"d",
+		"e",
+		"f",
+		"g",
+		"h",
+		"i",
+		"j",
+		"k",
+		"l",
+		"m",
+		"n",
+		"o",
+		"p",
+		"q",
+		"r",
+		"s",
+		"t",
+		"u",
+		"v",
+		"w",
+		"x",
+		"y",
+		"z",
+	];
+	let arr_EN = [
+		"A",
+		"B",
+		"C",
+		"D",
+		"E",
+		"F",
+		"G",
+		"H",
+		"I",
+		"J",
+		"K",
+		"L",
+		"M",
+		"N",
+		"O",
+		"P",
+		"Q",
+		"R",
+		"S",
+		"T",
+		"U",
+		"V",
+		"W",
+		"X",
+		"Y",
+		"Z",
+	];
+	return str.replace(/[a-z]/gi, (v) => {
+		if (v === v.toLowerCase()) {
+			const index = arr_en.indexOf(v);
+			return (v = arr_en[(index + 1) % 26]);
+		}
+		if (v === v.toUpperCase()) {
+			const index = arr_EN.indexOf(v);
+			return (v = arr_EN[(index + 1) % 26]);
+		}
+	});
+}
 
 // Well of Ideas - Harder Version.
 
@@ -9497,4 +9497,101 @@ function contentWeight(bottleWeight, scale) {
 
 // function wheresWally(string) {
 // 	return (" " + string).search(/ Wally\b/);
+// }
+
+// Alternate case.
+
+// function alternateCase(s) {
+// 	return s
+// 		.split("")
+// 		.map((value) => {
+// 			if (value != value.toUpperCase()) return value.toUpperCase();
+// 			return value.toLowerCase();
+// 		})
+// 		.join("");
+// }
+
+// makeBackronym.
+
+//preload variable: dict
+
+// const makeBackronym = function (string) {
+// 	return string
+// 		.toUpperCase()
+// 		.split("")
+// 		.map((elem) => dict[elem])
+// 		.join(" ");
+// };
+
+// zero-balanced Array.
+
+// function ìsZeroBalanced(n) {
+// 	if (n.length === 0) return false;
+// 	const pos = [];
+// 	let neg = [];
+// 	const zero = [];
+// 	n.map((v) => (v > 0 ? pos.push(v) : v === 0 ? zero.push(v) : neg.push(v)));
+// 	neg = neg.sort((a, b) => Math.abs(a) - Math.abs(b));
+// 	if (
+// 		!pos
+// 			.sort((a, b) => a - b)
+// 			.every((v, i) => Math.abs(neg[i]) === Math.abs(v))
+// 	)
+// 		return false;
+// 	if (zero.length > 0 && pos.length === neg.length) return true;
+// 	if (pos.length !== neg.length) return false;
+// 	return n.reduce((a, b) => a + b, 0) === 0;
+// }
+
+// vPalindrome chain length.
+
+// const palindromeChainLength = function (n) {
+// 	var x = parseInt(("" + n).split("").reverse().join(""));
+// 	if (n != x) {
+// 		return 1 + palindromeChainLength(n + x);
+// 	}
+// 	return 0;
+// };
+
+// sum2total.
+
+// function total(arr) {
+// 	while (arr.length > 2) {
+// 		arr = arr
+// 			.map((v, i, arr) => (v = arr[i] + arr[i + 1]))
+// 			.filter((v) => !isNaN(v));
+// 	}
+// 	return arr.reduce((a, b) => a + b);
+// }
+
+// sPoNgEbOb MeMe.
+
+// function spongeMeme(sentence) {
+// 	return sentence
+// 		.split("")
+// 		.map((v, i) => (i % 2 !== 0 ? v.toLowerCase() : v.toUpperCase()))
+// 		.join("");
+// }
+
+// reverseIt.
+
+// function reverseIt(data) {
+// 	if (typeof data === "string") return data.split("").reverse().join("");
+// 	if (typeof data === "number")
+// 		return data.toString().split("").reverse().join("") * 1;
+// 	return data;
+// }
+
+// regex validation of 24 hours time.
+
+// function validateTime(time) {
+// 	let arr = time.split(":");
+// 	if (arr[0] * 1 > 23 || arr[1] * 1 > 59 || time.length > 5) return false;
+// 	return /\d{1,2}:\d{2}/.test(time);
+// }
+
+// nth Floyd line.
+
+// function nthFloyd(n) {
+// 	return Math.ceil((Math.sqrt(8 * n + 1) - 1) / 2);
 // }
