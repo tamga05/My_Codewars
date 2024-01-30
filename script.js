@@ -9446,13 +9446,13 @@ function nextLetter(str) {
 
 // Well of Ideas - Harder Version.
 
-// function well(x) {
-// 	let count = 0;
-// 	x.map((v) =>
-// 		v.map((v) => (String(v).toLowerCase() === "good" ? (count += 1) : 1))
-// 	);
-// 	return count < 1 ? "Fail!" : count > 2 ? "I smell a series!" : "Publish!";
-// }
+function well(x) {
+	let count = 0;
+	x.map((v) =>
+		v.map((v) => (String(v).toLowerCase() === "good" ? (count += 1) : 1))
+	);
+	return count < 1 ? "Fail!" : count > 2 ? "I smell a series!" : "Publish!";
+}
 
 // What dominates your array?
 
