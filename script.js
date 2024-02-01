@@ -9469,21 +9469,21 @@ function dominator(arr) {
 
 // What is my name score? #1
 
-// function nameScore(name) {
-// 	let nameList = name.replace(/\s+/gi, "").toUpperCase().split("");
-// 	let score = 0,
-// 		result = {};
-// 	for (let x in alpha) {
-// 		for (let i = 0; i < nameList.length; i++) {
-// 			if (x.indexOf(nameList[i]) !== -1) {
-// 				score += alpha[x];
-// 			}
-// 		}
-// 	}
+function nameScore(name) {
+	let nameList = name.replace(/\s+/gi, "").toUpperCase().split("");
+	let score = 0,
+		result = {};
+	for (let x in alpha) {
+		for (let i = 0; i < nameList.length; i++) {
+			if (x.indexOf(nameList[i]) !== -1) {
+				score += alpha[x];
+			}
+		}
+	}
 
-// 	result[name] = score;
-// 	return result;
-// }
+	result[name] = score;
+	return result;
+}
 
 // What's my golf score?
 
