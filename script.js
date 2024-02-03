@@ -9495,9 +9495,9 @@ function golfScoreCalculator(parList, scoreList) {
 
 // Where's Wally.
 
-// function wheresWally(string) {
-// 	return (" " + string).search(/ Wally\b/);
-// }
+function wheresWally(string) {
+	return (" " + string).search(/ Wally\b/);
+}
 
 // Alternate case.
 
