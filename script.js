@@ -9513,15 +9513,15 @@ function alternateCase(s) {
 
 // makeBackronym.
 
-//preload variable: dict
+// preload variable: dict
 
-// const makeBackronym = function (string) {
-// 	return string
-// 		.toUpperCase()
-// 		.split("")
-// 		.map((elem) => dict[elem])
-// 		.join(" ");
-// };
+const makeBackronym = function (string) {
+	return string
+		.toUpperCase()
+		.split("")
+		.map((elem) => dict[elem])
+		.join(" ");
+};
 
 // zero-balanced Array.
 
