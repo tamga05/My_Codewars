@@ -9525,23 +9525,23 @@ const makeBackronym = function (string) {
 
 // zero-balanced Array.
 
-// function ìsZeroBalanced(n) {
-// 	if (n.length === 0) return false;
-// 	const pos = [];
-// 	let neg = [];
-// 	const zero = [];
-// 	n.map((v) => (v > 0 ? pos.push(v) : v === 0 ? zero.push(v) : neg.push(v)));
-// 	neg = neg.sort((a, b) => Math.abs(a) - Math.abs(b));
-// 	if (
-// 		!pos
-// 			.sort((a, b) => a - b)
-// 			.every((v, i) => Math.abs(neg[i]) === Math.abs(v))
-// 	)
-// 		return false;
-// 	if (zero.length > 0 && pos.length === neg.length) return true;
-// 	if (pos.length !== neg.length) return false;
-// 	return n.reduce((a, b) => a + b, 0) === 0;
-// }
+function ìsZeroBalanced(n) {
+	if (n.length === 0) return false;
+	const pos = [];
+	let neg = [];
+	const zero = [];
+	n.map((v) => (v > 0 ? pos.push(v) : v === 0 ? zero.push(v) : neg.push(v)));
+	neg = neg.sort((a, b) => Math.abs(a) - Math.abs(b));
+	if (
+		!pos
+			.sort((a, b) => a - b)
+			.every((v, i) => Math.abs(neg[i]) === Math.abs(v))
+	)
+		return false;
+	if (zero.length > 0 && pos.length === neg.length) return true;
+	if (pos.length !== neg.length) return false;
+	return n.reduce((a, b) => a + b, 0) === 0;
+}
 
 // vPalindrome chain length.
 
