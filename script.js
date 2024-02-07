@@ -9545,13 +9545,13 @@ function ìsZeroBalanced(n) {
 
 // vPalindrome chain length.
 
-// const palindromeChainLength = function (n) {
-// 	var x = parseInt(("" + n).split("").reverse().join(""));
-// 	if (n != x) {
-// 		return 1 + palindromeChainLength(n + x);
-// 	}
-// 	return 0;
-// };
+const palindromeChainLength = function (n) {
+	var x = parseInt(("" + n).split("").reverse().join(""));
+	if (n != x) {
+		return 1 + palindromeChainLength(n + x);
+	}
+	return 0;
+};
 
 // sum2total.
 
