@@ -9555,14 +9555,14 @@ const palindromeChainLength = function (n) {
 
 // sum2total.
 
-// function total(arr) {
-// 	while (arr.length > 2) {
-// 		arr = arr
-// 			.map((v, i, arr) => (v = arr[i] + arr[i + 1]))
-// 			.filter((v) => !isNaN(v));
-// 	}
-// 	return arr.reduce((a, b) => a + b);
-// }
+function total(arr) {
+	while (arr.length > 2) {
+		arr = arr
+			.map((v, i, arr) => (v = arr[i] + arr[i + 1]))
+			.filter((v) => !isNaN(v));
+	}
+	return arr.reduce((a, b) => a + b);
+}
 
 // sPoNgEbOb MeMe.
 
