@@ -9566,12 +9566,12 @@ function total(arr) {
 
 // sPoNgEbOb MeMe.
 
-// function spongeMeme(sentence) {
-// 	return sentence
-// 		.split("")
-// 		.map((v, i) => (i % 2 !== 0 ? v.toLowerCase() : v.toUpperCase()))
-// 		.join("");
-// }
+function spongeMeme(sentence) {
+	return sentence
+		.split("")
+		.map((v, i) => (i % 2 !== 0 ? v.toLowerCase() : v.toUpperCase()))
+		.join("");
+}
 
 // reverseIt.
 
