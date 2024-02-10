@@ -9575,12 +9575,12 @@ function spongeMeme(sentence) {
 
 // reverseIt.
 
-// function reverseIt(data) {
-// 	if (typeof data === "string") return data.split("").reverse().join("");
-// 	if (typeof data === "number")
-// 		return data.toString().split("").reverse().join("") * 1;
-// 	return data;
-// }
+function reverseIt(data) {
+	if (typeof data === "string") return data.split("").reverse().join("");
+	if (typeof data === "number")
+		return data.toString().split("").reverse().join("") * 1;
+	return data;
+}
 
 // regex validation of 24 hours time.
 
