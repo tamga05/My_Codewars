@@ -9584,14 +9584,303 @@ function reverseIt(data) {
 
 // regex validation of 24 hours time.
 
-// function validateTime(time) {
-// 	let arr = time.split(":");
-// 	if (arr[0] * 1 > 23 || arr[1] * 1 > 59 || time.length > 5) return false;
-// 	return /\d{1,2}:\d{2}/.test(time);
-// }
+function validateTime(time) {
+	let arr = time.split(":");
+	if (arr[0] * 1 > 23 || arr[1] * 1 > 59 || time.length > 5) return false;
+	return /\d{1,2}:\d{2}/.test(time);
+}
 
 // nth Floyd line.
 
 // function nthFloyd(n) {
 // 	return Math.ceil((Math.sqrt(8 * n + 1) - 1) / 2);
+// }
+
+// Vowel one.
+
+// function vowelOne(s) {
+// 	return s.replace(/./g, (v) => (/[aeiou]/i.test(v) ? "1" : "0"));
+// }
+
+// Vowel Count.
+
+// function getCount(str) {
+// 	return (str.match(/[aeiou]/gi) || []).length;
+// }
+
+// Volume of a cup.
+
+// function cupVolume(d1, d2, height) {
+// 	return (
+// 		(((Math.PI * height) / 12) * (d1 ** 2 + d1 * d2 + d2 ** 2)).toFixed(2) *
+// 		1
+// 	);
+// }
+
+// Visible Dots On a Die.
+
+// function totalAmountVisible(n, s) {
+// 	return (s * (s + 1)) / 2 + (n - s - 1);
+// }
+
+// Valid number to 2 decimal places.
+
+// function validNumber(num) {
+// 	return /^[+-]?\d*\.\d\d$/.test(num);
+// }
+
+// Valid HK Phone Number.
+
+// const isValidHKPhoneNumber = (string) => {
+// 	return /^\d{4}\s\d{4}$/.test(string);
+// };
+// const hasValidHKPhoneNumber = (string) => {
+// 	return /\d{4}\s\d{4}/.test(string);
+// };
+
+// Unscrambled eggs.
+
+// function unscrambleEggs(word) {
+// 	return word.replace(/(egg)/gi, "");
+// }
+
+// Unpacking Arguments.
+
+// function spread(func, args) {
+// 	return func(...args);
+// }
+
+// Training JS #19: Methods of String object--toUpperCase() toLowerCase() and replace().
+
+// function alienLanguage(str) {
+// 	return str
+// 		.split(" ")
+// 		.map((v) => v.slice(0, -1).toUpperCase() + v.slice(-1).toLowerCase())
+// 		.join(" ");
+// }
+
+// Training JS #20: Methods of String object--charAt() charCodeAt() and fromCharCode().
+
+// function topSecret(str) {
+// 	let dict = [
+// 		"a",
+// 		"b",
+// 		"c",
+// 		"d",
+// 		"e",
+// 		"f",
+// 		"g",
+// 		"h",
+// 		"i",
+// 		"j",
+// 		"k",
+// 		"l",
+// 		"m",
+// 		"n",
+// 		"o",
+// 		"p",
+// 		"q",
+// 		"r",
+// 		"s",
+// 		"t",
+// 		"u",
+// 		"v",
+// 		"w",
+// 		"x",
+// 		"y",
+// 		"z",
+// 	];
+// 	let Dict = [
+// 		"A",
+// 		"B",
+// 		"C",
+// 		"D",
+// 		"E",
+// 		"F",
+// 		"G",
+// 		"H",
+// 		"I",
+// 		"J",
+// 		"K",
+// 		"L",
+// 		"M",
+// 		"N",
+// 		"O",
+// 		"P",
+// 		"Q",
+// 		"R",
+// 		"S",
+// 		"T",
+// 		"U",
+// 		"V",
+// 		"W",
+// 		"X",
+// 		"Y",
+// 		"Z",
+// 	];
+// 	return str.replace(/[a-z]/gi, (v) => {
+// 		if (v === v.toLowerCase()) {
+// 			return dict.indexOf(v.toLowerCase()) - 3 < 0
+// 				? dict[dict.indexOf(v.toLowerCase()) - 3 + 26]
+// 				: dict[dict.indexOf(v.toLowerCase()) - 3];
+// 		}
+// 		if (v === v.toUpperCase()) {
+// 			return Dict.indexOf(v) - 3 < 0
+// 				? Dict[Dict.indexOf(v) - 3 + 26]
+// 				: Dict[Dict.indexOf(v) - 3];
+// 		}
+// 		return v;
+// 	});
+// }
+// //question1: The top secret file number is...
+// const answer1 = "3745";
+// //question2: Super agent's name is...
+// const answer2 = "RILc";
+// //question3: He stole the treasure is...
+// const answer3 = "Expired biscuits";
+
+// Training JS #22: Unlock new skills--Arrow function,spread operator and deconstruction.
+
+// const infiniteLoop = (arr, d, n) => {
+// 	for (let i = 1; i <= n; i++) {
+// 		if (d === "left") {
+// 			arr[2].push(arr[0].shift());
+// 			arr[1].push(arr[2].shift());
+// 			arr[0].push(arr[1].shift());
+// 		}
+// 		if (d === "right") {
+// 			arr[0].unshift(arr[2].pop());
+// 			arr[1].unshift(arr[0].pop());
+// 			arr[2].unshift(arr[1].pop());
+// 		}
+// 	}
+// 	return arr;
+// };
+
+// Training JS #24: methods of arrayObject---splice() and slice().
+
+// function threeInOne(arr) {
+// 	const arr1 = [];
+// 	for (let i = 0; i <= arr.length; i += 3) {
+// 		arr1.push(arr.slice(i, i + 3));
+// 	}
+// 	return arr1.map((v) => v.reduce((a, b) => a + b, 0)).slice(0, -1);
+// }
+
+// Training JS #26: methods of arrayObject---map().
+
+// function isolateIt(arr) {
+// 	return arr.map((v) => {
+// 		if (v.length % 2 == 0) {
+// 			return v.slice(0, v.length / 2) + "|" + v.slice(v.length / 2);
+// 		}
+// 		if (v.length % 2 !== 0) {
+// 			return v.slice(0, v.length / 2) + "|" + v.slice(v.length / 2 + 1);
+// 		}
+// 	});
+// }
+
+// Training JS #27: methods of arrayObject---filter().
+
+// function countGrade(scores) {
+// 	const obj = { S: 0, A: 0, B: 0, C: 0, D: 0, X: 0 };
+// 	scores.map((v) => {
+// 		if (v >= 100) {
+// 			obj[`S`]++;
+// 		}
+// 		if (v >= 90 && v < 100) {
+// 			obj[`A`]++;
+// 		}
+// 		if (v >= 80 && v < 90) {
+// 			obj[`B`]++;
+// 		}
+// 		if (v >= 60 && v < 80) {
+// 			obj[`C`]++;
+// 		}
+// 		if (v >= 0 && v < 60) {
+// 			obj[`D`]++;
+// 		}
+// 		if (v < 0) {
+// 			obj[`X`]++;
+// 		}
+// 	});
+// 	return obj;
+// }
+
+// Training JS #28: methods of arrayObject---every() and some().
+
+// function mirrorImage(arr) {
+// 	for (let i = 0; i < arr.length - 1; i++) {
+// 		if (
+// 			arr[i].toString().split("").reverse().join("") ===
+// 			arr[i + 1].toString()
+// 		) {
+// 			return [arr[i], arr[i + 1]];
+// 		}
+// 	}
+// 	return [-1, -1];
+// }
+
+// Training JS #30: methods of arrayObject---reduce() and reduceRight().
+
+// function tailAndHead(arr) {
+// 	let m = [];
+// 	for (let i = 0; i < arr.length - 1; i++)
+// 		m.push((arr[i] % 10) + Number((arr[i + 1] + "")[0]));
+// 	return m.reduce((a, b) => a * b);
+// }
+
+// Training JS #33: methods of Math---max() min() and abs().
+
+// function maxMin(arr1, arr2) {
+// 	const arr = arr2.map((v, i) => v - arr1[i], 0);
+// 	return [
+// 		Math.max(...arr.map((v) => Math.abs(v))),
+// 		Math.min(...arr.map((v) => Math.abs(v))),
+// 	];
+// }
+
+// Training JS #37: Unlock new weapon---RegExp Object.
+
+// function countAnimals(animals, count) {
+// 	let res = [];
+// 	for (let i = 0; i < count.length; i++)
+// 		res.push(animals.split(count[i]).length - 1);
+// 	return res;
+// }
+
+// Training JS #38: Regular Expression--"^","$", "." and test().
+
+// function findSimilarity(str, word) {
+// 	var regstr =
+// 		word[0] + //first letter
+// 		word.slice(1, -1).replace(/./g, ".") + //middle letters
+// 		word.slice(-1); //last letter
+// 	var reg1 = new RegExp("^" + regstr + "$");
+// 	return str
+// 		.split(" ")
+// 		.filter((v) => reg1.test(v))
+// 		.join(" ");
+// }
+
+// The old switcheroo.
+
+// function vowel2index(str) {
+// 	return str.replace(/[aeiou]/gi, (m, i) => i + 1);
+// }
+
+// The Pony Express.
+
+// function riders(stations) {
+// 	let riders = 0;
+// 	let sum = 0;
+// 	for (let i = 0; i < stations.length; i++) {
+// 		sum += stations[i];
+// 		if (sum > 100) {
+// 			riders++;
+// 			sum = 0;
+// 			i--;
+// 		}
+// 	}
+// 	return riders + 1;
 // }
