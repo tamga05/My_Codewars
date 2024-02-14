@@ -9604,9 +9604,9 @@ function vowelOne(s) {
 
 // Vowel Count.
 
-// function getCount(str) {
-// 	return (str.match(/[aeiou]/gi) || []).length;
-// }
+function getCount(str) {
+	return (str.match(/[aeiou]/gi) || []).length;
+}
 
 // Volume of a cup.
 
