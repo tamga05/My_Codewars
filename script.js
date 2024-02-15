@@ -9610,12 +9610,12 @@ function getCount(str) {
 
 // Volume of a cup.
 
-// function cupVolume(d1, d2, height) {
-// 	return (
-// 		(((Math.PI * height) / 12) * (d1 ** 2 + d1 * d2 + d2 ** 2)).toFixed(2) *
-// 		1
-// 	);
-// }
+function cupVolume(d1, d2, height) {
+	return (
+		(((Math.PI * height) / 12) * (d1 ** 2 + d1 * d2 + d2 ** 2)).toFixed(2) *
+		1
+	);
+}
 
 // Visible Dots On a Die.
 
