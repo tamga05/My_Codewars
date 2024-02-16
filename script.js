@@ -9619,9 +9619,9 @@ function cupVolume(d1, d2, height) {
 
 // Visible Dots On a Die.
 
-// function totalAmountVisible(n, s) {
-// 	return (s * (s + 1)) / 2 + (n - s - 1);
-// }
+function totalAmountVisible(n, s) {
+	return (s * (s + 1)) / 2 + (n - s - 1);
+}
 
 // Valid number to 2 decimal places.
 
