@@ -9625,9 +9625,9 @@ function totalAmountVisible(n, s) {
 
 // Valid number to 2 decimal places.
 
-// function validNumber(num) {
-// 	return /^[+-]?\d*\.\d\d$/.test(num);
-// }
+function validNumber(num) {
+	return /^[+-]?\d*\.\d\d$/.test(num);
+}
 
 // Valid HK Phone Number.
 
