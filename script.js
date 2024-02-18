@@ -9631,12 +9631,12 @@ function validNumber(num) {
 
 // Valid HK Phone Number.
 
-// const isValidHKPhoneNumber = (string) => {
-// 	return /^\d{4}\s\d{4}$/.test(string);
-// };
-// const hasValidHKPhoneNumber = (string) => {
-// 	return /\d{4}\s\d{4}/.test(string);
-// };
+const isValidHKPhoneNumber = (string) => {
+	return /^\d{4}\s\d{4}$/.test(string);
+};
+const hasValidHKPhoneNumber = (string) => {
+	return /\d{4}\s\d{4}/.test(string);
+};
 
 // Unscrambled eggs.
 
