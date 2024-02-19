@@ -9640,9 +9640,9 @@ const hasValidHKPhoneNumber = (string) => {
 
 // Unscrambled eggs.
 
-// function unscrambleEggs(word) {
-// 	return word.replace(/(egg)/gi, "");
-// }
+function unscrambleEggs(word) {
+	return word.replace(/(egg)/gi, "");
+}
 
 // Unpacking Arguments.
 
