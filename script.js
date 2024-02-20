@@ -9646,9 +9646,9 @@ function unscrambleEggs(word) {
 
 // Unpacking Arguments.
 
-// function spread(func, args) {
-// 	return func(...args);
-// }
+function spread(func, args) {
+	return func(...args);
+}
 
 // Training JS #19: Methods of String object--toUpperCase() toLowerCase() and replace().
 
