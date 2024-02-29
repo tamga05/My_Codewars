@@ -9832,13 +9832,13 @@ function tailAndHead(arr) {
 
 // Training JS #33: methods of Math---max() min() and abs().
 
-// function maxMin(arr1, arr2) {
-// 	const arr = arr2.map((v, i) => v - arr1[i], 0);
-// 	return [
-// 		Math.max(...arr.map((v) => Math.abs(v))),
-// 		Math.min(...arr.map((v) => Math.abs(v))),
-// 	];
-// }
+function maxMin(arr1, arr2) {
+	const arr = arr2.map((v, i) => v - arr1[i], 0);
+	return [
+		Math.max(...arr.map((v) => Math.abs(v))),
+		Math.min(...arr.map((v) => Math.abs(v))),
+	];
+}
 
 // Training JS #37: Unlock new weapon---RegExp Object.
 
