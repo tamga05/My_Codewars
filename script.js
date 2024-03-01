@@ -9842,12 +9842,12 @@ function maxMin(arr1, arr2) {
 
 // Training JS #37: Unlock new weapon---RegExp Object.
 
-// function countAnimals(animals, count) {
-// 	let res = [];
-// 	for (let i = 0; i < count.length; i++)
-// 		res.push(animals.split(count[i]).length - 1);
-// 	return res;
-// }
+function countAnimals(animals, count) {
+	let res = [];
+	for (let i = 0; i < count.length; i++)
+		res.push(animals.split(count[i]).length - 1);
+	return res;
+}
 
 // Training JS #38: Regular Expression--"^","$", "." and test().
 
