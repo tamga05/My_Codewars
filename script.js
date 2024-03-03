@@ -9852,11 +9852,11 @@ function countAnimals(animals, count) {
 // Training JS #38: Regular Expression--"^","$", "." and test().
 
 function findSimilarity(str, word) {
-	var regstr =
+	const regstr =
 		word[0] + //first letter
 		word.slice(1, -1).replace(/./g, ".") + //middle letters
 		word.slice(-1); //last letter
-	var reg1 = new RegExp("^" + regstr + "$");
+	const reg1 = new RegExp("^" + regstr + "$");
 	return str
 		.split(" ")
 		.filter((v) => reg1.test(v))
@@ -9865,9 +9865,9 @@ function findSimilarity(str, word) {
 
 // The old switcheroo.
 
-// function vowel2index(str) {
-// 	return str.replace(/[aeiou]/gi, (m, i) => i + 1);
-// }
+function vowel2index(str) {
+	return str.replace(/[aeiou]/gi, (m, i) => i + 1);
+}
 
 // The Pony Express.
 
@@ -9884,3 +9884,369 @@ function findSimilarity(str, word) {
 // 	}
 // 	return riders + 1;
 // }
+
+// TV Remote.
+
+// const tvRemote = function (word) {
+// 	const keyboard = [
+// 		["a", "b", "c", "d", "e", "1", "2", "3"],
+// 		["f", "g", "h", "i", "j", "4", "5", "6"],
+// 		["k", "l", "m", "n", "o", "7", "8", "9"],
+// 		["p", "q", "r", "s", "t", ".", "@", "0"],
+// 		["u", "v", "w", "x", "y", "z", "_", "/"],
+// 	];
+
+// 	const pos = { x: 0, y: 0 };
+
+// 	const getPos = (l) => {
+// 		const y = keyboard.findIndex((row) => row.find((n) => n === l));
+// 		const x = keyboard[y].findIndex((n) => n === l);
+
+// 		return { x, y };
+// 	};
+
+// 	let dist = 0;
+
+// 	for (let l of word) {
+// 		const newPos = getPos(l);
+// 		dist += Math.abs(pos.x - newPos.x) + Math.abs(pos.y - newPos.y) + 1;
+
+// 		pos.x = newPos.x;
+// 		pos.y = newPos.y;
+// 	}
+
+// 	return dist;
+// };
+
+// Tail Swap.
+
+// function tailSwap(arr) {
+// 	let head = [];
+// 	let tail = [];
+// 	arr.map((v) =>
+// 		v
+// 			.split(":")
+// 			.map((v, i, arr) => (i % 2 == 0 ? head.push(v) : tail.push(v)))
+// 	);
+// 	tail = tail.reverse();
+// 	head = head.map((v, i) => v + ":" + tail[i]);
+// 	return head;
+// }
+
+// Tax Calculator.
+
+// function taxCalculator(total) {
+// 	let tax = 0;
+// 	if (total <= 0 || isNaN(total)) {
+// 		return 0;
+// 	} else if (total > 0 && total <= 10) {
+// 		tax = total * 0.1;
+// 	} else if (total > 10 && total <= 20) {
+// 		tax = 1 + (total - 10) * 0.07;
+// 	} else if (total > 20 && total <= 30) {
+// 		tax = 1.7 + (total - 20) * 0.05;
+// 	} else {
+// 		tax = 2.2 + (total - 30) * 0.03;
+// 	}
+// 	return +tax.toFixed(2);
+// }
+
+// Tea for two.
+
+// function tea42(input) {
+// 	return input.toString().replace(/2/g, "t");
+// }
+
+// Temperature analysis I.
+
+// function lowestTemp(t) {
+// 	return t.length > 0 ? Math.min(...t.split(" ").map(Number)) : null;
+// }
+
+// Test Your Knowledge Of Function Scope.
+
+// function add(x) {
+// 	return (b) => x + b;
+// }
+
+// Test's results.
+
+// function testResult(array) {
+// 	const dict = { h: 0, a: 0, l: 0 };
+// 	array.map((v) => {
+// 		if (v > 8) dict.h++;
+// 		if (v > 6 && v < 9) dict.a++;
+// 		if (v < 7) dict.l++;
+// 	});
+// 	let sum = (array.reduce((a, b) => a + b, 0) / array.length).toFixed(3) * 1;
+// 	if (dict.a === 0 && dict.l === 0) return [sum, dict, "They did well"];
+// 	return [sum, dict];
+// }
+
+// The Arpeggiator.
+
+// function arpeggio(notes) {
+// 	switch (notes) {
+// 		case "A":
+// 			return ["A", "C", "E", "A"];
+// 		case "B":
+// 			return ["B", "D", "F", "B"];
+// 		case "C":
+// 			return ["C", "E", "G", "C"];
+// 		case "D":
+// 			return ["D", "F", "A", "D"];
+// 		case "E":
+// 			return ["E", "G", "B", "E"];
+// 		case "F":
+// 			return ["F", "A", "C", "F"];
+// 		case "G":
+// 			return ["G", "B", "D", "G"];
+// 		default:
+// 			undefined;
+// 	}
+// }
+
+// The Barksdale Code.
+
+// function decode(string) {
+// 	const obj = { 1: 9, 2: 8, 3: 7, 4: 6, 5: 0, 6: 4, 7: 3, 8: 2, 9: 1, 0: 5 };
+// 	return string
+// 		.split("")
+// 		.map((v) => (v = obj[v]))
+// 		.join("");
+// }
+
+// The Coins of Ter | Round to the Next N.
+
+// function adjust(coin, price) {
+// 	for (let i = price; ; i++) {
+// 		if (i >= price && i % coin === 0) {
+// 			return i;
+// 			break;
+// 		}
+// 	}
+// }
+
+// The Coupon Code.
+
+// function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+// 	return (
+// 		enteredCode === correctCode &&
+// 		Date.parse(expirationDate) >= Date.parse(currentDate)
+// 	);
+// }
+
+// The Ladies of ENIAC.
+
+// function radLadies(name) {
+// 	return name.replace(/[^a-z\s!]/gi, "").toUpperCase();
+// }
+
+// The Lazy Startup Office.
+
+// function binRota(arr) {
+// 	return [].concat(...arr.map((v, i) => (i % 2 !== 0 ? v.reverse() : v)));
+// }
+
+// The Most Amicable of Numbers.
+
+// function amicableNumbers(num1, num2) {
+// 	const arr = [
+// 		220, 284, 1184, 1210, 2620, 2924, 5020, 5564, 6232, 6368, 10744, 10856,
+// 		12285, 14595, 17296, 18416, 66928, 66992, 122368, 123152, 196724,
+// 		202444, 437456, 455344, 469028, 486178, 503056, 514736, 522405, 525915,
+// 		643336, 652664, 802725, 863835, 998104, 1043096, 1077890, 1099390,
+// 		122265, 139815,
+// 	];
+// 	return arr.includes(num1) && arr.includes(num2);
+// }
+
+// The Office I - Outed.
+
+// function outed(meet, boss) {
+// 	return (Object.values(meet).reduce((a, b) => a + b, 0) + meet[boss]) /
+// 		Object.values(meet).length >
+// 		5
+// 		? "Nice Work Champ!"
+// 		: "Get Out Now!";
+// }
+
+// The Office II - Boredom Score.
+
+// function boredom(staff) {
+// 	const arr = Object.values(staff).reduce((a, b) => a + obj[b], 0);
+// 	return arr <= 80
+// 		? "kill me now"
+// 		: arr >= 100
+// 		? "party time!!"
+// 		: "i can handle this";
+// }
+
+// const obj = {
+// 	accounts: 1,
+// 	finance: 2,
+// 	canteen: 10,
+// 	regulation: 3,
+// 	trading: 6,
+// 	change: 6,
+// 	IS: 8,
+// 	retail: 5,
+// 	cleaning: 4,
+// 	"pissing about": 25,
+// };
+
+// The Office III - Broken Photocopier.
+
+// function broken(x) {
+// 	return x.replace(/[01]/g, (n) => (n === "1" ? (n = "0") : "1"));
+// }
+
+// The Office IV - Find a Meeting Room.
+
+// function meeting(x) {
+// 	if (x.indexOf("O") === -1) return "None available!";
+// 	return x.indexOf("O");
+// }
+
+// The Office VI - Sabbatical.
+
+// function sabb(x, val, happ) {
+// 	x = (x.match(/[sabticl]/gi) || []).length;
+// 	return x + val + happ > 22
+// 		? "Sabbatical! Boom!"
+// 		: "Back to your desk, boy.";
+// }
+
+// The Owls Are Not What They Seem.
+
+// function owlPic(text) {
+// 	const dict = ["8", "W", "T", "Y", "U", "I", "O", "A", "H", "X", "V", "M"];
+// 	const left = text
+// 		.toUpperCase()
+// 		.split("")
+// 		.filter((v) => dict.includes(v))
+// 		.join("");
+// 	const right = left.split("").reverse().join("");
+// 	return left + `''0v0''` + right;
+// }
+
+// The Span Function.
+
+// function span(arr, predicate) {
+// 	var i = 0;
+// 	while (i < arr.length && predicate(arr[i])) {
+// 		i++;
+// 	}
+// 	return [arr.slice(0, i), arr.slice(i)];
+// }
+
+// The highest profit wins!
+
+// function minMax(arr) {
+// 	return [Math.min(...arr), Math.max(...arr)];
+// }
+
+// The mean of two means.
+
+// function getMean(arr, x, y) {
+// 	if (x > 1 && y > 1 && x <= arr.length && y <= arr.length) {
+// 		var mean1 = 0,
+// 			mean2 = 0,
+// 			answer;
+// 		var clone = arr.slice().reverse();
+// 		for (var i = 0; i < x; i++) {
+// 			mean1 += arr[i];
+// 		}
+// 		for (var j = 0; j < y; j++) {
+// 			mean2 += clone[j];
+// 		}
+// 		answer = (mean1 / x + mean2 / y) / 2;
+// 		return answer;
+// 	}
+// 	return -1;
+// }
+
+// The once rollable dice.
+
+// function Character(name, opness) {
+// 	this.name = name;
+// 	this.opness = opness;
+// 	this.attack = function () {
+// 		return this.opness + ~~(Math.random() * 20) + 1;
+// 	};
+// }
+
+// The reject() function.
+
+// function reject(array, iterator) {
+// 	return array.filter((el) => !iterator(el));
+// }
+
+// The unknown but known variables: Addition.
+
+// function theVar(theVariables) {
+// 	return theVariables
+// 		.split("+")
+// 		.map((v) => v.charCodeAt() - 96)
+// 		.reduce((a, b) => a + b, 0);
+// }
+
+// The wheat rice and chessboard problem.
+
+// function squaresNeeded(grains) {
+// 	const arr = [0];
+// 	for (let i = 0; i < 63; i++) {
+// 		arr.push(Math.pow(2, i));
+// 	}
+// 	for (let i = 0; i < 63; i++) {
+// 		if (grains < arr[i]) {
+// 			return i - 1;
+// 		}
+// 	}
+// }
+
+// Thinkful - Logic Drills: Umbrella decider.
+
+// function takeUmbrella(weather, chance) {
+// 	if (weather == "sunny" && chance <= 0.5) return false;
+// 	if (weather == "rainy") return true;
+// 	if (weather == "cloudy" && chance <= 0.2) return false;
+// 	return true;
+// }
+
+// Thinkful - Number Drills: Rømer temperature.
+
+// function celsiusToRomer(temp) {
+// 	return (temp * 21) / 40 + 7.5;
+// }
+
+// Thinkful - Object Drills: Quarks.
+
+// class Quark {
+// 	constructor(color, flavor) {
+// 		this.color = color;
+// 		this.flavor = flavor;
+// 		this.baryon_number = 1 / 3;
+// 	}
+// 	interact(obj) {
+// 		const color1 = obj.color;
+// 		const color2 = this.color;
+// 		this.color = color1;
+// 		obj.color = color2;
+// 	}
+// }
+
+// Thinkful - Object Drills: Vectors.
+
+// class Vector {
+// 	constructor(x, y) {
+// 		this.x = x;
+// 		this.y = y;
+// 	}
+// 	add(v) {
+// 		return new Vector(this.x + v.x, this.y + v.y);
+// 	}
+// }
+
+
+//
