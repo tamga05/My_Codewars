@@ -9887,36 +9887,36 @@ function riders(stations) {
 
 // TV Remote.
 
-// const tvRemote = function (word) {
-// 	const keyboard = [
-// 		["a", "b", "c", "d", "e", "1", "2", "3"],
-// 		["f", "g", "h", "i", "j", "4", "5", "6"],
-// 		["k", "l", "m", "n", "o", "7", "8", "9"],
-// 		["p", "q", "r", "s", "t", ".", "@", "0"],
-// 		["u", "v", "w", "x", "y", "z", "_", "/"],
-// 	];
+const tvRemote = function (word) {
+	const keyboard = [
+		["a", "b", "c", "d", "e", "1", "2", "3"],
+		["f", "g", "h", "i", "j", "4", "5", "6"],
+		["k", "l", "m", "n", "o", "7", "8", "9"],
+		["p", "q", "r", "s", "t", ".", "@", "0"],
+		["u", "v", "w", "x", "y", "z", "_", "/"],
+	];
 
-// 	const pos = { x: 0, y: 0 };
+	const pos = { x: 0, y: 0 };
 
-// 	const getPos = (l) => {
-// 		const y = keyboard.findIndex((row) => row.find((n) => n === l));
-// 		const x = keyboard[y].findIndex((n) => n === l);
+	const getPos = (l) => {
+		const y = keyboard.findIndex((row) => row.find((n) => n === l));
+		const x = keyboard[y].findIndex((n) => n === l);
 
-// 		return { x, y };
-// 	};
+		return { x, y };
+	};
 
-// 	let dist = 0;
+	let dist = 0;
 
-// 	for (let l of word) {
-// 		const newPos = getPos(l);
-// 		dist += Math.abs(pos.x - newPos.x) + Math.abs(pos.y - newPos.y) + 1;
+	for (let l of word) {
+		const newPos = getPos(l);
+		dist += Math.abs(pos.x - newPos.x) + Math.abs(pos.y - newPos.y) + 1;
 
-// 		pos.x = newPos.x;
-// 		pos.y = newPos.y;
-// 	}
+		pos.x = newPos.x;
+		pos.y = newPos.y;
+	}
 
-// 	return dist;
-// };
+	return dist;
+};
 
 // Tail Swap.
 
