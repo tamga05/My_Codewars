@@ -9953,9 +9953,9 @@ function taxCalculator(total) {
 
 // Tea for two.
 
-// function tea42(input) {
-// 	return input.toString().replace(/2/g, "t");
-// }
+function tea42(input) {
+	return input.toString().replace(/2/g, "t");
+}
 
 // Temperature analysis I.
 
