@@ -9959,9 +9959,9 @@ function tea42(input) {
 
 // Temperature analysis I.
 
-// function lowestTemp(t) {
-// 	return t.length > 0 ? Math.min(...t.split(" ").map(Number)) : null;
-// }
+function lowestTemp(t) {
+	return t.length > 0 ? Math.min(...t.split(" ").map(Number)) : null;
+}
 
 // Test Your Knowledge Of Function Scope.
 
