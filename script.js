@@ -9965,9 +9965,9 @@ function lowestTemp(t) {
 
 // Test Your Knowledge Of Function Scope.
 
-// function add(x) {
-// 	return (b) => x + b;
-// }
+function add(x) {
+	return (b) => x + b;
+}
 
 // Test's results.
 
