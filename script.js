@@ -9971,17 +9971,17 @@ function add(x) {
 
 // Test's results.
 
-// function testResult(array) {
-// 	const dict = { h: 0, a: 0, l: 0 };
-// 	array.map((v) => {
-// 		if (v > 8) dict.h++;
-// 		if (v > 6 && v < 9) dict.a++;
-// 		if (v < 7) dict.l++;
-// 	});
-// 	let sum = (array.reduce((a, b) => a + b, 0) / array.length).toFixed(3) * 1;
-// 	if (dict.a === 0 && dict.l === 0) return [sum, dict, "They did well"];
-// 	return [sum, dict];
-// }
+function testResult(array) {
+	const dict = { h: 0, a: 0, l: 0 };
+	array.map((v) => {
+		if (v > 8) dict.h++;
+		if (v > 6 && v < 9) dict.a++;
+		if (v < 7) dict.l++;
+	});
+	let sum = (array.reduce((a, b) => a + b, 0) / array.length).toFixed(3) * 1;
+	if (dict.a === 0 && dict.l === 0) return [sum, dict, "They did well"];
+	return [sum, dict];
+}
 
 // The Arpeggiator.
 
