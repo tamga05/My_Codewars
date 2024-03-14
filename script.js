@@ -10018,14 +10018,14 @@ function decode(string) {
 
 // The Coins of Ter | Round to the Next N.
 
-// function adjust(coin, price) {
-// 	for (let i = price; ; i++) {
-// 		if (i >= price && i % coin === 0) {
-// 			return i;
-// 			break;
-// 		}
-// 	}
-// }
+function adjust(coin, price) {
+	for (let i = price; ; i++) {
+		if (i >= price && i % coin === 0) {
+			return i;
+			break;
+		}
+	}
+}
 
 // The Coupon Code.
 
