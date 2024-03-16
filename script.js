@@ -10038,9 +10038,9 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
 
 // The Ladies of ENIAC.
 
-// function radLadies(name) {
-// 	return name.replace(/[^a-z\s!]/gi, "").toUpperCase();
-// }
+function radLadies(name) {
+	return name.replace(/[^a-z\s!]/gi, "").toUpperCase();
+}
 
 // The Lazy Startup Office.
 
