@@ -10044,9 +10044,9 @@ function radLadies(name) {
 
 // The Lazy Startup Office.
 
-// function binRota(arr) {
-// 	return [].concat(...arr.map((v, i) => (i % 2 !== 0 ? v.reverse() : v)));
-// }
+function binRota(arr) {
+	return [].concat(...arr.map((v, i) => (i % 2 !== 0 ? v.reverse() : v)));
+}
 
 // The Most Amicable of Numbers.
 
@@ -10247,6 +10247,5 @@ function radLadies(name) {
 // 		return new Vector(this.x + v.x, this.y + v.y);
 // 	}
 // }
-
 
 //
