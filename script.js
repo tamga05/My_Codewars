@@ -10063,13 +10063,13 @@ function amicableNumbers(num1, num2) {
 
 // The Office I - Outed.
 
-// function outed(meet, boss) {
-// 	return (Object.values(meet).reduce((a, b) => a + b, 0) + meet[boss]) /
-// 		Object.values(meet).length >
-// 		5
-// 		? "Nice Work Champ!"
-// 		: "Get Out Now!";
-// }
+function outed(meet, boss) {
+	return (Object.values(meet).reduce((a, b) => a + b, 0) + meet[boss]) /
+		Object.values(meet).length >
+		5
+		? "Nice Work Champ!"
+		: "Get Out Now!";
+}
 
 // The Office II - Boredom Score.
 
