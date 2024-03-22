@@ -10097,9 +10097,9 @@ const obj = {
 
 // The Office III - Broken Photocopier.
 
-// function broken(x) {
-// 	return x.replace(/[01]/g, (n) => (n === "1" ? (n = "0") : "1"));
-// }
+function broken(x) {
+	return x.replace(/[01]/g, (n) => (n === "1" ? (n = "0") : "1"));
+}
 
 // The Office IV - Find a Meeting Room.
 
