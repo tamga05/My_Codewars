@@ -10103,10 +10103,10 @@ function broken(x) {
 
 // The Office IV - Find a Meeting Room.
 
-// function meeting(x) {
-// 	if (x.indexOf("O") === -1) return "None available!";
-// 	return x.indexOf("O");
-// }
+function meeting(x) {
+	if (x.indexOf("O") === -1) return "None available!";
+	return x.indexOf("O");
+}
 
 // The Office VI - Sabbatical.
 
