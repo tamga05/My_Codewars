@@ -10178,9 +10178,9 @@ function Character(name, opness) {
 
 // The reject() function.
 
-// function reject(array, iterator) {
-// 	return array.filter((el) => !iterator(el));
-// }
+function reject(array, iterator) {
+	return array.filter((el) => !iterator(el));
+}
 
 // The unknown but known variables: Addition.
 
