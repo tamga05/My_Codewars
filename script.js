@@ -10184,12 +10184,12 @@ function reject(array, iterator) {
 
 // The unknown but known variables: Addition.
 
-// function theVar(theVariables) {
-// 	return theVariables
-// 		.split("+")
-// 		.map((v) => v.charCodeAt() - 96)
-// 		.reduce((a, b) => a + b, 0);
-// }
+function theVar(theVariables) {
+	return theVariables
+		.split("+")
+		.map((v) => v.charCodeAt() - 96)
+		.reduce((a, b) => a + b, 0);
+}
 
 // The wheat rice and chessboard problem.
 
