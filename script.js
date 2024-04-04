@@ -10214,9 +10214,9 @@ function takeUmbrella(weather, chance) {
 
 // Thinkful - Number Drills: Rømer temperature.
 
-// function celsiusToRomer(temp) {
-// 	return (temp * 21) / 40 + 7.5;
-// }
+function celsiusToRomer(temp) {
+	return (temp * 21) / 40 + 7.5;
+}
 
 // Thinkful - Object Drills: Quarks.
 
