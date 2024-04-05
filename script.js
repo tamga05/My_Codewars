@@ -10186,7 +10186,9 @@ function reject(array, iterator) {
 
 function theVar(theVariables) {
 	return theVariables
-		.split("+").map((v) => v.charCodeAt() - 96).reduce((a, b) => a + b, 0);
+		.split("+")
+		.map((v) => v.charCodeAt() - 96)
+		.reduce((a, b) => a + b, 0);
 }
 
 // The wheat rice and chessboard problem.
@@ -10220,19 +10222,19 @@ function celsiusToRomer(temp) {
 
 // Thinkful - Object Drills: Quarks.
 
-// class Quark {
-// 	constructor(color, flavor) {
-// 		this.color = color;
-// 		this.flavor = flavor;
-// 		this.baryon_number = 1 / 3;
-// 	}
-// 	interact(obj) {
-// 		const color1 = obj.color;
-// 		const color2 = this.color;
-// 		this.color = color1;
-// 		obj.color = color2;
-// 	}
-// }
+class Quark {
+	constructor(color, flavor) {
+		this.color = color;
+		this.flavor = flavor;
+		this.baryon_number = 1 / 3;
+	}
+	interact(obj) {
+		const color1 = obj.color;
+		const color2 = this.color;
+		this.color = color1;
+		obj.color = color2;
+	}
+}
 
 // Thinkful - Object Drills: Vectors.
 
