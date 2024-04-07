@@ -10238,14 +10238,248 @@ class Quark {
 
 // Thinkful - Object Drills: Vectors.
 
-// class Vector {
-// 	constructor(x, y) {
-// 		this.x = x;
-// 		this.y = y;
-// 	}
-// 	add(v) {
-// 		return new Vector(this.x + v.x, this.y + v.y);
-// 	}
+class Vector {
+	constructor(x, y) {
+		this.x = x;
+		this.y = y;
+	}
+	add(v) {
+		return new Vector(this.x + v.x, this.y + v.y);
+	}
+}
+
+// Thinkful - String Drills: Areacode extractor.
+
+// function areaCode(text) {
+// 	return text.match(/\((\d{3})\)/)[1];
 // }
 
-//
+// Thinkful - String Drills: Poem formatter.
+
+// function formatPoem(poem) {
+// 	return poem.split(". ").join(".\n");
+// }
+
+// Thinking & Testing : Incomplete string.
+
+// function testit(s) {
+// 	return s.replace(/../g, (s) =>
+// 		String.fromCharCode((s.charCodeAt(0) + s.charCodeAt(1)) / 2)
+// 	);
+// }
+
+// Thinking & Testing : Math of Primary School.
+
+// function testit(arr) {
+// 	return arr[0] * arr[3] + arr[1] * arr[2];
+// }
+
+// Thinking & Testing : Retention and discard.
+
+// function testit(n) {
+// 	let arr = [];
+// 	for (let i = 1; i <= n; i += 2) if (n % i === 0) arr.push(i);
+// 	return arr;
+// }
+
+// Thinking & Testing : Something capitalized.
+
+// function testit(s) {
+// 	if (s.length === 0) return s;
+// 	let sArr = s.split(" ");
+// 	for (let i = 0; i < sArr.length; i++) {
+// 		let as = sArr[i];
+// 		if (as.length > 1) {
+// 			sArr[i] =
+// 				as.substring(0, as.length - 1) +
+// 				as.substring(as.length - 1).toUpperCase();
+// 		} else {
+// 			sArr[i] = as.toUpperCase();
+// 		}
+// 	}
+// 	return sArr.join(" ");
+// }
+
+// Thinking & Testing : True or False.
+
+// function testit(n) {
+// 	return n.toString(2).replace(/0/g, "").length;
+// }
+
+// Thinking & Testing : Uniq or not Uniq.
+
+// function testit(a, b) {
+// 	a = [...new Set(a)];
+// 	b = [...new Set(b)];
+// 	return a.concat(b).sort((a, b) => a - b);
+// }
+
+// Thinking & Testing: A and B?
+
+// function testit(a, b) {
+// 	return a | b;
+// }
+
+// Thirsty Robot (Updated).
+
+// function thirstyRobot(drinks) {
+// 	let [wined, sick, drunk] = [false, false, false];
+// 	drinks.forEach((abv) => {
+// 		if (wined && abv <= 8) sick = true;
+// 		if (abv > 8 && abv <= 15) wined = true;
+// 		if (abv > 15) drunk = true;
+// 	});
+// 	if (!sick) return drunk ? "Wonky robot" : "Fine";
+// 	return drunk ? "Poor robot" : "Oh dear";
+// }
+
+// Tidy Number (Special Numbers Series #9).
+
+// function tidyNumber(n) {
+// 	const arr = n.toString().split("");
+// 	for (let i = 0; i < arr.length - 1; i++) {
+// 		if (arr[i] <= arr[i + 1]) {
+// 			continue;
+// 		} else {
+// 			return false;
+// 		}
+// 	}
+// 	return true;
+// }
+
+// Time Converter: hours, minutes, seconds and milliseconds.
+
+// function convert(time) {
+// 	let ms = time.getMilliseconds();
+// 	if (ms.toString().length < 2) ms = "00" + ms;
+// 	if (ms.toString().length < 3) ms = "0" + ms;
+// 	return time.toTimeString().split(" ")[0] + `,${ms}`;
+// }
+
+// Radio DJ helper function.
+
+// function longestPossible(playback) {
+// 	for (let song of songs) {
+// 		song[`time`] =
+// 			song[`playback`].split(":")[0] * 60 +
+// 			song[`playback`].split(":")[1] * 1;
+// 	}
+// 	songs = songs.sort((a, b) => b.time - a.time);
+// 	return songs.find((v) => v.time < playback) === undefined
+// 		? false
+// 		: songs.find((v) => v.time < playback).title;
+// }
+
+// Re-open class.
+
+// String.prototype.myNewMethod = String.prototype.toUpperCase
+
+// ReOrdering.
+
+// const reOrdering = t => t.replace(/^(.+)\s([A-Z][^\s]*)(.*)$/, "$2 $1$3")
+
+// Largest 5 digit number in a series.
+
+// function solution(digits) {
+// 	let answer = 0;
+
+// 	for (let i = 0; i < digits.length; i++) {
+// 		let number = digits.substr(i, 5); //each loop iteration pulls the next 5 digits into a substring
+// 		if (Number(number) > answer) {
+// 			//convert to number and compare against answer
+// 			answer = Number(number);
+// 		}
+// 	}
+// 	return answer;
+// }
+
+// Largest Square Inside A Circle.
+
+// function areaLargestSquare(r) {
+// 	return 2 * r * r;
+// }
+
+// Lazily executing a function.
+
+// const make_lazy = function (fn) {
+// 	return fn.bind.apply(fn, arguments);
+// };
+
+// Last.
+
+// function last(list) {
+// 	var last = arguments[arguments.length - 1];
+// 	return last[last.length - 1] || last;
+// }
+
+// Left$ and Right$.
+
+// function left$(str, i) {
+// 	if (i === undefined) i = 1;
+// 	if (typeof i === "string") i = str.indexOf(i);
+// 	return str.slice(0, i);
+// }
+
+// function right$(str, i) {
+// 	if (i === undefined) i = 1;
+// 	if (typeof i === "string") i = str.length - str.lastIndexOf(i) - i.length;
+// 	return i ? str.slice(-i) : "";
+// }
+
+// Leonardo numbers.
+
+// L = (n, L0, L1, add) => {
+// 	let newArr = [L0, L1];
+// 	for (let i = 2; i < n; i++) {
+// 		newArr.push(newArr[i - 2] + newArr[i - 1] + add);
+// 	}
+
+// 	return newArr;
+// };
+
+// Letterbox Paint-Squad.
+
+// const paintLetterboxes = (start, end) => {
+// 	let res = Array(10).fill(0);
+// 	for (let i = start; i <= end; i++) {
+// 		for (let n of i + "") {
+// 			res[n]++;
+// 		}
+// 	}
+// 	return res;
+// };
+
+// Linked Lists - Get Nth.
+
+// function Node(data) {
+// 	this.data = data;
+// 	this.next = null;
+// }
+
+// function getNth(node, index) {
+// 	if (!node) throw new Error("Invalid node at " + index);
+
+// 	return index === 0 ? node : getNth(node.next, index - 1);
+// }
+
+// Linked Lists - Move Node.
+
+// function Context(source, dest) {
+// 	this.source = source;
+// 	this.dest = dest;
+// }
+
+// function moveNode(source, dest) {
+// 	if (!source) {
+// 		throw new Error("Source is not present !");
+// 	}
+// 	const newSource = source.next;
+// 	source.next = dest;
+// 	return new Context(newSource, source);
+// }
+
+// List Filtering.
+
+// function filter_list(l) {
+// 	return l.filter((v) => typeof v == "number");
+// }
