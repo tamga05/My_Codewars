@@ -10250,9 +10250,9 @@ class Vector {
 
 // Thinkful - String Drills: Areacode extractor.
 
-// function areaCode(text) {
-// 	return text.match(/\((\d{3})\)/)[1];
-// }
+function areaCode(text) {
+	return text.match(/\((\d{3})\)/)[1];
+}
 
 // Thinkful - String Drills: Poem formatter.
 
