@@ -10256,9 +10256,9 @@ function areaCode(text) {
 
 // Thinkful - String Drills: Poem formatter.
 
-// function formatPoem(poem) {
-// 	return poem.split(". ").join(".\n");
-// }
+function formatPoem(poem) {
+	return poem.split(". ").join(".\n");
+}
 
 // Thinking & Testing : Incomplete string.
 
