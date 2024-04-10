@@ -10262,11 +10262,11 @@ function formatPoem(poem) {
 
 // Thinking & Testing : Incomplete string.
 
-// function testit(s) {
-// 	return s.replace(/../g, (s) =>
-// 		String.fromCharCode((s.charCodeAt(0) + s.charCodeAt(1)) / 2)
-// 	);
-// }
+function testit(s) {
+	return s.replace(/../g, (s) =>
+		String.fromCharCode((s.charCodeAt(0) + s.charCodeAt(1)) / 2)
+	);
+}
 
 // Thinking & Testing : Math of Primary School.
 
