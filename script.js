@@ -10302,9 +10302,9 @@ function testit(s) {
 
 // Thinking & Testing : True or False.
 
-// function testit(n) {
-// 	return n.toString(2).replace(/0/g, "").length;
-// }
+function testit(n) {
+	return n.toString(2).replace(/0/g, "").length;
+}
 
 // Thinking & Testing : Uniq or not Uniq.
 
