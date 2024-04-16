@@ -10308,11 +10308,11 @@ function testit(n) {
 
 // Thinking & Testing : Uniq or not Uniq.
 
-// function testit(a, b) {
-// 	a = [...new Set(a)];
-// 	b = [...new Set(b)];
-// 	return a.concat(b).sort((a, b) => a - b);
-// }
+function testit(a, b) {
+	a = [...new Set(a)];
+	b = [...new Set(b)];
+	return a.concat(b).sort((a, b) => a - b);
+}
 
 // Thinking & Testing: A and B?
 
