@@ -10316,9 +10316,9 @@ function testit(a, b) {
 
 // Thinking & Testing: A and B?
 
-// function testit(a, b) {
-// 	return a | b;
-// }
+function testit(a, b) {
+	return a | b;
+}
 
 // Thirsty Robot (Updated).
 
