@@ -10358,17 +10358,17 @@ function convert(time) {
 
 // Radio DJ helper function.
 
-// function longestPossible(playback) {
-// 	for (let song of songs) {
-// 		song[`time`] =
-// 			song[`playback`].split(":")[0] * 60 +
-// 			song[`playback`].split(":")[1] * 1;
-// 	}
-// 	songs = songs.sort((a, b) => b.time - a.time);
-// 	return songs.find((v) => v.time < playback) === undefined
-// 		? false
-// 		: songs.find((v) => v.time < playback).title;
-// }
+function longestPossible(playback) {
+	for (let song of songs) {
+		song[`time`] =
+			song[`playback`].split(":")[0] * 60 +
+			song[`playback`].split(":")[1] * 1;
+	}
+	songs = songs.sort((a, b) => b.time - a.time);
+	return songs.find((v) => v.time < playback) === undefined
+		? false
+		: songs.find((v) => v.time < playback).title;
+}
 
 // Re-open class.
 
