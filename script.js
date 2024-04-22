@@ -10372,7 +10372,7 @@ function longestPossible(playback) {
 
 // Re-open class.
 
-// String.prototype.myNewMethod = String.prototype.toUpperCase
+String.prototype.myNewMethod = String.prototype.toUpperCase
 
 // ReOrdering.
 
