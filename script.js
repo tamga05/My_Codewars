@@ -10376,7 +10376,7 @@ String.prototype.myNewMethod = String.prototype.toUpperCase
 
 // ReOrdering.
 
-// const reOrdering = t => t.replace(/^(.+)\s([A-Z][^\s]*)(.*)$/, "$2 $1$3")
+const reOrdering = t => t.replace(/^(.+)\s([A-Z][^\s]*)(.*)$/, "$2 $1$3")
 
 // Largest 5 digit number in a series.
 
