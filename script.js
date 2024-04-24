@@ -10380,18 +10380,18 @@ const reOrdering = t => t.replace(/^(.+)\s([A-Z][^\s]*)(.*)$/, "$2 $1$3")
 
 // Largest 5 digit number in a series.
 
-// function solution(digits) {
-// 	let answer = 0;
+function solution(digits) {
+	let answer = 0;
 
-// 	for (let i = 0; i < digits.length; i++) {
-// 		let number = digits.substr(i, 5); //each loop iteration pulls the next 5 digits into a substring
-// 		if (Number(number) > answer) {
-// 			//convert to number and compare against answer
-// 			answer = Number(number);
-// 		}
-// 	}
-// 	return answer;
-// }
+	for (let i = 0; i < digits.length; i++) {
+		let number = digits.substr(i, 5); //each loop iteration pulls the next 5 digits into a substring
+		if (Number(number) > answer) {
+			//convert to number and compare against answer
+			answer = Number(number);
+		}
+	}
+	return answer;
+}
 
 // Largest Square Inside A Circle.
 
