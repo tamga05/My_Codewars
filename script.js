@@ -10401,9 +10401,9 @@ function areaLargestSquare(r) {
 
 // Lazily executing a function.
 
-// const make_lazy = function (fn) {
-// 	return fn.bind.apply(fn, arguments);
-// };
+const make_lazy = function (fn) {
+	return fn.bind.apply(fn, arguments);
+};
 
 // Last.
 
