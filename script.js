@@ -10414,11 +10414,11 @@ function last(list) {
 
 // Left$ and Right$.
 
-// function left$(str, i) {
-// 	if (i === undefined) i = 1;
-// 	if (typeof i === "string") i = str.indexOf(i);
-// 	return str.slice(0, i);
-// }
+function left$(str, i) {
+	if (i === undefined) i = 1;
+	if (typeof i === "string") i = str.indexOf(i);
+	return str.slice(0, i);
+}
 
 // function right$(str, i) {
 // 	if (i === undefined) i = 1;
