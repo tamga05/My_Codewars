@@ -10420,11 +10420,11 @@ function left$(str, i) {
 	return str.slice(0, i);
 }
 
-// function right$(str, i) {
-// 	if (i === undefined) i = 1;
-// 	if (typeof i === "string") i = str.length - str.lastIndexOf(i) - i.length;
-// 	return i ? str.slice(-i) : "";
-// }
+function right$(str, i) {
+	if (i === undefined) i = 1;
+	if (typeof i === "string") i = str.length - str.lastIndexOf(i) - i.length;
+	return i ? str.slice(-i) : "";
+}
 
 // Leonardo numbers.
 
