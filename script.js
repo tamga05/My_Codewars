@@ -10372,11 +10372,11 @@ function longestPossible(playback) {
 
 // Re-open class.
 
-String.prototype.myNewMethod = String.prototype.toUpperCase
+String.prototype.myNewMethod = String.prototype.toUpperCase;
 
 // ReOrdering.
 
-const reOrdering = t => t.replace(/^(.+)\s([A-Z][^\s]*)(.*)$/, "$2 $1$3")
+const reOrdering = (t) => t.replace(/^(.+)\s([A-Z][^\s]*)(.*)$/, "$2 $1$3");
 
 // Largest 5 digit number in a series.
 
@@ -10433,6 +10433,7 @@ L = (n, L0, L1, add) => {
 	for (let i = 2; i < n; i++) {
 		newArr.push(newArr[i - 2] + newArr[i - 1] + add);
 	}
+};
 
 // 	return newArr;
 // };
