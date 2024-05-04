@@ -10433,10 +10433,8 @@ L = (n, L0, L1, add) => {
 	for (let i = 2; i < n; i++) {
 		newArr.push(newArr[i - 2] + newArr[i - 1] + add);
 	}
+	return newArr;
 };
-
-// 	return newArr;
-// };
 
 // Letterbox Paint-Squad.
 
