@@ -10438,15 +10438,15 @@ L = (n, L0, L1, add) => {
 
 // Letterbox Paint-Squad.
 
-// const paintLetterboxes = (start, end) => {
-// 	let res = Array(10).fill(0);
-// 	for (let i = start; i <= end; i++) {
-// 		for (let n of i + "") {
-// 			res[n]++;
-// 		}
-// 	}
-// 	return res;
-// };
+const paintLetterboxes = (start, end) => {
+	let res = Array(10).fill(0);
+	for (let i = start; i <= end; i++) {
+		for (let n of i + "") {
+			res[n]++;
+		}
+	}
+	return res;
+};
 
 // Linked Lists - Get Nth.
 
