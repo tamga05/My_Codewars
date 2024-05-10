@@ -10463,19 +10463,19 @@ function getNth(node, index) {
 
 // Linked Lists - Move Node.
 
-// function Context(source, dest) {
-// 	this.source = source;
-// 	this.dest = dest;
-// }
+function Context(source, dest) {
+	this.source = source;
+	this.dest = dest;
+}
 
-// function moveNode(source, dest) {
-// 	if (!source) {
-// 		throw new Error("Source is not present !");
-// 	}
-// 	const newSource = source.next;
-// 	source.next = dest;
-// 	return new Context(newSource, source);
-// }
+function moveNode(source, dest) {
+	if (!source) {
+		throw new Error("Source is not present !");
+	}
+	const newSource = source.next;
+	source.next = dest;
+	return new Context(newSource, source);
+}
 
 // List Filtering.
 
